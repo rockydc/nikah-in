@@ -9,6 +9,8 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section-guest">RSVP</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section-gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section-maps">Location</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#share-the-love">Love Gift</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#section-ucapan">Pray & Love</a></li>
                 </ul>
         </div>
         </div>

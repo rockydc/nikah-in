@@ -141,9 +141,25 @@ $bp-XL:1200px;
 .section{
     padding:60px 50px;
 }
+#section-love{
+    @include mobile {
+        h2{
+            font-size:65px!important;
+            color:black !important;
+        }
+    }
+}
 #section-about{
 
     .content-about{
+        a{
+            font-size:15px;
+            color: rgb(96,82,68);
+            letter-spacing: 1px;  
+            i{
+                font-size:18px;
+            }
+        }
         h1{
             font-family: Meddon, cursive;font-weight: 700;color: rgb(109,95,82);   
         }
@@ -190,6 +206,9 @@ $bp-XL:1200px;
     }
     @include mobile{
         .content-about{
+            .instagram-text{
+                text-align:center;
+            }
             h1{font-size:30px;
             text-align: center;}
             h3{
@@ -332,7 +351,19 @@ $bp-XL:1200px;
                 background-color:rgb(128,64,18);
             }
         }
+    .form-status{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: row;
+    }
     @include mobile{
+        .form-status{
+            align-items:center;
+            justify-content:center;
+            
+            flex-direction: column;
+        }
         .img-guest{
             width:300px;
         }
@@ -433,19 +464,49 @@ $bp-XL:1200px;
     }
 }
 
+
+.text-venue{
+    font-family: 'Dancing Script', cursive;font-weight: bold;color: rgb(150,94,86);letter-spacing: 8px;
+}
+.date-venue{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.detail-venue{
+    font-family: Andika, sans-serif;letter-spacing: 1px;color: rgb(127,135,143);
+}
 .title-section{
     font-family: moonTime,sans-serif;
     font-weight:600px!important;
     font-size:80px!important;
+
     letter-spacing:18px !important;
 }
 
 .wrapper-love{
     padding:50px;
 }
+.bank-account{
+    width: 273px;
+    height:269px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border:solid 3px #f2b577;
+    border-radius:10px;
+}
+//additional css
 @include mobile {
-    
+    .title-section{
+        font-size:50px!important;
+    }
     .fixed-top{
         background-color: #FDF4E3 !important;
+    }
+    .date-venue{
+        font-size:17px!important;
+    }
+    .msg-venue{
+        font-size:16px;
     }
 }

@@ -65,6 +65,13 @@ WebWedding
                             <h1>Anes</h1>
                             <h3><strong>Sanggam Yohanes Situmeang&nbsp;</strong></h3>
                             <p>Son of Drs. Darwis Situmeang, M. A.<br>and Yetty Simanjuntak<br></p>
+                            <div class="instagram-text">
+                            <a class="text-decoration-none" href="https://www.instagram.com/anesitumeang/">
+                            <i class="fa fa-instagram mr-2"></i>@anesitumeang
+                            </a>
+
+                            </div>
+
                         </div>
                     </div>
                     <div class="row">
@@ -75,6 +82,14 @@ WebWedding
                             <h1>Nahomi</h1>
                             <h3 style="">Nahomi Lestari Manurung</h3>
                             <p>Daughter of St. Monggur K Manurung<br>and Romauli Saragi, S. AP</p>
+                            <div class="instagram-text">
+                            <a class="text-decoration-none" href="https://www.instagram.com/nahomilestari/">
+                            <i class="fa fa-instagram mr-2"></i>@nahomilestari
+                            </a>
+
+                            </div>
+
+                           
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="{{url('aness/assets/img/Screenshot_4-removebg-preview.png')}}"></div>
                     </div>
@@ -94,32 +109,35 @@ WebWedding
                 <div>
                     <div class="wrapper-content-church">
                         <div class="d-md-flex d-lg-flex d-xl-flex justify-content-md-end align-items-md-center justify-content-lg-end align-items-lg-center justify-content-xl-end align-items-xl-center barcode"><img src="{{url('aness/assets/img/HKBP%20Jatiasih.png')}}"></div>
-                        <div><img src="{{url('aness/assets/img/gereja-removebg-preview.png')}}">
-                            <h2 style="font-family: 'Dancing Script', cursive;font-weight: bold;color: rgb(150,94,86);letter-spacing: 8px;">HKBP Jatiasih</h2>
-                            <p style="font-family: 'Josefin Sans', sans-serif;">December 19,2020 | 07.30 AM</p>
+                        <div class="mt-3">
+                        <h2 class="text-venue" style="">Holly Matrimony</h2>
+                        <img src="{{url('aness/assets/img/gereja-removebg-preview.png')}}">
+                            <h2 class="text-venue"style="">HKBP Jatiasih</h2>
+                            <p class="date-venue" style="">December 19,2020 <br> 07.30 AM</p>
                         </div>
                         <div></div>
                     </div>
                 </div>
             </div>
-            <p style="font-family: Andika, sans-serif;letter-spacing: 5px;color: rgb(127,135,143);">Raya Jatiasih No. 8 , Jatiasih,Bekasi</p>
-            <p style="font-weight: bold;">We appologize in the implementation on holy matrimony will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
+            <p class="detail-venue" style="">Raya Jatiasih No. 8 Jatiasih,Bekasi</p>
+            <p class="msg-venue">We appologize in the implementation on holy matrimony will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
         <div data-aos="zoom-in-up"
             class="text-center">
             <div>
                 <div>
                     <div class="wrapper-content-church">
                         <div></div>
-                        <div><img src="{{url('aness/assets/img/gedung-removebg-preview.png')}}">
-                            <h2 style="font-family: 'Dancing Script', cursive;font-weight: bold;color: rgb(150,94,86);letter-spacing: 8px;">Hall on St. Nahanson</h2>
-                            <p style="font-family: 'Josefin Sans', sans-serif;">December 19,2020 | 11:00 AM</p>
+                        <div><h2 class="text-venue" style="">Wedding Reception</h2>
+                        <img src="{{url('aness/assets/img/gedung-removebg-preview.png')}}">
+                            <h2 class="text-venue" style="">Hall on St.Nahanson</h2>
+                            <p class="date-venue">December 19, 2020  <br>11:00 AM - 14:00 PM </p>
                         </div>
                         <div class="d-md-flex justify-content-md-start align-items-md-center barcode"><img src="{{url('aness/assets/img/Nahanson.png')}}"></div>
                     </div>
                 </div>
             </div>
-            <p style="font-family: Andika, sans-serif;letter-spacing: 5px;color: rgb(127,135,143);">Wibawa Mukti II no. 131, Jatiasih, Bekasi</p>
-            <p style="font-weight: bold;">We would apply strict health protocol, so please wear your mask, sanitize your hand, and<br>please dont bring your kids (under 12 year)<br></p>
+            <p class="detail-venue">Wibawa Mukti II no. 131, Jatiasih, Bekasi</p>
+            <p class="msg-venue">We would apply strict health protocol, so please wear your mask, sanitize your hand, and<br>please dont bring your kids (under 12 year)<br></p>
         </div>
     </div>
     <div id="section-guest" class="section">
@@ -165,8 +183,8 @@ WebWedding
                             <div class="col">
                                 <div class="form-group text-center"><label class="text-center" style="font-weight: bold;">Will You Be Coming ?</label>
                                     <div>
-                                        <div class="form-group d-flex align-item-center justify-content-center">
-                                            <div class="form-check ml-3">
+                                        <div class="form-group form-status text-center">
+                                            <div class="form-check ml-2">
                                             <input checked class="form-check-input" type="radio" id="attend" value="attend" name="status"><label class="form-check-label" for="attend">i will attend</label>
                                             </div>
                                             
@@ -217,16 +235,22 @@ WebWedding
         <h1 class="title-section" style="font-size:50px;">Share The Love</h1>
         <div class="wrapper-love d-flex justify-content-center align-items-center flex-column">
             <p style="letter-spacing: 4px;color: rgb(126,99,79);"> We Also Provide Cash Less
-                <br>Wedding Gift Using Dana and Ovo</p>
-                <img class="mt-4 img-barcode" src="{{url('aness/assets/img/barcodeOvo.png')}}"><p></p>
-                <img class="mt-4 img-barcode" src="{{url('aness/assets/img/danabarcode.png')}}">
-                <p>Dana</p>
+                <br>Wedding Gift Using Ovo and Bank Account</p>
+                <img class="mt-4 img-barcode" src="{{url('aness/assets/img/barcodeOvo.png')}}">
+                <p>OVO</p>
+                <div class="bank-account">
+
+                <p><strong>BCA</strong> : 5210609743 <br>a.n S Johanes</p>
+                <p><strong>Permata</strong> : 413344748 <br>a.n Nahomi Lestari Manurung</p>
+                </div>
+                
+
         </div>
 
     </div>
     <div id="section-ucapan" class="section">
         <div class="container wrapper-content">
-            <h1>Ucapan &amp; <strong>Doa</strong></h1>
+            <h1>Pray &amp; <strong>Love</strong></h1>
             <div>
                 <div class="wrapper wrapper-pesan">
                 @forelse($items as $item)

@@ -151,8 +151,25 @@
   padding: 60px 50px;
 }
 
+@media (min-width: 0) and (max-width: 600px) {
+  #section-love h2 {
+    font-size: 65px !important;
+    color: black !important;
+  }
+}
+
 #section-about {
   position: relative;
+}
+
+#section-about .content-about a {
+  font-size: 15px;
+  color: #605244;
+  letter-spacing: 1px;
+}
+
+#section-about .content-about a i {
+  font-size: 18px;
 }
 
 #section-about .content-about h1 {
@@ -203,6 +220,9 @@
 }
 
 @media (min-width: 0) and (max-width: 600px) {
+  #section-about .content-about .instagram-text {
+    text-align: center;
+  }
   #section-about .content-about h1 {
     font-size: 30px;
     text-align: center;
@@ -337,7 +357,35 @@
   background-color: #804012;
 }
 
+#section-guest .form-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 @media (min-width: 0) and (max-width: 600px) {
+  #section-guest .form-status {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #section-guest .img-guest {
     width: 300px;
   }
@@ -443,6 +491,23 @@
   }
 }
 
+.text-venue {
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  color: #965e56;
+  letter-spacing: 8px;
+}
+
+.date-venue {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.detail-venue {
+  font-family: Andika, sans-serif;
+  letter-spacing: 1px;
+  color: #7f878f;
+}
+
 .title-section {
   font-family: moonTime,sans-serif;
   font-weight: 600px !important;
@@ -454,9 +519,38 @@
   padding: 50px;
 }
 
+.bank-account {
+  width: 273px;
+  height: 269px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: solid 3px #f2b577;
+  border-radius: 10px;
+}
+
 @media (min-width: 0) and (max-width: 600px) {
+  .title-section {
+    font-size: 50px !important;
+  }
   .fixed-top {
     background-color: #FDF4E3 !important;
+  }
+  .date-venue {
+    font-size: 17px !important;
+  }
+  .msg-venue {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
