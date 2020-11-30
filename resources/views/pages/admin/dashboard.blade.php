@@ -16,13 +16,14 @@
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col col-lg-6 col-md-6 col-sm-12">
-                            <div class="card d-flex align-items-center justify-content-center">
+                            <div class="card d-flex align-items-center justify-content-center pt-3">
                                 <h2 style="font-size:20px;">Jumlah RSVP Online</h2>
-                                <p>20</p>
+
+                                <p>{{$users}}</p>
                             </div>
                         </div>
                         <div class="col col-lg-6 col-md-6 col-sm-12">
-                            <div class="card d-flex align-items-center justify-content-center">
+                            <div class="card d-flex align-items-center justify-content-center pt-3">
                                 <h2 style="font-size:20px;">Guest Book</h2>
                                 <p>20</p>
                             </div>

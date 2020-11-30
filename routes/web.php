@@ -29,7 +29,7 @@ Route::prefix('admin')
     });
 
 // Anes/*
-Route::prefix('anes')
+Route::prefix('anes-nahomi')
     ->namespace('Anes')
     ->group(function(){
         Route::get('/','AnesController@index')
