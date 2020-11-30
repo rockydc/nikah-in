@@ -38,13 +38,7 @@ class rsvp_onlineController extends Controller
     public function create()
     {
         //
-        return rsvp_online::create([
-            'nama'=>$data['nama'],
-            'no_telepon'=>$data['no_telepon'],
-            'email'=>$data['email'],
-            'pesan'=>$data['pesan']
-        ]);
-        
+
     }
 
     /**
@@ -55,14 +49,7 @@ class rsvp_onlineController extends Controller
      */
     public function store(rsvp_onlineRequest $request)
     {
-        //
-        $data = $request->all();
-        $data['slug'] = Str::slug($request->nama+$request->email);
-
-        // rsvp_online::create($data);
-         rsvp_online::create($data);
-        // return redirect()->route('anes.index');
-
+       
     }
 
     /**

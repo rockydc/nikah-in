@@ -9,8 +9,7 @@ class rsvp_online extends Model
     //
     protected $dateFormat = 'U';
     public $timestamps=true;
-    const CREATED_AT = 'create_time';
-    const UPDATED_AT = 'update_time'; 
+ 
     use SoftDeletes;
     protected $table = 'rsvponline';
     protected $fillable = [
