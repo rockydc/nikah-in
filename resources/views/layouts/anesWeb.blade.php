@@ -22,6 +22,15 @@
     <link rel="stylesheet" href="{{url('aness/assets/css/styles.css')}}">
     <link rel="stylesheet" href="{{url('aness/assets/css/styles.compiled.css')}}">
     <link rel="stylesheet" href="{{url('aness/assets/scss/styles.css')}}">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YLNT1MN0T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7YLNT1MN0T');
+    </script>
 </head>
 
 <body id="page-top" style="background: rgb(246,236,226);">
