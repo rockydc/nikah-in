@@ -31,7 +31,17 @@
 
     gtag('config', 'G-7YLNT1MN0T');
     </script>
+        <script>
+        window.onload = function() {
+          var context = new AudioContext();
+        }
+        </script>
+
+
 </head>
+<audio autoplay loop>
+    <source src="{{url('aness/music/Isyana Sarasvati, Afgan, Rendy Pandugo - Heaven (Official Music Video).mp3')}}">
+</audio>
 
 <body id="page-top" style="background: rgb(246,236,226);">
   
