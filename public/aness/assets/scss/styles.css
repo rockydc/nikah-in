@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+*:focus {
+  outline: 0 !important;
+}
+
 @font-face {
   font-family: 'moonTime';
   src: url("../fonts/MoonTime-Regular-www.Dfonts.org/MoonTime-Regular.otf");
@@ -537,6 +541,24 @@
           flex-direction: column;
   border: solid 3px #f2b577;
   border-radius: 10px;
+}
+
+.act-btn {
+  z-index: 100;
+  background: #ff299c;
+  line-height: 20px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+  text-decoration: none;
+  -webkit-transition: ease all 0.3s;
+  transition: ease all 0.3s;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border: none;
+  outline: none;
 }
 
 @media (min-width: 0) and (max-width: 600px) {
