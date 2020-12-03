@@ -151,7 +151,7 @@ WebWedding
                     <div>
                         <div class="form-row">
                             <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7">
-                                <div class="form-group"><label>Nama</label><input class="form-control" type="text" name="nama" value="{{old('nama')}}"> </div>
+                                <div class="form-group"><label>Name</label><input class="form-control" type="text" name="nama" value="{{old('nama')}}"> </div>
                                 <p style="color:red;">
                                 @error('nama') {{$message}}
                                 @enderror
@@ -159,7 +159,7 @@ WebWedding
                                 </div>
 
                             <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                <div class="form-group"><label>No telepon</label><input class="form-control" type="text" name="no_telepon" value="{{old('no_telepon')}}"></div>
+                                <div class="form-group"><label>Phone Number</label><input class="form-control" type="text" name="no_telepon" value="{{old('no_telepon')}}"></div>
                                 <p class="text-danger">
                                 @error('no_telepon') {{$message}}
                                 @enderror</p>
@@ -176,7 +176,7 @@ WebWedding
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <div class="form-group"><label>Pesan</label><textarea class="form-control" name="pesan"></textarea></div>
+                                <div class="form-group"><label>Your Message</label><textarea class="form-control" name="pesan"></textarea></div>
                             </div>
                         </div>
                         <div class="form-row">
@@ -197,7 +197,10 @@ WebWedding
                         <div class="form-row">
                             <div class="col">
                                 <div class="form-group text-center d-flex align-items-center justify-content-center">
-                                    <div><label class="d-xl-flex d-flex justify-content-center" style="font-weight: bold;">Guest&nbsp;</label></div><select  name="jmlh_orang" class="form-control ml-2" style="width: 150px;"><option value="1" selected="">1 Person</option><option value="2">2 Person</option><option value="3">3 Person</option><option value="4">4 Person</option><option value="5 ">5 Person</option><option value="6">Other</option></select></div>
+                                    <div><label class="d-xl-flex d-flex justify-content-center" style="font-weight: bold;">Guest&nbsp;</label></div><select  name="jmlh_orang" class="form-control ml-2" style="width: 150px;"><option value="1" selected="">1 Person</option><option value="2">2 Person</option><option value="3">3 Person</option>
+                                    
+                                    <!-- <option value="4">4 Person</option><option value="5 ">5 Person</option> -->
+                                    <option value="6">Other</option></select></div>
                             </div>
                         </div>
                     </div>

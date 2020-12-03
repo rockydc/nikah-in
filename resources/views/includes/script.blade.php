@@ -34,6 +34,12 @@
                             data:'email',name:'email'
                         },
                         {
+                            data:'status',name:'status'
+                        },
+                        {
+                            data:'jmlh_orang',name:'jmlh_orang'
+                        },
+                        {
                             data:'pesan',name:'pesan'
                         },
                        

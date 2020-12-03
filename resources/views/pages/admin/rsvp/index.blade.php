@@ -24,6 +24,8 @@
                                             <th>Nama</th>
                                             <th>no_telepon</th>
                                             <th>email</th>
+                                            <th>Status</th>
+                                            <th>Jmlh_orang</th>
                                             <th>pesan</th>
                                           
                                             
