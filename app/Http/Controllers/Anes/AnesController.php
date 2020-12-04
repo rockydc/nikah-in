@@ -45,4 +45,7 @@ class AnesController extends Controller
 
         
     }
+    public function guest(Request $request){
+        return view('layouts.guestbookAnes');
+    }
 }
