@@ -49,7 +49,7 @@
 
 
         <div>
-            <p style="font-family: 'Josefin Sans', sans-serif;"><em>© &nbsp;Rosedan Solution 2020. All rights reserved.</em><br></p>
+            <p style="font-family: 'Josefin Sans', sans-serif;"><em>© &nbsp;nikah-in.com 2020. All rights reserved.</em><br></p>
             <!-- <iframe src="{{url('aness/music/Isyana Sarasvati, Afgan, Rendy Pandugo - Heaven (Official Music Video).mp3')}}" allow="autoplay" style="display:none" id="iframeAudio">
             </iframe>  -->
             <button class="act-btn text-center"type="button" id="playbutton">
