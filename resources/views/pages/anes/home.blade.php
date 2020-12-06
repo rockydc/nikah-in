@@ -120,7 +120,7 @@ WebWedding
                 </div>
             </div>
             <p class="detail-venue" style="">Raya Jatiasih No. 8 Jatiasih,Bekasi</p>
-            <p class="msg-venue">We appologize in the implementation on holy matrimony will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
+            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">We appologize in the implementation on holy matrimony will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
         <div data-aos="zoom-in-up"
             class="text-center">
             <div>
@@ -137,7 +137,7 @@ WebWedding
                 </div>
             </div>
             <p class="detail-venue">Wibawa Mukti II no. 131, Jatiasih, Bekasi</p>
-            <p class="msg-venue">We would apply strict health protocol, so please wear your mask, sanitize your hand, and<br>please dont bring your kids (under 12 year)<br></p>
+            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">We would apply strictly health protocol.  Please always wear a mask, Wash your hand, Keeping a save distance, <br>Use hand sanitizer frequently</p>
         </div>
     </div>
     <div id="section-guest" class="section">
@@ -176,7 +176,7 @@ WebWedding
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <div class="form-group"><label>Your Message</label><textarea class="form-control" name="pesan"></textarea></div>
+                                <div class="form-group"><label>Wedding pray</label><textarea class="form-control" name="pesan"></textarea></div>
                             </div>
                         </div>
                         <div class="form-row">
