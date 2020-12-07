@@ -120,7 +120,7 @@ WebWedding
                 </div>
             </div>
             <p class="detail-venue" style="">Raya Jatiasih No. 8 Jatiasih,Bekasi</p>
-            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">We appologize in the implementation on holy matrimony will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
+            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;1">We appologize in the implementation on holy matrimony will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
         <div data-aos="zoom-in-up"
             class="text-center">
             <div>
