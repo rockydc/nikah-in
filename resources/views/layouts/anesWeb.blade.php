@@ -6,17 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Yohanes &amp; Nahomi</title>
     <meta name="description" content="Yohanes &amp; Nahomi Wedding">
-    <link rel="icon" type="image/png" sizes="500x500" href="{{url('aness/assets/img/icon.png')}}">
+    <link rel="icon" type="image/png" sizes="500x500" href="{{url('aness/assets/img/iconanes.jpeg')}}">
     <link rel="stylesheet" href="{{url('aness/assets/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Beth+Ellen">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Damion">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homemade+Apple">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Meddon">
+
     <link rel="stylesheet" href="{{url('aness/assets/fonts/font-awesome.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
     <link rel="stylesheet" href="{{url('aness/assets/css/styles.css')}}">
