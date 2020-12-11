@@ -30,7 +30,7 @@
 
             <!-- Nav Item - guest book -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('rsvp.index')}}">
+                <a class="nav-link" href="{{route('guestbook.index')}}">
                     <i class="fa fa-book"></i>
                     <span>Guest Book</span></a>
             </li>

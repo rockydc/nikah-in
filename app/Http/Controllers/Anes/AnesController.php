@@ -32,17 +32,18 @@ class AnesController extends Controller
                     'email'=>'required|email'
 
                 ]);
-
-                $data = rsvp_online::insert([
-                    'nama'=>$request->nama,
-                    'no_telepon'=>$request->no_telepon,
-                    'email'=>$request->email,
-                    'pesan'=>$request->pesan,
-                    'slug'=>Str::slug($request->nama),
-                    'status'=>$request->status,
-                    'jmlh_orang'=>$request->jmlh_orang,
-                    'created_at'=>Carbon::now()->setTimezone('Asia/Bangkok')
-                ]);
+          
+                $data = array(
+                    'nama'=>$request->post('nama'),
+                    'no_telepon'=>$request->post('no_telepon'),
+                    'email'=>$request->post('email'),
+                    'pesan'=>$request->post('pesan'),
+                    'slug'=>Str::slug($request->post('nama')),
+                    'status'=>$request->post('status'),
+                    'jmlh_orang'=>$request->post('jmlh_orang')
+                    
+                );
+                rsvp_online::create($data);
 
              
 
@@ -59,16 +60,15 @@ class AnesController extends Controller
             'no_telepon'=>'required|numeric'
 
         ]);
-
-        $data = guestbook_anes_model::insert([
-            'nama'=>$request->nama,
-            'no_telepon'=>$request->no_telepon,
-            'alamat'=>$request->alamat,
-            'kerabat'=>$request->kerabat,
-            'jmlh_orang'=>$request->jmlh_orang,
-            'created_at'=>Carbon::now()->setTimezone('Asia/Bangkok')
-        ]);
-
+     
+        $data = array(
+            'nama'=>$request->post('nama'),
+            'no_telepon'=>$request->post('no_telepon'),
+            'alamat'=>$request->post('alamat'),
+            'kerabat'=>$request->post('kerabat'),
+            'jmlh_orang'=>$request->post('jmlh_orang')
+        );
+        guestbook_anes_model::create($data);
         return redirect()->route('anesguest');
         
     }
