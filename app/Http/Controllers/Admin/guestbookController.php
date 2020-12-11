@@ -19,6 +19,6 @@ class guestbookController extends Controller
             if($request->ajax()){
                 return datatables()->of($items)->make(true);
             }
-        return view('pages.admin.guestbook.index',compact('items'));
+        return view('pages.admin.guest_book.index',compact('items'));
     }
 }

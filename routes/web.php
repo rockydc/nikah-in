@@ -26,6 +26,7 @@ Route::prefix('admin')
         ->name('dashboard');
 
         Route::resource('rsvp','rsvp_onlineController');
+        Route::resource('guestbook','guestbookController');
     });
 
 // Anes/*
