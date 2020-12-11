@@ -38,6 +38,8 @@ Route::prefix('anes-nahomi')
         ->name('anesStore');
         Route::get('/guestbook','AnesController@guest')
         ->name('anesguest');
+        Route::post('/gueststore','AnesController@gueststore')
+        ->name('gueststore');
     });
 
 
