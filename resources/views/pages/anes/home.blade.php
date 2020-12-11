@@ -244,7 +244,7 @@ WebWedding
                 <div class="bank-account">
 
                 <p><strong>BCA</strong> : 5210609743 <br>a.n S Johanes</p>
-                <p><strong>Permata</strong> : 413344748 <br>a.n Nahomi Lestari Manurung</p>
+                <p><strong>Permata</strong> : 4133447488 <br>a.n Nahomi Lestari Manurung</p>
                 </div>
                 
 
