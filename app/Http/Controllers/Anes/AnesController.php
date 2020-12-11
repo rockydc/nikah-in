@@ -65,6 +65,7 @@ class AnesController extends Controller
             'no_telepon'=>$request->no_telepon,
             'alamat'=>$request->alamat,
             'kerabat'=>$request->kerabat,
+            'jmlh_orang'=>$request->jmlh_orang,
             'created_at'=>Carbon::now()->setTimezone('Asia/Bangkok')
         ]);
 

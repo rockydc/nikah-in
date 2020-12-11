@@ -28,7 +28,14 @@
                 <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Nama</label><input name="nama" class="form-control" type="text"></div>
                 <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">No_Telepon</label><input name="no_telepon" class="form-control" type="text"></div>
                 <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Alamat</label><input name="alamat" class="form-control" type="text"></div>
-                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Kerabat</label><select name="kerabat" class="form-control" style="font-family: 'Josefin Sans', sans-serif;"><option value="keluarga pengantin Laki-Laki" selected="">Keluarga Pengantin Lelaki</option><option value="keluarga penganti Wanita">Keluarga Pengantin Wanita</option></select></div>
+                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Kerabat</label><select name="kerabat" class="form-control" style="font-family: 'Josefin Sans', sans-serif;"><option value="keluarga pengantin Laki-Laki" selected="">Keluarga Pengantin Lelaki</option><option value="keluarga penganti Wanita">Keluarga Pengantin Wanita</option></select>
+                
+                
+                </div>
+                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Jumlah Orang</label><select name="jmlh_orang" class="form-control" style="font-family: 'Josefin Sans', sans-serif;"><option value="1" selected="">1</option><option value="2">2</option><option value="3">3</option><option value="4">other</option></select>
+                
+                
+                </div>
                 <button
                     class="btn btn-primary text-center" type="submit">Send</button>
             </form>

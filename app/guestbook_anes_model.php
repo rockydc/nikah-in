@@ -12,7 +12,7 @@ class guestbook_anes_model extends Model
     protected $table='guestbook_tbl';
     public $timestamps = true;
     protected $fillable= [
-        'nama','no_telepon','alamat','kerabat','created_at','updated_at'
+        'nama','no_telepon','alamat','kerabat','jmlh_orang','created_at','updated_at'
     ];
 
     protected $hidden=[

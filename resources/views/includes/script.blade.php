@@ -1,5 +1,5 @@
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{ url ('backend/vendor/jquery/jquery.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="{{ url ('backend/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{ url ('backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Core plugin JavaScript-->
@@ -18,7 +18,6 @@
                     serverSide : true,
                     searching : true,
                     paging :true,
-
                     ajax : {
                         url: "{{ route('rsvp.index')}}",
                         type:'GET'
@@ -45,11 +44,9 @@
                        
                     ],
                     order:[[0,'asc']]
-
                     });
                   
                 });
-
                 </script>
     <!-- Page level plugins -->
  

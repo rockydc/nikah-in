@@ -17,14 +17,15 @@
                     <div class="row">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" width="100%" cellspacing="0" id="table_rsvp">
+                                <table class="table table-bordered" width="100%" cellspacing="0" id="table_guest">
                                     <thead>
                                         <tr>
                                            
                                             <th>Nama</th>
                                             <th>no_telepon</th>
-                                            <th>email</th>
-                                            <th>pesan</th>
+                                            <th>alamat</th>
+                                            <th>kerabat</th>
+                                            <th>jumlah_orang</th>
                                           
                                             
                                         </tr>

@@ -20,6 +20,7 @@ class GuestbookTbl extends Migration
             $table->string('no_telepon');
             $table->string('alamat');
             $table->string('kerabat');
+            $table->string('jmlh_orang');
             $table->timestamps();
         });
     }
