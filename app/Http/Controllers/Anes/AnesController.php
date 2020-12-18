@@ -73,7 +73,7 @@ class AnesController extends Controller
         guestbook_anes_model::create($data);
 
         
-        return redirect()->route('anesguest')->with('message','Successfully');
+        return redirect()->route('anesguest')->with('message','Data Insert Successfully');
         
     }
 }
