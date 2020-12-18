@@ -42,7 +42,12 @@
                 <p class="text-danger">
                                 @error('no_telepon') {{$message}}
                                 @enderror</p></div>
-                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Alamat</label><input name="alamat" class="form-control" type="text"></div>
+                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Alamat</label><input name="alamat" class="form-control" type="text">
+               
+                <p class="text-danger">
+                @error('alamat') {{$message}}
+                                @enderror</p>
+                </div>
                 <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Kerabat</label><select name="kerabat" class="form-control" style="font-family: 'Josefin Sans', sans-serif;"><option value="keluarga pengantin Laki-Laki" selected="">Keluarga Pengantin Lelaki</option><option value="keluarga penganti Wanita">Keluarga Pengantin Wanita</option></select>
                 
                 
