@@ -57,7 +57,8 @@ class AnesController extends Controller
     public function gueststore(Request $request){
         $request->validate([
             'nama'=>'required|string',
-            'no_telepon'=>'required|numeric'
+            'no_telepon'=>'required|numeric',
+            'alamat'=>'required'
 
         ]);
 
