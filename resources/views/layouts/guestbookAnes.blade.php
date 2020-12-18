@@ -23,10 +23,25 @@
     <div class="text-center container p-5 wrapper-guest">
         <h1 style="font-family: 'Josefin Sans', sans-serif;">Guest Book</h1>
         <div class="mt-5 container">
+
+                    @if(session()->has('message'))
+                <div class="alert alert-success">
+              
+                    {{ session()->get('message') }}
+                </div>
+            @endif
         <form action="{{route('gueststore')}}" method="post">
             @csrf 
-                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Nama</label><input name="nama" class="form-control" type="text"></div>
-                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">No_Telepon</label><input name="no_telepon" class="form-control" type="text"></div>
+                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Nama</label><input name="nama" class="form-control" type="text">
+                <p style="color:red;">
+                                @error('nama') {{$message}}
+                                @enderror
+                                </p>
+                </div>
+                <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">No_Telepon</label><input name="no_telepon" class="form-control" type="text">
+                <p class="text-danger">
+                                @error('no_telepon') {{$message}}
+                                @enderror</p></div>
                 <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Alamat</label><input name="alamat" class="form-control" type="text"></div>
                 <div class="form-group"><label style="font-family: 'Josefin Sans', sans-serif;">Kerabat</label><select name="kerabat" class="form-control" style="font-family: 'Josefin Sans', sans-serif;"><option value="keluarga pengantin Laki-Laki" selected="">Keluarga Pengantin Lelaki</option><option value="keluarga penganti Wanita">Keluarga Pengantin Wanita</option></select>
                 
@@ -49,6 +64,9 @@
     <script src="{{url('aness/assets/js/scrollchangecolor.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script>
+  $('div.alert').delay(2000).slideUp(500);
+</script>
+
 </body>
 
 </html>

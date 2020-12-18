@@ -60,6 +60,8 @@ class AnesController extends Controller
             'no_telepon'=>'required|numeric'
 
         ]);
+
+       
      
         $data = array(
             'nama'=>$request->post('nama'),
@@ -69,7 +71,9 @@ class AnesController extends Controller
             'jmlh_orang'=>$request->post('jmlh_orang')
         );
         guestbook_anes_model::create($data);
-        return redirect()->route('anesguest');
+
+        
+        return redirect()->route('anesguest')->with('message','Successfully');
         
     }
 }
