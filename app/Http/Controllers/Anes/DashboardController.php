@@ -19,8 +19,5 @@ class DashboardController extends Controller
             'guest'=>$guest
         ]);
 
-        
-
     }
-
 }

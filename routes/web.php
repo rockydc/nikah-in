@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    return redirect()->route('anes');
+    return view('pages.homepage');
+    // return redirect()->route('anes');
 });
 
 
@@ -27,7 +27,12 @@ Route::prefix('admin')
 
         Route::resource('rsvp','rsvp_onlineController');
         Route::resource('guestbook','guestbookController');
+
+
+
+        
     });
+
 
 // Anes/*
 Route::prefix('anes-nahomi')
@@ -41,7 +46,20 @@ Route::prefix('anes-nahomi')
         ->name('anesguest');
         Route::post('/gueststore','AnesController@gueststore')
         ->name('gueststore');
+        Route::prefix('admin')
+        ->middleware(['auth','admin'])
+        ->group(function(){
+            Route::get('/','AnesController@dashboard')
+            ->name('anesdashboard');
+    
+            Route::get('rsvp','AnesController@rsvp');
+            Route::get('guestbook','AnesController@guestbook');
+        });
+
+
     });
+
+
 
 
 Auth::routes();

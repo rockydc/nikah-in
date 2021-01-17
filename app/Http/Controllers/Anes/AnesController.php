@@ -77,4 +77,34 @@ class AnesController extends Controller
         return redirect()->route('anesguest')->with('message','Data Insert Successfully');
         
     }
+
+
+    public function dashboard(Request $request){
+
+        $users = 0;
+        $guest =0;
+        return view('pages.admin.dashboard',[
+            'users'=>$users,
+            'guest'=>$guest
+        ]);
+
+
+        
+    }
+    public function rsvp(Request $request){
+             
+        $items = rsvp_online::all();
+            if($request->ajax()){
+                return datatables()->of($items)->make(true);
+            }
+        return view('pages.admin.rsvp.index',compact('items'));
+    }
+
+    public function guestbook(Request $request){
+        $items = guestbook_anes_model::all();
+        if($request->ajax()){
+            return datatables()->of($items)->make(true);
+        }
+    return view('pages.admin.guest_book.index',compact('items'));
+    }
 }
