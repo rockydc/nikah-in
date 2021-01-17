@@ -81,8 +81,8 @@ class AnesController extends Controller
 
     public function dashboard(Request $request){
 
-        $users = 0;
-        $guest =0;
+        $users = rsvp_online::all()->sum('jmlh_orang');
+        $guest = guestbook_anes_model::all()->sum('jmlh_orang');
         return view('pages.admin.dashboard',[
             'users'=>$users,
             'guest'=>$guest
