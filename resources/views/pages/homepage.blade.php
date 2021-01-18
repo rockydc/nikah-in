@@ -1,6 +1,8 @@
 @extends('layouts.index')
 
-
+@section('title')
+Nikah-in - Home
+@endsection
 @section('content')
 <header class="section-header text-center">
         <div class="container header-wrap"><img class="tada animated" src="{{url('home/assets/img/Ilustrasi%20header%201.png')}}" style="width: 150px;height: 150px;">

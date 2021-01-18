@@ -16,6 +16,11 @@ Route::get('/', function () {
     // return redirect()->route('anes');
 });
 
+Route::get('/desain', function () {
+    return view('pages.desain');
+    // return redirect()->route('anes');
+});
+
 
 // Admin/*
 Route::prefix('admin')
