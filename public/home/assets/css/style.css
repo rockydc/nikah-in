@@ -28,7 +28,10 @@
   a {
     color: #29231E;
   }
-  
+  a:hover{
+    color:#29231E;
+    text-decoration: none;
+  }
   .cool-link {
     display: inline-block;
     color: #29231E;

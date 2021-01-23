@@ -102,48 +102,13 @@ Nikah-in - Home
         <div class="container features-wrap" style="padding-top: 0px;">
             <div class="features-content">
                 <div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-4" data-aos="fade-up" data-aos-duration="900" style="margin-top: 0px;">
-                            <div>
-                                <div class="wrapper-themes">
-                                    <div class="btn-wrap-themes"><a class="btn btn-primary view-themes d-none" role="button" id="btn-themes1" href="https://silent-cake-8261.bss.design/"><i class="fa fa-eye mr-2"></i>View themes</a></div><img id="themes1" src="{{url('home/assets/img/desain_sample.png')}}" loading="lazy">
-                                    <div class="top-left-content-desain"><img src="{{url('home/assets/img/ic_diamond_cover.svg')}}" style="width: 18px;height: 14px;"><span style="color: rgb(255,255,255);">Rekomendasi</span></div>
-                                </div>
-                                <div class="desain-content">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-7 col-lg-7 col-xl-8">
-                                            <p>Charles and Diana Themes<br></p>
-                                        </div>
-                                        <div class="col-sm-12 col-md-5 col-lg-4 col-xl-4">
-                                            <div class="likes-wrap"><img src="{{url('home/assets/img/ic_eyee_black.svg')}}" style="width: 24px;height: 24px;"><span>48</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-4" data-aos="fade-down" data-aos-duration="900" style="margin-top: 0px;">
-                            <div>
-                                <div class="wrapper-themes">
-                                    <div class="btn-wrap-themes"><a class="btn btn-primary view-themes d-none" role="button" id="btn-themes2" href="https://green-bread-6481.bss.design/"><i class="fa fa-eye mr-2"></i>View themes</a></div><img id="themes2" src="{{url('home/assets/img/design%20black%20diamonds.png')}}" loading="lazy">
-                                    <div class="top-left-content-desain"><img src="{{url('home/assets/img/ic_diamond_cover.svg')}}" style="width: 18px;height: 14px;"><span style="color: rgb(255,255,255);">Rekomendasi</span></div>
-                                </div>
-                                <div class="desain-content">
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-7 col-lg-7 col-xl-8">
-                                            <p>Charles and Diana Themes<br></p>
-                                        </div>
-                                        <div class="col-sm-12 col-md-5 col-lg-4 col-xl-4">
-                                            <div class="likes-wrap"><img src="{{url('home/assets/img/ic_eyee_black.svg')}}" style="width: 24px;height: 24px;"><span>48</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" id="getdesainhome">
+    
                     </div>
                     <!-- tombol tampilkan semua -->
-                    <!-- <div class="row" style="margin-top: 57px;">
-                        <div class="col d-flex align-items-center justify-content-center"><a data-bs-hover-animate="rubberBand" class="btn btn-design" href="desain.html" target="_top">Tampilkan semua</a></div>
-                    </div> -->
+                    <div class="row" style="margin-top: 57px;">
+                        <div class="col d-flex align-items-center justify-content-center"><a data-bs-hover-animate="rubberBand" class="btn btn-design" href="{{route('desainUser')}}" target="_top">Tampilkan semua</a></div>
+                    </div>
 
                     <!-- end tombol tampilkan semua -->
                 </div>
@@ -216,4 +181,6 @@ Nikah-in - Home
             </form>
         </div>
     </div>
+    <!-- <lottie-player src="{{url('home/Save the date.json')}}"  background="transparent"  speed="0.5"  style="width: 300px; height: 300px;"  autoplay></lottie-player> -->
+  
 @endsection

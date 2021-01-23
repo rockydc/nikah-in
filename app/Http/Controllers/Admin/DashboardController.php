@@ -12,9 +12,11 @@ class DashboardController extends Controller
 {
     //make code here
     public function index(Request $request){
-        $users = rsvp_online::all()->sum('jmlh_orang');
-        $guest = guestbook_anes_model::all()->sum('jmlh_orang');
-        return view('pages.admin.dashboard',[
+        // $users = rsvp_online::all()->sum('jmlh_orang');
+        // $guest = guestbook_anes_model::all()->sum('jmlh_orang');
+        $users=0;
+        $guest=0;
+        return view('pages.admin-home.dashboard',[
             'users'=>$users,
             'guest'=>$guest
         ]);

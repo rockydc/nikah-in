@@ -11,15 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.homepage');
-    // return redirect()->route('anes');
-});
+Route::get('/','HomeController@index')->name('home');
+Route::get('/getdatadesain','HomeController@getdata');
 
-Route::get('/desain', function () {
-    return view('pages.desain');
-    // return redirect()->route('anes');
-});
+
+Route::prefix("desain")
+    ->namespace('desain')
+    ->group(function(){
+        Route::get('/','DesainController@index')->name('desainUser');
+        Route::get('/getdata','DesainController@getdata')->name('desainGet');
+        
+        Route::get('/preview/{nama}','DesainController@preview')->name('previewdesain');
+        Route::get('/template/{nama}','DesainController@template');
+    
+    });
+
 
 
 // Admin/*
@@ -28,13 +34,10 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->group(function(){
         Route::get('/','DashboardController@index')
-        ->name('dashboard');
+        ->name('dashboardhome');
 
-        Route::resource('rsvp','rsvp_onlineController');
-        Route::resource('guestbook','guestbookController');
-
-
-
+        Route::resource('desain','DesainController');
+        Route::resource('message','MessageController');
         
     });
 

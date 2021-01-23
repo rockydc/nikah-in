@@ -10,6 +10,11 @@
 @yield('content')
 @include('includes.home.footer')
 @include('includes.home.script')
+
+
 </body>
 
+
+
 </html>
+
