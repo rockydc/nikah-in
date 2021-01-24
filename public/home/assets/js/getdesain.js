@@ -33,6 +33,7 @@ function initDataDesain(){
                         <div style="margin-top: 45px;">
                             <p style="font-weight: 700;">${nama}</p>
                             <p>${caption.substring(0,100)}</p>
+                            <p> <a class="cool-link custom-link" href="../desain/preview/${nama}">selengkapnya <i class="fa fa-chevron-right ml-4"></i></a> </p>
                         </div>
                     </div>
                 </div>
