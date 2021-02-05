@@ -20,7 +20,7 @@
                     paging :true,
 
                     ajax : {
-                        url: "{{ route('rsvp.index')}}",
+                        url: "{{ route('datarsvp')}}",
                         type:'GET'
                     },
                     columns:[
@@ -61,7 +61,7 @@
                     paging :true,
 
                     ajax : {
-                        url: "{{ route('guestbook.index')}}",
+                        url: "{{ route('datarsvp')}}",
                         type:'GET'
                     },
                     columns:[

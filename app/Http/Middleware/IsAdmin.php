@@ -17,7 +17,15 @@ class IsAdmin
     {
         if(Auth::user() && Auth::user()->roles == 'ADMIN'){
             return $next($request);
+            // return redirect(route('dashboardhome'));
+
         }
-        return $redirect('/');
+        elseif(Auth::user() && Auth::user()-> roles =='CLIENT'){
+            return redirect(url('anes-nahomi/admin'));
+        }
+        // if(Auth::user()&& Auth::user()->roles == 'CLIENT'){
+        //     return $next($request);
+        // }
+        return redirect(url('/'));
     }
 }

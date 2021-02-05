@@ -16,6 +16,35 @@
 </head>
 
 <body>
+<audio loop id="myaudio" type="audio/mp3">
+    <source src="{{url('template/jasmine/assets/music/Isyana Sarasvati, Afgan, Rendy Pandugo - Heaven (Official Music Video).mp3')}}">
+</audio>
+<div class="modal" role="dialog" tabindex="-1" id="myModal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="section-modal"><img class="img-header" src="{{url('template/jasmine/assets/img/foto-bg-story3-mobile.png')}}" />
+                    <div class="mt-4">
+                        <p class="text-center">Wedding of<br /></p>
+                        <h1>Anes &amp; Nahomi<br /></h1>
+                        <div class="d-flex justify-content-center">
+                            <div class="date-wrapper">
+                                <p>19</p>
+                                <p>.</p>
+                                <p>12</p>
+                                <p>.</p>
+                                <p>30</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div><img src="{{url('template/jasmine/assets/img/fluent_music-note-2-24-filled.svg')}}" /><span class="ml-3">Christina Perri - A Thousand Years<br /></span>
+                        <div class="d-flex justify-content-center"><a id="btn-open" class="btn btn-buka" href="#">Buka Undangan</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <nav class="navbar navbar-light navbar-expand-md sticky-top">
         <div class="container-fluid"><a class="navbar-brand" href="https://nikah-in.com"><img class="mr-2" src="{{url('template/jasmine/assets/img/Nikahin-removebg-preview.png')}}" style="width: 32px;height: 32px;">Nikah-in</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -254,10 +283,12 @@
             <p class="text-center">© Copyright Nikah-in. 2021. All Rights Reserved.<br></p>
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="{{url('template/jasmine/assets/js/script.min.js')}}"></script>
+    <script src="{{url('template/jasmine/assets/js/page.js')}}"></script>
 </body>
 
 </html>

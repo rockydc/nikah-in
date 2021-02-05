@@ -23,15 +23,24 @@ function initDataDesain(){
                 const nama = row.nama;
                 const imgbg = row.imgbg;
                 const caption = row.deskripsi;
+                const views = row.views;
     
                 content += `
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 pt-4">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 pt-4">
                     <div>
                         <div class="view-wrapper" onmouseover="cardhover(this)" onmouseout="normalImg(this)">
                             <div id="btn-view" class="btn-view-desain-wrap" style="padding: 0px;margin-top: -23px;"><a id="view-before" class="btn btn-view d-none" href="../desain/preview/${nama}"><img class="mr-3" src="../home/assets/img/eye_ic.png" style="width: 17px;height: 12px;" />View themes</a></div><img id="img-content" class="img-desain" src="../storage/${imgbg}" />
                         </div>
                         <div style="margin-top: 45px;">
-                            <p style="font-weight: 700;">${nama}</p>
+                                <div class="row mb-5" >
+                                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-9">
+                                    <p style="font-weight:700;">${nama}<br></p>
+                                </div>
+                                <div class=" col-sm-12 col-md-5 col-lg-4 col-xl-3 text-center">
+                                    <div class="likes-wrap"><img src="home/assets/img/ic_eyee_black.svg" style="width: 24px;height: 24px;"><span class="ml-3">${views}</span></div>
+                                </div>
+                            </div>
+                           
                             <p>${caption.substring(0,100)}</p>
                             <p> <a class="cool-link custom-link" href="../desain/preview/${nama}">selengkapnya <i class="fa fa-chevron-right ml-4"></i></a> </p>
                         </div>
@@ -69,12 +78,13 @@ function initDataHome(){
              
                 const nama = row.nama;
                 const imgbg = row.imgbg;
-                console.log(row);
+                const views = row.views;
+                
                 content += `
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-4" data-aos="fade-up" data-aos-duration="900" style="margin-top: 0px;">
                 <div>
                     <div class="wrapper-themes"onmouseover="cardhover(this)" onmouseout="normalImg(this)">
-                        <div class="btn-wrap-themes"><a class="btn btn-view btn-primary view-themes d-none" role="button" id="btn-themes" href="desain/preview/${nama}"><i class="fa fa-eye mr-2"></i>View themes</a></div><img class="img-desain-home" style="height:519px; object-fit:cover; object-position:center;" src="Storage/${imgbg}" loading="lazy">
+                        <div class="btn-wrap-themes"><a class="btn btn-view btn-primary view-themes d-none" role="button" id="btn-themes" href="desain/preview/${nama}/view/${views}"><i class="fa fa-eye mr-2"></i>View themes</a></div><img class="img-desain-home" style="height:519px; object-fit:cover; object-position:center;" src="Storage/${imgbg}" loading="lazy">
                         <div class="top-left-content-desain"><img src="home/assets/img/ic_diamond_cover.svg" style="width: 18px;height: 14px;"><span style="color: rgb(255,255,255);">Rekomendasi</span></div>
                     </div>
                     <div class="desain-content">
@@ -83,7 +93,7 @@ function initDataHome(){
                                 <p>${nama}<br></p>
                             </div>
                             <div class="col-sm-12 col-md-5 col-lg-4 col-xl-4">
-                                <div class="likes-wrap"><img src="home/assets/img/ic_eyee_black.svg" style="width: 24px;height: 24px;"><span>48</span></div>
+                                <div class="likes-wrap"><img src="home/assets/img/ic_eyee_black.svg" style="width: 24px;height: 24px;"><span>${views}</span></div>
                             </div>
                         </div>
                     </div>

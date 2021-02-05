@@ -10,6 +10,7 @@ use App\Http\Requests\Admin\rsvp_onlineRequest;
 use Illuminate\Support\Str;
 use Validator;
 use Carbon\Carbon;
+use PDF;
 
 class AnesController extends Controller
 {
@@ -47,7 +48,7 @@ class AnesController extends Controller
 
              
 
-                return redirect()->route('anes');
+                return redirect()->route('success');
 
         
     }
@@ -81,8 +82,8 @@ class AnesController extends Controller
 
     public function dashboard(Request $request){
 
-        $users = rsvp_online::all()->sum('jmlh_orang');
-        $guest = guestbook_anes_model::all()->sum('jmlh_orang');
+        $users = 0;
+        $guest = 0;
         return view('pages.admin.dashboard',[
             'users'=>$users,
             'guest'=>$guest
@@ -97,7 +98,8 @@ class AnesController extends Controller
             if($request->ajax()){
                 return datatables()->of($items)->make(true);
             }
-        return view('pages.admin.rsvp.index',compact('items'));
+        // return view('pages.admin.rsvp.index',compact('items'));
+         return view('layouts.user.data-rsvp',compact('items'));
     }
 
     public function guestbook(Request $request){
@@ -106,5 +108,12 @@ class AnesController extends Controller
             return datatables()->of($items)->make(true);
         }
     return view('pages.admin.guest_book.index',compact('items'));
+    }
+
+    public function cetakpdf(){
+
+        $items = rsvp_online::all();
+        $pdf = PDF::loadview('layouts.user.data-rsvp_pdf',['items'=>$items]);
+        return $pdf->download('laporan-data-rsvp.pdf');
     }
 }

@@ -17,7 +17,7 @@ class DesainController extends Controller
     {
         //
         $items = DesainModel::all();
-
+        
         
         return view('pages.admin-home.desain',
     
@@ -67,6 +67,8 @@ class DesainController extends Controller
     public function show($id)
     {
         //
+
+
     }
 
     /**

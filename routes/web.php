@@ -13,6 +13,9 @@
 
 Route::get('/','HomeController@index')->name('home');
 Route::get('/getdatadesain','HomeController@getdata');
+Route::get('/rsvpsucces',function(){
+    return view ('layouts.user.rsvpsuccespage');
+})->name('success');
 
 
 Route::prefix("desain")
@@ -21,7 +24,7 @@ Route::prefix("desain")
         Route::get('/','DesainController@index')->name('desainUser');
         Route::get('/getdata','DesainController@getdata')->name('desainGet');
         
-        Route::get('/preview/{nama}','DesainController@preview')->name('previewdesain');
+        Route::get('/preview/{nama}/view/{views}','DesainController@preview')->name('previewdesain');
         Route::get('/template/{nama}','DesainController@template');
     
     });
@@ -54,14 +57,16 @@ Route::prefix('anes-nahomi')
         ->name('anesguest');
         Route::post('/gueststore','AnesController@gueststore')
         ->name('gueststore');
+        Route::get('data-rsvp','AnesController@rsvp')->name('datarsvp');
+        Route::get('data-rsvp/cetakpdf','AnesController@cetakpdf')->name('anescetak');
         Route::prefix('admin')
-        ->middleware(['auth','admin'])
+        ->middleware(['auth'])
         ->group(function(){
             Route::get('/','AnesController@dashboard')
             ->name('anesdashboard');
     
-            Route::get('rsvp','AnesController@rsvp');
-            Route::get('guestbook','AnesController@guestbook');
+            // Route::get('rsvp','AnesController@rsvp')->name('anesrsvp');
+            Route::get('guestbook','AnesController@guestbook')->name('anesguestbook');
         });
 
 
