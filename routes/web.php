@@ -64,8 +64,8 @@ Route::prefix('anes-nahomi')
         ->group(function(){
             Route::get('/','AnesController@dashboard')
             ->name('anesdashboard');
-    
-            // Route::get('rsvp','AnesController@rsvp')->name('anesrsvp');
+            Route::get('/getrsvp','AnesController@getrsvp');
+            Route::get('/rsvp','AnesController@rsvp')->name('anesrsvp');
             Route::get('guestbook','AnesController@guestbook')->name('anesguestbook');
         });
 

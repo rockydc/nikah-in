@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Admin - Dashboard </title>
+    
 
 @include('includes.style')
 
@@ -75,7 +76,9 @@
     </div>
 
 @include('includes.script')
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="{{url('backend/js/bs-init.js')}}"></script>
+<script src="{{url('backend/js/demo/chart-pie-demo.js')}}"></script>
 </body>
 
 </html>

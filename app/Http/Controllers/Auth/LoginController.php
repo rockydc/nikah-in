@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use  Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     /*
@@ -47,10 +47,19 @@ use AuthenticatesUsers {
     logout as doLogout;
 }
 public function logout(Request $request)
-{
-    $this->doLogout($request);
+{  
+    if(Auth::user() && Auth::user()->roles == 'ADMIN'){
+        $this->doLogout($request);
+        return redirect()->route('home');
+        // return redirect(route('dashboardhome'));
 
-    return redirect()->route('anes');
+    }else{
+        $this->doLogout($request);
+
+        return redirect()->route('anes');
+    }
+
+   
 }
 
     

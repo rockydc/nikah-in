@@ -92,6 +92,10 @@ class AnesController extends Controller
 
         
     }
+    public function getrsvp(){
+        $items = rsvp_online::get();
+        return json_encode(array('data'=>$items));
+    }
     public function rsvp(Request $request){
              
         $items = rsvp_online::all();
