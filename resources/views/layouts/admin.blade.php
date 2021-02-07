@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>Admin - Dashboard </title>
     
 
@@ -76,9 +76,7 @@
     </div>
 
 @include('includes.script')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-<script src="{{url('backend/js/bs-init.js')}}"></script>
-<script src="{{url('backend/js/demo/chart-pie-demo.js')}}"></script>
+
 </body>
 
 </html>

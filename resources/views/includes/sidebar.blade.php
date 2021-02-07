@@ -22,19 +22,19 @@
 
             <!-- Nav Item - rsvp -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('anesrsvp')}}">
                     <i class="fa fa-inbox"></i>
                     <span>RSVP Online</span></a>
             </li>
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - guest book -->
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a class="nav-link" href="#">
                     <i class="fa fa-book"></i>
                     <span>Guest Book</span></a>
             </li>
-            
+             -->
             <!-- Divider -->
             <hr class="sidebar-divider">
           

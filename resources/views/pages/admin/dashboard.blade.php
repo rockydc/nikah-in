@@ -19,7 +19,8 @@
                         <div class="card shadow mb-4">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h6 class="text-primary font-weight-bold m-0">Komentar Terbaru</h6>
-                                <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                <div class="dropdown no-arrow">
+                                <!-- <button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button> -->
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                         <p class="text-center dropdown-header">Menu</p><a class="dropdown-item" href="#">Lihat Semua</a>
                                         <!-- <a class="dropdown-item" href="#"> Another action</a> -->
@@ -27,36 +28,21 @@
                                     </div>
                                 </div>
                             </div>
-
+                            @foreach($items as $item)
                             <div class="d-flex pt-3 pb-3 pl-3 pr-3">
                             <img src="{{url('template/jasmine/assets/img/profil_ic.svg')}}" width="100" height="100">
                             <div class="ml-4 pt-2">
-                                <p style="font-size:18px;font-weight:800;color:black;">Ridwan</p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
-                                <p style="font-size:12px;">2020-11-16 06:46:01</p>
+                                <p style="font-size:18px;font-weight:800;color:black;">{{$item->nama}}</p>
+                                <p>{{$item->pesan}}</p>
+                                <p style="font-size:12px;">{{$item->updated_at}}</p>
                             </div>
                             </div>
 
-                            <div class="d-flex pt-3 pb-3 pl-3">
-                            <img src="{{url('template/jasmine/assets/img/profil_ic.svg')}}" width="100" height="100">
-                            <div class="ml-4 pt-2">
-                                <p style="font-size:18px;font-weight:800;color:black;">Ridwan</p>
-                                <p>mantap</p>
-                                <p style="font-size:12px;">2020-11-16 06:46:01</p>
-                            </div>
-                            </div>
+  
+                            @endforeach
+           
 
-                            
-                            <div class="d-flex pt-3 pb-3 pl-3 pr-3">
-                            <img src="{{url('template/jasmine/assets/img/profil_ic.svg')}}" width="100" height="100">
-                            <div class="ml-4 pt-2">
-                                <p style="font-size:18px;font-weight:800;color:black;">Ridwan</p>
-                                <p>mantap</p>
-                                <p style="font-size:12px;">2020-11-16 06:46:01</p>
-                            </div>
-                            </div>
-
-                            
+                            <div class="col d-flex align-items-center justify-content-center mb-4"><a style="color:black;" href="{{route('anesrsvp')}}">Lihat Semua</a></div>
 
                         </div>
                         </div>
@@ -64,7 +50,8 @@
                         <div class="card shadow mb-4">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h6 class="text-primary font-weight-bold m-0">Kehadiran</h6>
-                                <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                <div class="dropdown no-arrow">
+                                <!-- <button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button> -->
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in">
                                         <p class="text-center dropdown-header">Menu</p><a class="dropdown-item" href="#">Lihat Semua</a>
                                         <!-- <a class="dropdown-item" href="#"> Another action</a> -->

@@ -82,11 +82,14 @@ class AnesController extends Controller
 
     public function dashboard(Request $request){
 
-        $users = 0;
-        $guest = 0;
+        $items = rsvp_online::orderBy('id','desc')
+        ->skip(0)
+        ->take(3)
+        ->get();
+        // return json_encode(array('data'=>$items));
+      
         return view('pages.admin.dashboard',[
-            'users'=>$users,
-            'guest'=>$guest
+            'items'=>$items
         ]);
 
 
@@ -96,14 +99,15 @@ class AnesController extends Controller
         $items = rsvp_online::get();
         return json_encode(array('data'=>$items));
     }
+    
     public function rsvp(Request $request){
              
         $items = rsvp_online::all();
             if($request->ajax()){
                 return datatables()->of($items)->make(true);
             }
-        // return view('pages.admin.rsvp.index',compact('items'));
-         return view('layouts.user.data-rsvp',compact('items'));
+        return view('pages.admin.rsvp.index',compact('items'));
+        //  return view('layouts.user.data-rsvp',compact('items'));
     }
 
     public function guestbook(Request $request){
