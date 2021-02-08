@@ -2,6 +2,8 @@
 Chart.defaults.global.defaultFontColor = '#858796';
 let attend = 0;
 let notattend = 0;
+let jmlh_orang_attend = 0;
+let jmlh_orang_notattend = 0
 $.ajax({
     type:"GET",
     url:"../anes-nahomi/admin/getrsvp",
@@ -14,13 +16,22 @@ $.ajax({
         const result  = response.data
         result.forEach(function(data){
           
+         
+
            if(data.status == 'attend'){
-               attend = attend + 1
+              jmlh_orang_attend= jmlh_orang_attend +Number(data.jmlh_orang)
+               
+               
            }else{
-               notattend = notattend + 1
+            jmlh_orang_notattend = jmlh_orang_notattend + Number(data.jmlh_orang)
+         
            }
- 
+        
+
         })
+        attend = attend+jmlh_orang_attend
+        notattend = notattend+jmlh_orang_notattend
+    
     }
   
 }).done(function(data){
