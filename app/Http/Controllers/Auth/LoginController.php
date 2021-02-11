@@ -42,7 +42,7 @@ class LoginController extends Controller
 
 
   
-protected $redirectAfterLogout = 'anes';
+protected $redirectAfterLogout = '/';
 use AuthenticatesUsers {
     logout as doLogout;
 }

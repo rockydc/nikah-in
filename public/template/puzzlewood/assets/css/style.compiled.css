@@ -1,0 +1,426 @@
+* {
+  scroll-behavior: smooth;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+h1 {
+  color: #29231E;
+}
+
+p {
+  color: #29231E;
+}
+
+span {
+  color: #29231E;
+}
+
+a {
+  color: #29231E;
+}
+
+.cool-link {
+  display: inline-block;
+  color: #29231E;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 65%;
+}
+
+.navbar {
+  font-family: montserrat, sans-serif;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+.navbar .navbar-brand {
+  padding-top: 10px;
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.navbar .nav {
+  margin-right: 50px;
+  font-size: 14px;
+}
+.navbar .nav .nav-item {
+  margin-left: 34px;
+}
+.navbar .nav .nav-item a {
+  color: #29231E;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .navbar .nav .nav-item .active {
+    border: none;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .navbar .navbar-brand {
+    margin-left: 0px;
+  }
+  .navbar .nav {
+    margin: 0px;
+  }
+  .navbar .nav .nav-item {
+    margin-left: 20px;
+  }
+}
+
+header {
+  height: 734px;
+  background: url("../../assets/img/header_bg.png") center/cover;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  background-attachment: fixed;
+}
+header .header-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .header-wrap img {
+  position: absolute;
+}
+header .header-wrap .pol-1 {
+  width: 273px;
+  height: 273px;
+}
+header .header-wrap p {
+  color: white;
+}
+header .header-wrap h1 {
+  color: white;
+  font-family: Playfair display, sans-serif;
+  font-size: 100px;
+}
+header .header-wrap span {
+  font-family: Playfair display, sans-serif;
+  color: white;
+}
+header .header-wrap .date-wrap {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-profile {
+  background-color: #E4DEB4;
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.section-profile p {
+  font-family: "Playfair Display", serif;
+}
+.section-profile .p-heading {
+  font-size: 35px;
+  margin-bottom: 100px;
+}
+.section-profile .profile-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .section-profile .profile-wrapper {
+    width: 100%;
+  }
+  .section-profile .p-heading {
+    font-size: 25px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .section-profile .profile-wrapper {
+    width: 100%;
+  }
+}
+
+.section-countdown {
+  background: url("../../assets/img/Mask%20Group.png");
+  padding-top: 111px;
+  padding-bottom: 140px;
+  background-color: #FAF7E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-countdown .wrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-countdown .countdown-wrapper {
+  width: 320px;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+.section-countdown .text-waktu {
+  font-size: 30px;
+  margin: 0px;
+  font-weight: 700;
+}
+.section-countdown .text-keterangan {
+  margin: 0px;
+  font-size: 18px;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .section-countdown .countdown-wrapper {
+    width: 250px;
+  }
+  .section-countdown .wrapper {
+    width: 100%;
+  }
+  .section-countdown .text-waktu {
+    font-size: 25px;
+  }
+}
+
+.text-title {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+}
+
+.section-venue {
+  overflow-x: hidden;
+  padding-bottom: 250px;
+  position: relative;
+}
+.section-venue .bungakiri {
+  position: absolute;
+  top: 8%;
+  width: 400px;
+  height: 400px;
+  left: -5%;
+}
+.section-venue .bungakanan {
+  position: absolute;
+  top: 8%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+}
+.section-venue .content-venue {
+  width: 70%;
+}
+.section-venue .btn-direction {
+  background-color: #D4AF37;
+  border: none;
+  text-decoration: none;
+  color: white;
+  width: 230px;
+  padding: 10px 0px;
+}
+.section-venue .embed-responsive-item {
+  width: 550px;
+  height: 300px;
+}
+.section-venue .form-wrapper {
+  margin-top: 200px;
+  width: 60%;
+}
+.section-venue .form-wrapper button {
+  background-color: #d4af37;
+  border: none;
+  width: 200px;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .section-venue .bungakiri {
+    position: absolute;
+    top: 900px;
+    width: 200px;
+    height: 200px;
+  }
+  .section-venue .bungakanan {
+    position: absolute;
+    top: 900px;
+    width: 200px;
+    height: 200px;
+  }
+  .section-venue .embed-responsive-item {
+    width: 300px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .section-venue .bungakiri {
+    position: absolute;
+    top: 25%;
+    width: 300px;
+    height: 300px;
+  }
+  .section-venue .bungakanan {
+    position: absolute;
+    top: 25%;
+    width: 300px;
+    height: 300px;
+  }
+  .section-venue .embed-responsive-item {
+    width: 350px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 600px) {
+  header {
+    background: url("../../assets/img/header_bg_mobile.png") center/cover;
+  }
+
+  .text-title {
+    font-size: 24px;
+  }
+
+  .section-countdown {
+    padding-bottom: 60px;
+    padding-top: 55px;
+  }
+}
+.section-gift {
+  background-color: #EAECF4;
+  padding-top: 97px;
+  height: 700px;
+}
+.section-gift .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section-gift .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.section-gift .content-wrapper .items {
+  position: absolute;
+}
+.section-gift .content-wrapper .amplop-ats {
+  top: 10%;
+}
+.section-gift .content-wrapper .kertas {
+  top: 0px;
+}
+.section-gift .content-wrapper .kertas:hover {
+  top: -60px;
+}
+.section-gift .content-wrapper .amplop-bwh {
+  top: 210px;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .section-gift .content-wrapper {
+    width: 90%;
+  }
+  .section-gift .content-wrapper .amplop-ats {
+    width: 300px;
+    top: 0;
+  }
+  .section-gift .content-wrapper .kertas {
+    width: 250px;
+    top: -30px;
+  }
+  .section-gift .content-wrapper .kertas:hover {
+    top: -40px;
+  }
+  .section-gift .content-wrapper .amplop-bwh {
+    width: 300px;
+    top: 70px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .section-gift .content-wrapper {
+    width: 90%;
+  }
+  .section-gift .content-wrapper .amplop-ats {
+    width: 550px;
+    top: 10%;
+  }
+  .section-gift .content-wrapper .kertas {
+    width: 400px;
+    top: -40px;
+  }
+  .section-gift .content-wrapper .kertas:hover {
+    top: -50px;
+  }
+  .section-gift .content-wrapper .amplop-bwh {
+    width: 550px;
+    top: 140px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 600px) {
+  .section-gift {
+    height: 420px;
+  }
+  .section-gift p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .section-gift {
+    height: 550px;
+  }
+  .section-gift p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.section-ucapan {
+  padding-top: 85px;
+  padding-bottom: 239px;
+}
+.section-ucapan img {
+  width: 50px;
+  height: 50px;
+}
+.section-ucapan .ucapan-wrapper {
+  padding-top: 40px;
+  width: 50%;
+}
+.section-ucapan .content-ucapan {
+  margin-top: 1.625rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+}
+.section-ucapan .content-ucapan .text-time {
+  font-size: 12px;
+}
+.section-ucapan .content-ucapan p {
+  margin-bottom: 0;
+}
+.section-ucapan .content-ucapan h1 {
+  font-size: 30px;
+}
+@media (min-width: 0) and (max-width: 600px) {
+  .section-ucapan h1 {
+    font-size: 30px;
+  }
+  .section-ucapan img {
+    width: 24px;
+    height: 24px;
+  }
+  .section-ucapan .ucapan-wrapper {
+    width: 80%;
+  }
+  .section-ucapan .ucapan-wrapper h1 {
+    font-size: 18px;
+  }
+}

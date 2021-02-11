@@ -24,7 +24,7 @@ Route::prefix("desain")
         Route::get('/','DesainController@index')->name('desainUser');
         Route::get('/getdata','DesainController@getdata')->name('desainGet');
         
-        Route::get('/preview/{nama}/view/{views}','DesainController@preview')->name('previewdesain');
+        Route::get('/preview/{nama}/view/{view}','DesainController@preview');
         Route::get('/template/{nama}','DesainController@template');
     
     });

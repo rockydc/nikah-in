@@ -3,7 +3,7 @@ Chart.defaults.global.defaultFontColor = '#858796';
 let attend = 0;
 let notattend = 0;
 let jmlh_orang_attend = 0;
-let jmlh_orang_notattend = 0
+let jmlh_orang_notattend = 0;
 $.ajax({
     type:"GET",
     url:"../anes-nahomi/admin/getrsvp",
