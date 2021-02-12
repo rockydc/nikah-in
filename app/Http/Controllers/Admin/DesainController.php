@@ -102,7 +102,9 @@ class DesainController extends Controller
         $data['imgprev'] = $request->file('imgprev')->store(
             'backend/img/desain','public'
         );
+        
         $item->update($data);
+        
 
         return redirect()->route('desain.index');
     }

@@ -16,10 +16,12 @@
                 let id = $(this).data('target-id');
                 let nama = $(this).data('nama');
                 let deskripsi= $(this).data('caption');
+                let views  = $(this).data('views');
                 $(".modal-body #id_desain").val(id);
                 $(".modal-body #namadesain").val(nama);
                 $(".modal-body #deskripsi").val(deskripsi);
-                console.log(deskripsi)
+                $(".modal-body #jml_views").val(views);
+                console.log(views)
 });
             });
 

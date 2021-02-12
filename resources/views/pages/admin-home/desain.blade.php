@@ -44,7 +44,7 @@
                     <div>
 
 
-                    <a data-target="#editDesain" data-toggle="modal" data-caption ="{{$item->deskripsi}}"data-nama="{{$item->nama}}" data-target-id="{{$item->id}}" class="tomboledit btn btn-info">
+                    <a data-target="#editDesain" data-toggle="modal" data-caption ="{{$item->deskripsi}}"data-nama="{{$item->nama}}" data-views ="{{$item->views}}"data-target-id="{{$item->id}}" class="tomboledit btn btn-info">
 
 
                     <i class="fa fa-edit"></i>
@@ -111,13 +111,14 @@
                     @csrf
                     <input class="form-control mt-2" type="text" id="id_desain" name="id" placeholder="nama desain"
                     value="" readonly />
+
                     <label class="mr-3">Nama Tema</label>
                     <input class="form-control mt-2" type="text" id="namadesain" name="nama" placeholder="nama desain"
                     value="" />
                     <label class="mr-3">deskripsi</label>
                     <textarea  id="deskripsi" name="deskripsi" class="form-control" rows="5"></textarea>      
-                    <input class="form-control mt-4" type="text" name="views" placeholder="nama desain"
-                    value="" hidden />
+                    <input class="form-control mt-4" type="text"id="jml_views" name="views" placeholder="nama desain"
+                    value="" readonly />
                     
                  
                         <div class="form-group d-flex flex-column mt-4"><label class="mr-3">Image - bg</label>

@@ -1,0 +1,452 @@
+*{
+    scroll-behavior: smooth;
+    padding:0px;
+    margin:0px;
+    font-family:playfair Display,sans-serif;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+  
+}
+$black:#29231E;
+$bp-sm:600px;
+$bp-md:768px;
+$bp-L:992px;
+$bp-XL:1200px;
+h1{
+    color:$black;
+}
+p{
+    color:$black;
+}
+span{
+    color:$black;
+}
+a{
+    color:$black;
+}
+@mixin mobile{
+    @media (min-width:0) and (max-width:#{$bp-sm})
+    {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width:$bp-sm+1px) and (max-width:#{$bp-md})
+    {
+        @content;
+    }
+}
+@mixin dekstop {
+    @media (min-width:$bp-md+1px) and(max-width:#{$bp-L}){
+        @content
+    }
+        
+}
+@mixin superdesktop{
+    @media(min-width:$bp-L+1px) and(max-width:#{$bp-XL}){
+        @content
+    }
+}
+.cool-link{
+        
+        display:inline-block;
+        color:$black;
+        text-decoration:none;
+    
+        }
+.cool-link::after{
+        content: '';
+        display: block;
+        width: 0px;
+        height: 1px;
+        background: #000;
+        transition: width .3s;
+        }
+.cool-link:hover::after{
+        width:65%;
+        }
+        
+
+header{
+     background: url("header 2x.png") center / cover no-repeat;
+        background-attachment:fixed;
+        height:734px;
+        .title-section-header{
+         position:absolute;
+         bottom:50%;
+        }
+        h1{
+            font-size:45px;
+        }
+     
+        .text-date{
+            letter-spacing:8px;
+            font-size:24px;
+        }
+        .date-wrapper{
+            display:flex;
+            justify-content:space-between;
+        }
+    }
+
+.section-profile{
+    padding-top:108px;
+    padding-bottom:66px;
+    .profile-wrapper{
+        img{
+            width:100%;
+        }
+        .text-name{
+            font-size:35px;
+        }
+        width:70%;
+    }
+    .text-dan{
+       font-size: 100px;
+    }
+    
+}
+
+.section-the-date{
+    background: url("bg-save-the-date.png");
+    height:570px;
+    padding-top:47px;
+    .date-wrapper{
+        display:flex;
+        justify-content:start;
+        align-items:center;
+        flex-direction:column;
+        width:60%;
+        height:523px;
+        background: linear-gradient(179.99deg, #FFFFFF 55.93%, #EDE4D2 109.19%, #D3BE94 126.36%, #BC9D5D 149.12%);
+        border-radius: 10px 10px 0px 0px;
+    }
+    p{
+        font-family:montserrat,sans-serif;
+        text-align:center;
+    }
+    .text-date{
+        font-weight:550;
+        font-size:35px;
+    }
+    .text-caption{
+        font-size:18px;
+    }
+    .countdown-wrapper{
+        padding-top:110px;
+        width:60%;
+        display:flex;
+        justify-content:space-between;
+    }
+    @include mobile{
+        
+    }
+}
+.section-venue{
+    padding-top:190px;
+    padding-bottom:190px;
+    .btn-direction{
+        font-family:montserrat,sans-serif;
+        padding:15px 0;
+        width:230px;
+        background-color:#D4AF37;
+        color:white;
+        border-radius:5px;
+    }
+    
+    
+}
+
+//section galeri
+.section-galeri{
+    padding-top:170px;
+    padding-bottom:130px;
+    .gallery-wrap{
+ 
+        img{
+           width:100%; 
+        }
+        .embed-responsive-item{
+            width:500px;
+            height:300px;
+        }
+        @include mobile{
+            .embed-responsive-item{
+                width:300px;
+                
+            }
+        }
+    }
+
+
+}
+//endsection galeri
+//section-rsvp
+.section-rsvp{
+    h1{
+        font-size:25px;
+    }
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:65px;
+    padding-bottom:148px;
+    .form-wrapper{
+        width:60%;
+        button{
+              background-color:rgba(212, 175, 55, 1);
+            border:none;
+            width:200px;
+        }
+    }
+}
+
+//endsection-rsvo
+//section gift
+.section-gift{
+    background-color:#EAECF4;
+    padding-top:97px;
+    height:700px;
+    
+    .wrapper{
+        
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+     
+    }
+    
+    .content-wrapper{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:relative;
+        .items{
+            position:absolute;
+            
+        }
+        .amplop-ats{
+      
+            top:10%;
+            
+        }
+        .kertas{
+        
+            top:0px;
+            &:hover{
+                top:-60px;
+            }
+        }
+        .amplop-bwh{
+            
+            top:210px;
+        }
+
+    }
+
+     @include mobile{
+     .content-wrapper{
+        width:90%;
+    
+        .amplop-ats{
+            width:300px;
+            top:0;
+            
+        }
+        .kertas{
+            width:250px;
+            top:-30px;
+            &:hover{
+                top:-40px;
+            }
+        }
+        .amplop-bwh{
+            width:300px;
+            top:70px;
+        }
+
+    }
+       
+        
+    }
+    @include tablet{
+     .content-wrapper{
+        width:90%;
+    
+        .amplop-ats{
+            width:550px;
+            top:10%;
+            
+        }
+        .kertas{
+            width:400px;
+            top:-40px;
+            &:hover{
+                top:-50px;
+            }
+        }
+        .amplop-bwh{
+            width:550px;
+            top:140px;
+        }
+
+    }
+       
+        
+    }
+}
+//endsection gift
+
+@include mobile{
+    
+    .section-gift{
+        p{
+            font-size:12px;
+            text-align:center;
+        }
+        height:420px;
+    }
+}
+@include tablet{
+    
+    .section-gift{
+        p{
+            font-size:12px;
+            text-align:center;
+        }
+        height:550px;
+    }
+}
+
+//endsection gift
+.section-ucapan{
+    padding-top:85px;
+    padding-bottom:239px;
+    img{
+        width:50px;
+        height:50px;
+    }
+    .ucapan-wrapper{
+        padding-top:40px;
+        width:50%;
+            
+    }
+    
+    .content-ucapan{
+        margin-top:1.625rem;
+        width:100%;
+        display:grid;
+        grid-template-columns:0.5fr 2fr;
+        .text-time{
+            font-size:12px;
+        }
+        p{
+            margin-bottom:0;
+        }   
+        h1{
+            font-size:30px;
+        }
+    }
+    
+    @include mobile{
+        h1{
+            font-size:30px;
+        }
+        img{
+            width:24px;
+            height:24px;
+        }
+        .ucapan-wrapper{
+            width:80%;
+            h1{
+                font-size:18px;
+            }
+  
+        }
+    }
+    
+}
+@include mobile{
+    header{
+         background: url("header_mb.png") right / cover no-repeat;
+        height:660px;
+        h1{
+            font-size:30px;
+        }
+        .text-date{
+            font-size:15px;
+        }
+    }
+    .section-the-date{
+        height:347px;
+        padding-top:69px;
+        .date-wrapper{
+            width:90%;
+            height:100%;
+        }
+        .countdown-wrapper{
+            .text-date{
+                text-align:center;
+                font-size:25px;
+            }
+                .text-caption{
+                font-size:15px;
+            }
+            
+            padding-top:51px;
+            width:80%;
+            
+        }
+        
+    }
+    .section-venue{
+        padding-top:93px;
+        padding-bottom:93px;
+    }
+}
+@include tablet{
+    header{
+         background: url("header_mb.png") 20% 75% / cover no-repeat;
+        height:660px;
+        h1{
+            font-size:40px;
+        }
+        .text-date{
+            font-size:20px;
+        }
+    }
+    .section-profile{
+        .profile-wrapper{
+            width:90%
+        
+        }
+        .text-dan{
+            font-size:100px;
+        }
+    }
+      .section-the-date{
+        height:447px;
+        padding-top:69px;
+        .date-wrapper{
+            width:70%;
+            height:100%;
+        }
+        .countdown-wrapper{
+            .text-date{
+                
+                font-size:30px;
+            }
+        
+            padding-top:51px;
+            width:60%;
+            
+        }
+        
+    }
+ 
+    .section-venue{
+        .text-lokasi{
+            font-size:14px;
+        }
+    }
+}
