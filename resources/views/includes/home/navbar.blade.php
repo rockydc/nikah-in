@@ -7,6 +7,7 @@
                     <li class="nav-item"><a class="nav-link cool-link js-scroll-trigger" href="#desain">Desain</a></li>
                     <li class="nav-item"><a class="nav-link cool-link js-scroll-trigger" href="#caraorder">Cara Order</a></li>
                     <li class="nav-item"><a class="nav-link cool-link js-scroll-trigger" href="#tentang">Tentang</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link cool-link js-scroll-trigger" href="#tentang">Blog</a></li> -->
                 </ul>
             </div>
         </div>

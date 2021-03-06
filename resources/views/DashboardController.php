@@ -14,12 +14,8 @@ class DashboardController extends Controller
     public function index(Request $request){
         // $users = rsvp_online::all()->sum('jmlh_orang');
         // $guest = guestbook_anes_model::all()->sum('jmlh_orang');
-        $users=0;
-        $guest=0;
-        return view('pages.admin-home.dashboard',[
-            'users'=>$users,
-            'guest'=>$guest
-        ]);
+        
+        return view('pages.admin-home.dashboard');
 
         
 

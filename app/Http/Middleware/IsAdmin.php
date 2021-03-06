@@ -16,16 +16,19 @@ class IsAdmin
     public function handle($request, Closure $next)
     {
         if(Auth::user() && Auth::user()->roles == 'ADMIN'){
+        
             return $next($request);
-            // return redirect(route('dashboardhome'));
 
+        }elseif(Auth::user()&& Auth::user()->roles == 'CLIENT'){
+            return redirect(url('/anes-nahomi/admin'));
         }
-        elseif(Auth::user() && Auth::user()-> roles =='CLIENT'){
-            return redirect(url('anes-nahomi/admin'));
+        elseif(Auth::user()&& Auth::user()->roles == 'ISBY'){
+            return redirect(url('/Hesti_Isby/admin'));
         }
+        
         // if(Auth::user()&& Auth::user()->roles == 'CLIENT'){
         //     return $next($request);
         // }
-        return redirect(url('/'));
+        return redirect(url('/login'));
     }
 }

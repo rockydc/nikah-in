@@ -9,6 +9,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{route('desain.index')}}"><i class="fa fa-pencil"></i><span>Desain</span></a></li>
                 <li class="nav-item"></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('message.index')}}"><i class="fa fa-envelope"></i><span>Message</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('portofolio.index')}}"><i class="fa fa-envelope"></i><span>Portofolio</span></a></li>
                 <li class="nav-item"></li>
             </ul>
             <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>

@@ -38,7 +38,7 @@ Route::prefix('admin')
     ->group(function(){
         Route::get('/','DashboardController@index')
         ->name('dashboardhome');
-
+        Route::resource('portofolio','PortofolioController');
         Route::resource('desain','DesainController');
         Route::resource('message','MessageController');
         
@@ -60,7 +60,7 @@ Route::prefix('anes-nahomi')
         Route::get('data-rsvp','AnesController@rsvp')->name('datarsvp');
         Route::get('data-rsvp/cetakpdf','AnesController@cetakpdf')->name('anescetak');
         Route::prefix('admin')
-        ->middleware(['auth'])
+        ->middleware(['auth','admin'])
         ->group(function(){
             Route::get('/','AnesController@dashboard')
             ->name('anesdashboard');
@@ -74,7 +74,22 @@ Route::prefix('anes-nahomi')
 
 
 
-
+Route::prefix('Hesti_Isby')
+->namespace('isby')
+->group(function(){
+    Route::get('/','IsbyController@index')->name('isby');
+    Route::get('/success','IsbyController@success')->name('isby-success');
+    Route::post('/store','IsbyController@store')->name('isbystore');
+   
+    Route::prefix('admin')
+    ->middleware(['auth','isby'])
+    ->group(function(){
+        Route::get('/','IsbyController@dashboard')->name('isbydashboard');
+        Route::get('/rsvp','IsbyController@rsvp')->name('isbyrsvp');
+        Route::get('/getrsvp','IsbyController@getrsvp');
+        
+    });
+});
 Auth::routes();
 
 

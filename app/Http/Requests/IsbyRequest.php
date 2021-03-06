@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class rsvp_onlineRequest extends FormRequest
+class IsbyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,10 +25,11 @@ class rsvp_onlineRequest extends FormRequest
     {
         return [
             //
-            'nama'=>'required',
-            'no_telepon'=>'required',
-            'email'=>'email',
-            'pesan'=>'pesan'
+            'nama'=>'required|string',
+            'ikatan'=>'required',
+            'email'=>'required|email'
+            
+            
         ];
     }
 }

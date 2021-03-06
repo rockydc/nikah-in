@@ -4,10 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\model\admin\DesainModel;
-use App\model\admin\Portofolio;
-use App\Http\Requests\Adminhome\desainRequest;
-class DesainController extends Controller
+use App\Models\Portofolio;
+
+class PortofolioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +16,11 @@ class DesainController extends Controller
     public function index()
     {
         //
-        $items = DesainModel::all();
-        
-        
-        return view('pages.admin-home.desain',
-    
-         ['items'=>$items]);
+        $items = Portofolio::all();
+        return view('pages.admin-home.portofolio',[
+            'items'=>$items       
+            
+            ]);
     }
 
     /**
@@ -44,19 +42,16 @@ class DesainController extends Controller
     public function store(Request $request)
     {
         //
-         //
-         $data = $request->all();
+        $data = $request->all();
+        $data['imgbg'] = $request->file('imgbg')->store(
+            'backend/img/desain','public'
+        );
+        $data['views']=0;
+
         
-         $data['imgbg'] = $request->file('imgbg')->store(
-             'backend/img/desain','public'
-         );
-         $data['imgprev'] = $request->file('imgprev')->store(
-             'backend/img/desain','public'
-         );
-         $data['views'] = 0;
- 
-         DesainModel::create($data);
-         return redirect()->route('desain.index');
+        Portofolio::create($data);
+        return redirect()->route('portofolio.index');
+
     }
 
     /**
@@ -68,8 +63,6 @@ class DesainController extends Controller
     public function show($id)
     {
         //
-
-
     }
 
     /**
@@ -90,24 +83,9 @@ class DesainController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         //
-       
-      
-        $data = $request->all();
-        $item = DesainModel::findOrFail($request->id);
-        $data['imgbg'] = $request->file('imgbg')->store(
-            'backend/img/desain','public'
-        );
-        $data['imgprev'] = $request->file('imgprev')->store(
-            'backend/img/desain','public'
-        );
-        
-        $item->update($data);
-        
-
-        return redirect()->route('desain.index');
     }
 
     /**
@@ -119,9 +97,9 @@ class DesainController extends Controller
     public function destroy($id)
     {
         //
-          //
-          $item= DesainModel::findOrFail($id);
-          $item->delete();
-          return redirect()->route('desain.index');
+         //
+         $item= Portofolio::findOrFail($id);
+         $item->delete();
+         return redirect()->route('desain.index');
     }
 }

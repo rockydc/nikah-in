@@ -53,10 +53,19 @@ public function logout(Request $request)
         return redirect()->route('home');
         // return redirect(route('dashboardhome'));
 
-    }else{
+    }elseif(Auth::user() && Auth::user()->roles == 'CLIENT'){
+        $this->doLogout($request);
+        return redirect()->route('anes');
+    }
+    elseif(Auth::user() && Auth::user()->roles == 'ISBY'){
+        $this->doLogout($request);
+        return redirect()->route('isby');
+    }
+    
+    else{
         $this->doLogout($request);
 
-        return redirect()->route('anes');
+        return redirect()->route('home');
     }
 
    
