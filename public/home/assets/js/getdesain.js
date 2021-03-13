@@ -2,6 +2,7 @@
 
 initDataDesain();
 initDataHome();
+initDataPorto();
 function initDataDesain(){
     $.ajax({
         type:"GET",
@@ -110,6 +111,59 @@ function initDataHome(){
         }
     })
 }
+
+function initDataPorto(){
+    $.ajax({
+        type:"GET",
+        url: "../desain/getporto",
+        dataType:"json",
+        success: function(response){
+      
+         let resultdata = response.data;
+         var content="";
+    
+        if(resultdata.length === 0){
+            content=`  
+            <div class="col-12 text-center">
+                <h6>data belum ada</h6>
+            </div>`
+        }else{
+            $.each(resultdata,(index,row)=>{
+             
+                const nama = row.nama;
+                const imgbg = row.imgbg;
+                
+                const views = row.views;
+    
+                content += `
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 pt-4">
+                    <div>
+                        <div class="view-wrapper" onmouseover="cardhover(this)" onmouseout="normalImg(this)">
+                            <div id="btn-view" class="btn-view-desain-wrap" style="padding: 0px;margin-top: -23px;"><a id="view-before" class="btn btn-view d-none" href="../desain/preview/${nama}/view/${views}"><img class="mr-3" src="../home/assets/img/eye_ic.png" style="width: 17px;height: 12px;" />View themes</a></div><img id="img-content" class="img-desain" src="../storage/${imgbg}" />
+                        </div>
+                        <div style="margin-top: 45px;">
+                        <div class="row">
+                            <div class="col-8 col-sm-8 text-left">
+                                <p class="text-left" style="font-weight: 700;">${nama}</p>
+                            </div>
+                            <div class="col-4 col-sm-4">
+                                <p class="text-right"><img class="mr-2" src="home/assets/img/ic_eyee_black.svg" /><span style="font-family: Poppins, sans-serif;font-size: 12px;">${views}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                `;
+             
+               
+             });
+        }
+        
+         $('#getportofolio').append(content)
+        }
+    })
+}
+
 function cardhover(x){
      $(x).find(".img-desain").css("filter","brightness(50%)");
      $(x).find(".img-desain-home").css("filter","brightness(50%)");

@@ -65,6 +65,7 @@ class Kernel extends HttpKernel
         'cekrole'=> \App\Http\Middleware\CekRole::class,
         'anes'=>\App\Http\Middleware\anes::class,
         'isby'=>\App\Http\Middleware\IsIsby::class,
+        'peter'=>\App\Http\Middleware\peter::class,
         
     ];
 

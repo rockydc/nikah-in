@@ -48,7 +48,7 @@
 
 
                     </a>
-                    <form class="d-inline" action="{{ route('desain.destroy',$item->id)}}" method="post">
+                    <form class="d-inline" action="{{ route('portofolio.destroy',$item->id)}}" method="post">
                     
                     @csrf
                     @method('delete')

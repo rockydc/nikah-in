@@ -22,10 +22,7 @@ class IsAdmin
         }elseif(Auth::user()&& Auth::user()->roles == 'CLIENT'){
             return redirect(url('/anes-nahomi/admin'));
         }
-        elseif(Auth::user()&& Auth::user()->roles == 'ISBY'){
-            return redirect(url('/Hesti_Isby/admin'));
-        }
-        
+
         // if(Auth::user()&& Auth::user()->roles == 'CLIENT'){
         //     return $next($request);
         // }

@@ -14,7 +14,7 @@ Nikah-in | Isby
             <div class="date-wrap"><span class="days">13</span><span>.</span><span>03</span><span>.</span><span>21</span></div>
         </div>
     </header>
-    <section class="section-quotes container text-center">
+    <section class="section-quotes container text-center" id="quote" >
         <div>
            
             <img src="{{url('user/isby/assets/img/bismillah.png')}}">
@@ -169,7 +169,16 @@ bila mendoakan seseorang yang nikah, beliau bersabda:</p>
     <section class="section-gift">
         <div class="container wrapper">
             <h1 style="font-family: Montserrat, sans-serif;">Share gift</h1>
-            <p>Bagikan kebahagian sebagai dukungan dalam mewujudkan cita cita Mr. X &amp; Mrs. Y<br></p>
+            <p>Bagikan kebahagian sebagai dukungan dalam mewujudkan cita cita Isby &amp; Hesti<br></p>
+            <p>
+               Mandiri: 0700009933842 <br>
+               a/n: Isby Isby Fadlilla
+            </p>
+            <p>
+                CIMB :761796756000<br>
+                a/n:Hesti Vini Widiastuti
+
+            </p>
             <div class="content-wrapper mt-5"><img class="amplop-ats items" src="{{url('template/jasmine/assets/img/amplop-ats.png')}}"><img class="kertas items" src="{{url('user/isby/assets/img/bca-qrcode.png')}}"><img class="amplop-bwh items" src="{{url('template/jasmine/assets/img/amplop-bwh.png')}}"></div>
         </div>
     </section>
@@ -180,12 +189,12 @@ bila mendoakan seseorang yang nikah, beliau bersabda:</p>
         @forelse($items as $item)
     
             <div class="content-ucapan">
-                <div class="d-flex align-items-start justify-content-center pt-1"><img src="{{url('template/jasmine/assets/img/profil_ic.svg')}}"></div>
+                <div class="d-flex align-items-start justify-content-center pt-1"><img src="{{url('user/isby/assets/img/profile-ic.svg')}}"></div>
                 <div>
-                <div class="d-flex">
+                
                 <h1>{{$item->nama}}</h1>
             
-                </div>
+              
                   
                     <p class="mt-3">{{$item->pesan}}<br></p>
                     <div class="d-flex justify-content-end">

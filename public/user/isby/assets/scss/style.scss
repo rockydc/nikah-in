@@ -159,7 +159,7 @@ header{
 @include mobile{
     header{
         
-        background: url("../img/header-mobile.png");
+        background: url("../img/header-mobile.png") center/ cover no-repeat;
     }
 }
 //end of header
@@ -187,8 +187,11 @@ header{
     
         }
         .instagram-profile{
-            padding:8px 15px;font-family: Montserrat, sans-serif;font-weight: 600;background: rgba(152, 212, 255, 0.15);
-            display:inline;
+            padding:8px 15px;
+            font-family: Montserrat, sans-serif;
+            font-weight: 600;
+            background-color: rgba(152, 212, 255, 0.15);
+            display:inline-block;
             border-radius:10px ;
 
         }
@@ -266,7 +269,7 @@ header{
 .section-information{
     margin-top:150px;
     height:700px;
-    background: url("../img/countdown-bg.png") bottom / cover no-repeat;
+    background: url("../img/countdown-bg.png") center / cover no-repeat;
     background-attachment:fixed;
     .wrap-info{
         text-align:center;
@@ -300,11 +303,17 @@ header{
         }
     @include mobile{
         .countdown-wrap{
-            width:100%;
+            width:300px;
             .text-date{
                 font-size:23px;
             }
         }
+    }
+}
+
+@include mobile{
+    .section-information{
+        background: url("../img/countdown-mobile.png") bottom / cover no-repeat;
     }
 }
 //endsection
@@ -355,6 +364,18 @@ header{
         }
     }
 }
+@include mobile{
+    .section-venue{
+        height:350px;
+    }
+    .btn-direction{
+        margin-top:50px;
+        background-color:white;
+        border:1px solid black;
+        border-radius:5px;
+        box-sizing: border-box;
+    }
+}
 
 //endsection venue
 
@@ -381,7 +402,7 @@ header{
 .section-gift{
     background-color:#EAECF4;
     padding-top:97px;
-    height:700px;
+    height:800px;
     
     .wrapper{
         
@@ -479,7 +500,7 @@ header{
             font-size:12px;
             text-align:center;
         }
-        height:420px;
+        height:500px;
     }
 }
 @include tablet{

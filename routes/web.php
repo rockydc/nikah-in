@@ -23,6 +23,7 @@ Route::prefix("desain")
     ->group(function(){
         Route::get('/','DesainController@index')->name('desainUser');
         Route::get('/getdata','DesainController@getdata')->name('desainGet');
+        Route::get('/getporto','DesainController@getporto')->name('portoGet');
         
         Route::get('/preview/{nama}/view/{view}','DesainController@preview');
         Route::get('/template/{nama}','DesainController@template');
@@ -90,6 +91,24 @@ Route::prefix('Hesti_Isby')
         
     });
 });
+
+Route::prefix('Peter_Melita')
+->namespace('peter')
+->middleware('auth','peter')
+->group(function(){
+    Route::get('/','PeterController@index')->name('Peter');
+    Route::get('/succes','PeterController@success')->name('peter-success');
+    Route::post('/store','PeterController@store')->name('peterstore');
+
+    Route::prefix('admin')
+    ->group(function(){
+        Route::get('/','PeterController@dashboard')->name('peterdashboard');
+        Route::get('/rsvp','PeterController@rsvp')->name('peterrsvp');
+        Route::get('/getrsvp','PeterController@getrsvp')->name('petergetrsvp');
+    });
+});
+
+
 Auth::routes();
 
 

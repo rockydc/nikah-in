@@ -100,6 +100,6 @@ class PortofolioController extends Controller
          //
          $item= Portofolio::findOrFail($id);
          $item->delete();
-         return redirect()->route('desain.index');
+         return redirect()->route('portofolio.index');
     }
 }

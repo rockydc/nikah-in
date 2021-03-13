@@ -147,7 +147,7 @@ header .header-wrap .date-wrap {
 
 @media (min-width: 0) and (max-width: 600px) {
   header {
-    background: url("../img/header-mobile.png");
+    background: url("../img/header-mobile.png") center/cover no-repeat;
   }
 }
 
@@ -177,8 +177,8 @@ header .header-wrap .date-wrap {
   padding: 8px 15px;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
-  background: rgba(152, 212, 255, 0.15);
-  display: inline;
+  background-color: rgba(152, 212, 255, 0.15);
+  display: inline-block;
   border-radius: 10px;
 }
 
@@ -252,7 +252,7 @@ header .header-wrap .date-wrap {
 .section-information {
   margin-top: 150px;
   height: 700px;
-  background: url("../img/countdown-bg.png") bottom/cover no-repeat;
+  background: url("../img/countdown-bg.png") center/cover no-repeat;
   background-attachment: fixed;
 }
 
@@ -297,10 +297,16 @@ header .header-wrap .date-wrap {
 
 @media (min-width: 0) and (max-width: 600px) {
   .section-information .countdown-wrap {
-    width: 100%;
+    width: 300px;
   }
   .section-information .countdown-wrap .text-date {
     font-size: 23px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 600px) {
+  .section-information {
+    background: url("../img/countdown-mobile.png") bottom/cover no-repeat;
   }
 }
 
@@ -356,6 +362,20 @@ header .header-wrap .date-wrap {
   }
 }
 
+@media (min-width: 0) and (max-width: 600px) {
+  .section-venue {
+    height: 350px;
+  }
+  .btn-direction {
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
 .section-rsvp {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,7 +403,7 @@ header .header-wrap .date-wrap {
 .section-gift {
   background-color: #EAECF4;
   padding-top: 97px;
-  height: 700px;
+  height: 800px;
 }
 
 .section-gift .wrapper {
@@ -476,7 +496,7 @@ header .header-wrap .date-wrap {
 
 @media (min-width: 0) and (max-width: 600px) {
   .section-gift {
-    height: 420px;
+    height: 500px;
   }
   .section-gift p {
     font-size: 12px;

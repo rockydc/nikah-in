@@ -5,6 +5,7 @@ namespace App\Http\Controllers\desain;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\model\admin\DesainModel;
+use App\Models\Portofolio;
 
 class DesainController extends Controller
 {
@@ -18,6 +19,11 @@ class DesainController extends Controller
     public function getdata(){
 
         $items = DesainModel::get();
+        return json_encode(array('data'=>$items));
+    }
+    public function getporto(){
+
+        $items = Portofolio::get();
         return json_encode(array('data'=>$items));
     }
     public function preview(Request $request, $nama,$views){
