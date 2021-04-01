@@ -131,15 +131,16 @@ function initDataPorto(){
             $.each(resultdata,(index,row)=>{
              
                 const nama = row.nama;
+                const nama_url = row.nama_url;
                 const imgbg = row.imgbg;
-                
+       
                 const views = row.views;
     
                 content += `
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 pt-4">
                     <div>
                         <div class="view-wrapper" onmouseover="cardhover(this)" onmouseout="normalImg(this)">
-                            <div id="btn-view" class="btn-view-desain-wrap" style="padding: 0px;margin-top: -23px;"><a id="view-before" class="btn btn-view d-none" href="../desain/preview/${nama}/view/${views}"><img class="mr-3" src="../home/assets/img/eye_ic.png" style="width: 17px;height: 12px;" />View themes</a></div><img id="img-content" class="img-desain" src="../storage/${imgbg}" />
+                            <div id="btn-view" class="btn-view-desain-wrap" style="padding: 0px;margin-top: -23px;"><a id="view-before" class="btn btn-view d-none" target="_blank" href="../${nama_url}"><img class="mr-3" src="../home/assets/img/eye_ic.png" style="width: 17px;height: 12px;" />View themes</a></div><img id="img-content" class="img-desain" src="../storage/${imgbg}" />
                         </div>
                         <div style="margin-top: 45px;">
                         <div class="row">

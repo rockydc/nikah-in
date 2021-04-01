@@ -128,6 +128,7 @@ Nikah-in - Home
                     <div class="product-content ml-5 mt-4"><span>Buku tamu Digital / RSVP<br></span></div>
                     <div class="product-content ml-5 mt-4"><span>Ucapan dan gift e-money<br></span></div>
                     <div class="product-content ml-5 mt-4"><span>Integrasi peta lokasi<br></span></div>
+                    <div class="product-content ml-5 mt-4"><span>Musik Latar<br></span></div>
                 </div>
                 <p class="text-left ml-5 mt-4" style="font-size: 14px;color: #C4C4C4;font-style: normal;text-decoration:line-through;">Rp 450 ribu</p>
                 <h1 class="text-left ml-5" style="font-family: Poppins, sans-serif;font-size: 30px;font-weight: 700;">Rp. 200 ribu</h1><a data-bs-hover-animate="pulse" class="btn btn-undangan" href="https://api.whatsapp.com/send?phone=6285157336832&amp;text=Hallo%20%2C%20saya%20ingin%20mengetahui%20lebih%20detail%20mengenai%20nikah-in">Buat Undangan</a>
