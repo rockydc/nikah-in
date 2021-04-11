@@ -131,11 +131,9 @@
        }
    })
   
-  </script>
-
-
-    
+  </script>  
     <script src="{{url('aness/assets/bootstrap/js/bootstrap.min.js')}}"></script>
+    @yield('javascript')
 </body>
 
 </html>
