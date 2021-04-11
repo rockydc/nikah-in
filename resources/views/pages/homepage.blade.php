@@ -118,6 +118,8 @@ Nikah-in - Home
     <div id="harga" class="section-harga">
         <h1 data-aos="fade-up" class="container text-title-section">Harga</h1>
         <div class="container">
+            <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
             <div data-aos="zoom-in" class="product-wrapper">
                 <h1 style="font-size: 14px;line-height: 21px;"><img class="mr-3" src="{{url('home/assets/img/diamond_ring_ic.png')}}">Paket Basic</h1>
                 <div class="line"></div>
@@ -130,9 +132,29 @@ Nikah-in - Home
                     <div class="product-content ml-5 mt-4"><span>Integrasi peta lokasi<br></span></div>
                     <div class="product-content ml-5 mt-4"><span>Musik Latar<br></span></div>
                 </div>
-                <p class="text-left ml-5 mt-4" style="font-size: 14px;color: #C4C4C4;font-style: normal;text-decoration:line-through;">Rp 450 ribu</p>
-                <h1 class="text-left ml-5" style="font-family: Poppins, sans-serif;font-size: 30px;font-weight: 700;">Rp. 200 ribu</h1><a data-bs-hover-animate="pulse" class="btn btn-undangan" href="https://api.whatsapp.com/send?phone=6285157336832&amp;text=Hallo%20%2C%20saya%20ingin%20mengetahui%20lebih%20detail%20mengenai%20nikah-in">Buat Undangan</a>
+                <p class="text-left ml-5 mt-4" style="font-size: 14px;color: #C4C4C4;font-style: normal;text-decoration:line-through;">Rp 450.000</p>
+                <h1 class="text-left ml-5" style="font-family: Poppins, sans-serif;font-size: 30px;font-weight: 700;">Rp. 200.000</h1><a data-bs-hover-animate="pulse" class="btn btn-undangan" href="https://api.whatsapp.com/send?phone=6285157336832&amp;text=Hallo%20%2C%20saya%20ingin%20mengetahui%20lebih%20detail%20mengenai%20nikah-in">Buat Undangan</a>
             </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div data-aos="zoom-in" class="product-wrapper">
+                <h1 style="font-size: 14px;line-height: 21px;"><img class="mr-3" src="{{url('home/assets/img/diamond_ring_ic.png')}}">Paket Komplit Wedding </h1>
+                <div class="line"></div>
+                <div>
+                    <div class="product-content ml-5 mt-4"><span>Paket Basic<br></span></div>
+                    <div class="product-content ml-5 mt-4"><span>1 Fotografer & 1 Videografer<br></span></div>
+                    <div class="product-content ml-5 mt-4"><span>Video Cinematic (max durasi 4menit)<br></span></div>
+                    <div class="product-content ml-5 mt-4"><span>50 Foto yang di Edit(Retone Color)<br></span></div>
+                    <div class="product-content ml-5 mt-4"><span>1 Album Kolase<br></span></div>
+                    <div class="product-content ml-5 mt-4"><span>Cetak Foto dan bingkai(60x40) 2 bh<br></span></div>
+                    <div class="product-content ml-5 mt-4"><span>Koper Album<br></span></div>
+                </div>
+                <p class="text-left ml-5 mt-4" style="font-size: 14px;color: #C4C4C4;font-style: normal;text-decoration:line-through;">Rp 7.000.000</p>
+                <h1 class="text-left ml-5" style="font-family: Poppins, sans-serif;font-size: 30px;font-weight: 700;">Rp. 3.500.000</h1><a data-bs-hover-animate="pulse" class="btn btn-undangan" href="https://api.whatsapp.com/send?phone=6287875176111&amp;text=Hallo%20%2C%20saya%20ingin%20mengetahui%20lebih%20detail%20mengenai%20paket%20Komplit%20Wedding">Buat Undangan</a>
+            </div>
+            </div>
+            </div>
+           
         </div>
     </div>
     <div id="caraorder" class="section-order">

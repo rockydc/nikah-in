@@ -534,3 +534,93 @@ $bp-XL:1200px;
         font-size:16px;
     }
 }
+
+  
+.section-modal {
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    .img-header{
+        object-fit:cover;
+        object-position:center;
+        width:90%;
+        height:270px;
+        border-radius:5px;
+        
+    }
+    h1{
+        font-family:playfair display, sans-serif;
+        font-size:30px;
+    }
+    p{
+        font-family:playfair display, sans-serif;
+    }
+    .date-wrapper{
+        
+        width:105px;
+        display:flex;
+        justify-content:space-between;
+        
+    }
+   
+    span{
+        font-size:12px;
+    }
+}
+
+.btn-buka{
+    margin-top:30px;
+    background-color:#D4AF37;
+    
+    text-decoration:none;
+    color:white;
+    padding:15px 43px;
+    transition:0.5s;
+    &:hover{
+        background-color: rgb(193,148,3);
+        color:white;
+    }
+    
+}
+
+@include mobile{
+    #myModal{
+
+        .modal-dialog{
+            
+            width:70%;
+             min-height: calc(100vh - 70px);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+ 
+        }
+        .section-modal{
+            .img-header{
+                width:100%;
+                height:170px;
+            }
+            h1{
+                font-size:24px;
+            }
+            span{
+                font-size:10px;
+            }
+            
+
+        }
+
+        .btn-buka{
+            margin-top:16px;
+            width:149px;
+            height:34.25px;
+            font-size:12px;
+            padding:7px 15px;
+        }
+     
+    
+}
+}

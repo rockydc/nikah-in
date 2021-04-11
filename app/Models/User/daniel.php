@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models\user;
+
+use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+class daniel extends Model
+{
+    //
+    protected $table = 'daniel_tbl';
+    protected $fillable = [
+       'nama','pesan',
+    ];
+
+    protected $hidden = [
+
+    ];
+    
+    public function getDateDiffTodayAttribute(){
+    	$date = Carbon::parse($this->updated_at);
+        $now = Carbon::now();
+        $diff = $date->diffInDays($now);
+        $additional = $diff.' Hari Yang Lalu';
+        if($diff > 30){
+            $additional = 'Lebih Dari 1 Bulan Yang Lalu';
+        } 
+        else if($diff > 7){
+            $additional = floor((int)$diff/7). ' Minggu Yang Lalu';
+        }
+        return $additional;
+    }
+}

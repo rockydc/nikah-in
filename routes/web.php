@@ -109,6 +109,22 @@ Route::prefix('Peter_Melita')
 });
 
 
+Route::prefix('daniela')
+->namespace('daniel')
+->group(function(){
+    Route::get('/','DanielController@index')->name('daniel');
+    Route::get('/succes','DanielController@success')->name('daniel-success');
+    Route::post('/store','DanielController@store')->name('danielstore');
+
+    Route::prefix('admin')
+    ->group(function(){
+        Route::get('/','DanielController@dashboard')->name('danieldashboard');
+        Route::get('/rsvp','DanielController@rsvp')->name('danielrsvp');
+        Route::get('/getrsvp','DanielController@getrsvp')->name('danielgetrsvp');
+    });
+});
+
+
 Auth::routes();
 
 
