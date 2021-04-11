@@ -129,7 +129,7 @@ WebWedding
         <h1 class="title-section">RSVP</h1>
         <!-- <img class="img-guest" src="{{url('aness/assets/img/guest_attendance-removebg-preview.png')}}"> -->
             <div class="form-wrapper p-lg-4 p-md-4 p-sm-1">
-                <form action="{{url('daniela/store')}}" method="post">
+                <form action="{{url('api/daniela/wish_store')}}" method="post">
                 @csrf 
 
                     <div>
@@ -150,7 +150,7 @@ WebWedding
                         </div>
 
                     </div>
-                    <div class="d-flex align-item-center justify-content-center"><button class="btn btn-send btn-block text-center" type="submit">Submit</button></div>
+                    <div class="d-flex align-item-center justify-content-center"><button onclick="event.preventDefault(); return storeData(event)" class="btn btn-send btn-block text-center" type="submit">Submit</button></div>
                     
 
                 </form>
@@ -207,4 +207,34 @@ WebWedding
             </div>
         </div>
     </div>
+@endsection
+@section('javascript')
+    <script>
+        const Ajax = {
+            postAjax: (uri) => {
+                return new Promise((resolve, reject) => {
+                    let form = $('form');
+                    $.ajax({
+                        method: 'POST',
+                        url: uri,
+                        data: form.serialize(),
+                        success: function(response){
+                            if(response.is_success){
+                                form.trigger('reset');
+                                resolve(response);
+                            }
+                        }
+                    })
+                })
+            }
+        }
+        function storeData(event)
+        {
+            event.preventDefault();
+            Ajax.postAjax($('form').attr('action')).then(
+                () => {window.location.reload(true);}
+            );
+        }
+        
+    </script>
 @endsection
