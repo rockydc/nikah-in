@@ -1,20 +1,20 @@
 {
-    'id':'int(increment primary)',
-    'nama_client':'varchar',
-    'url_slug':'varchar(auto_generate)',
-    'template':'int()',
-    'tgl_booking':'datetime',
-    'code_booking':'varchar',
-    'email_client':'varchar',
-    'no_hp':'number',
-    'total_pembayaran':'int',
-    'status_pembayaran':'int',
-    'web_details'={
-        'nama_pengantin_pria':'varchar',
-        'nama_pengantin_wanita':'varchar',
-        'tanggal_acara':'varchar',
-        'lokasi_acara':'varchar'
-        'gallery':''
+    
+    "id":"int",
+    "nama_client":"varchar",
+    "url_slug":"varchar(auto_generate)",
+    "template":"int()",
+    "tgl_booking":"datetime",
+    "code_booking":"varchar",
+    "email_client":"varchar",
+    "no_hp":"number",
+    "total_pembayaran":"int",
+    "status_pembayaran":"int",
+    "web_details":{
+        "nama_pengantin_pria":"varchar",
+        "nama_pengantin_wanita":"varchar",
+        "tanggal_acara":"varchar",
+        "lokasi_acara":"varchar",
+        "gallery":""
     }
-
 }

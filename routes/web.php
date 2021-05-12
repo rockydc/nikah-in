@@ -125,6 +125,23 @@ Route::prefix('daniela')
 });
 
 
+Route::prefix('pipitficry')
+->namespace('ficry')
+->group(function(){
+    Route::get('/','ficryController@index')->name('ficry');
+    Route::get('/success','ficryController@success')->name('ficry-success');
+    Route::post('/store','ficryController@store')->name('ficrystore');
+
+    Route::prefix('admin')
+    ->middleware(['auth','ficry'])
+    ->group(function(){
+        Route::get('/','FicryController@dashboard')->name('ficrydashboard');
+        Route::get('/rsvp','FicryController@rsvp')->name('ficryrsvp');
+        Route::get('/getrsvp','FicryController@getrsvp');
+    });
+});
+
+
 Auth::routes();
 
 

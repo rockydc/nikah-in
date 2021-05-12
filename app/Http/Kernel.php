@@ -66,6 +66,7 @@ class Kernel extends HttpKernel
         'anes'=>\App\Http\Middleware\anes::class,
         'isby'=>\App\Http\Middleware\IsIsby::class,
         'peter'=>\App\Http\Middleware\peter::class,
+        'ficry'=>\App\Http\Middleware\Ficry::class,
         
     ];
 
