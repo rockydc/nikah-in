@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Muhammad Ficry &amp; Fitriya</title>
     <meta name="description" content="Muhammad Ficry &amp; Fitriya ">
-    <link rel="icon" type="image/png" sizes="500x500" href="{{url('aness/assets/img/icon.png')}}">
+    <link rel="icon" type="image/png" sizes="500x500" href="{{url('user/ficry/assets/img/mosque 2.png')}}">
     <link rel="stylesheet" href="{{url('aness/assets/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">

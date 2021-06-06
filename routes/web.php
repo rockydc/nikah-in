@@ -141,6 +141,23 @@ Route::prefix('pipitficry')
     });
 });
 
+Route::prefix('ferry-nitia')
+->namespace('ferry')
+->group(function(){
+    Route::get('/','FerryController@index')->name('ferry');
+    Route::get('/success','FerryController@success')->name('ferry-success');
+    Route::post('/store','FerryController@store')->name('ferrystore');
+
+    Route::prefix('admin')
+    ->middleware(['auth','ferry'])
+    ->group(function(){
+        Route::get('/','FerryController@dashboard')->name('ferrydashboard');
+        Route::get('/rsvp','FerryController@rsvp')->name('ferryrsvp');
+        Route::get('/getrsvp','FerryController@getrsvp');
+        
+    });
+});
+
 
 Auth::routes();
 

@@ -110,7 +110,7 @@ WebWedding
                         <div class="d-md-flex d-lg-flex d-xl-flex justify-content-md-end align-items-md-center justify-content-lg-end align-items-lg-center justify-content-xl-end align-items-xl-center barcode"><img src="{{url('user/ficry/assets/img/qrcode.png')}}"></div>
                         <div class="mt-3">
                         <h2 class="text-venue" style="">Akad</h2>
-                        <img src="{{url('aness/assets/img/gereja-removebg-preview.png')}}">
+                        <img src="{{url('user/ficry/assets/img/mosque 2.png')}}">
                             <h2 class="text-venue"style="">Green Bamboo Residence</h2>
                             <p class="date-venue" style="">May 22,2021 <br> 08.00 AM</p>
                         </div>
@@ -127,7 +127,7 @@ WebWedding
                     <div class="wrapper-content-church">
                         <div></div>
                         <div><h2 class="text-venue" style="">Wedding Reception</h2>
-                        <img src="{{url('aness/assets/img/gedung-removebg-preview.png')}}">
+                        <img src="{{url('user/ficry/assets/img/mosque 2.png')}}">
                             <h2 class="text-venue" style="">Green Bamboo Residence</h2>
                             <p class="date-venue">May 22, 2020  <br>11:00 AM - 13:00 PM </p>
                         </div>

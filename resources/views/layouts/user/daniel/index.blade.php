@@ -91,7 +91,7 @@
  
 
 
-        <div>
+        <div> 
             <p style="font-family: 'Josefin Sans', sans-serif;"><em>© &nbsp;nikah-in.com 2021. All rights reserved.</em><br></p>
             <!-- <iframe src="{{url('aness/music/Isyana Sarasvati, Afgan, Rendy Pandugo - Heaven (Official Music Video).mp3')}}" allow="autoplay" style="display:none" id="iframeAudio">
             </iframe>  -->
