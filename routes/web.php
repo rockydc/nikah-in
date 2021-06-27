@@ -166,7 +166,7 @@ Route::prefix('riowira-anisa')
     Route::post('/store','RiowiraController@store')->name('riowirastore');
 
     Route::prefix('admin')
-    // ->middleware(['auth','ferry'])
+    ->middleware(['auth','riowira'])
     ->group(function(){
         Route::get('/','RiowiraController@dashboard')->name('riowiradashboard');
         Route::get('/rsvp','RiowiraController@rsvp')->name('riowirarsvp');
