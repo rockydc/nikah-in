@@ -158,6 +158,22 @@ Route::prefix('ferry-nitia')
     });
 });
 
+Route::prefix('riowira-anisa')
+->namespace('riowira')
+->group(function(){
+    Route::get('/','RiowiraController@index')->name('riowira');
+    Route::get('/success','RiowiraController@success')->name('riowira-success');
+    Route::post('/store','RiowiraController@store')->name('riowirastore');
+
+    Route::prefix('admin')
+    // ->middleware(['auth','ferry'])
+    ->group(function(){
+        Route::get('/','RiowiraController@dashboard')->name('riowiradashboard');
+        Route::get('/rsvp','RiowiraController@rsvp')->name('riowirarsvp');
+        Route::get('/getrsvp','RiowiraController@getrsvp');
+        
+    });
+});
 
 Auth::routes();
 
