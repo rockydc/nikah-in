@@ -218,7 +218,9 @@ WebWedding
     <!-- <img class="img-location" src="{{url('aness/assets/img/location-removebg-preview.png')}}"> -->
         <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.575814825532!2d106.97129931476903!3d-6.187476995520567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnMTQuOSJTIDEwNsKwNTgnMjQuNiJF!5e0!3m2!1sid!2sid!4v1624785788039!5m2!1sid!2sid&amp;zoom=15"
                 width="100%" height="400"></iframe></div>
-        <a href="https://www.google.com/maps?saddr=My+Location&daddr=-6.1871462716819465, 106.97344054171016" class="btn btn-block btn-secondary"></a>
+        <a href="https://www.google.com/maps?saddr=My+Location&daddr=-6.1871462716819465, 106.97344054171016" class="btn btn-block btn-secondary">
+            Dapatkan Petunjuk Arah
+        </a>
     </div>
 
     <div id="section-ucapan" class="section">
