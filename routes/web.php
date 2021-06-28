@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Console\Command;
+use Symfony\Component\Process\Process;
 
 Route::get('/','HomeController@index')->name('home');
 Route::get('/getdatadesain','HomeController@getdata');
@@ -174,7 +176,28 @@ Route::prefix('riowira-anisa')
         
     });
 });
+Route::prefix('terminal')->group(function(){
+    Route::get('migrate', function(){
+        \Artisan::call('migrate', ['force' => true]);
+    });
+    Route::get('pull', function(){
+        $process = new Process('git pull origin main');
+        $process->start();
 
+        foreach ($process as $type => $data) {
+            if ($process::OUT === $type) {
+                info($data);    //output store in log file..
+                $this->info($data);  //show output in console..
+                print_r($data);
+                //       $this->info(print_r($data,true)) // if output is array or object then used
+            } else {
+                $this->warn("error :- ".$data);
+            }
+        }
+
+        $this->info("get output");
+    });
+});
 Auth::routes();
 
 

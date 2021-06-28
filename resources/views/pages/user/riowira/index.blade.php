@@ -31,26 +31,27 @@ WebWedding
         <div class="wrapper">
             <div class="count-items" style="background: linear-gradient(25deg, rgba(0,0,0,0) 0%, rgb(108,108,108) 99%);">
                 <h2 id="days" style="font-family: Andika, sans-serif;font-weight: normal;">12</h2>
-                <p style="font-family: 'Josefin Sans', sans-serif;">Days</p>
+                <p style="font-family: 'Josefin Sans', sans-serif;">Hari</p>
             </div>
             <div class="count-items">
                 <h2 id="hours" style="font-weight: normal;font-family: Andika, sans-serif;">0</h2>
-                <p style="font-family: 'Josefin Sans', sans-serif;">Hours</p>
+                <p style="font-family: 'Josefin Sans', sans-serif;">Jam</p>
             </div>
             <div class="count-items" style="font-weight: normal;font-family: Andika, sans-serif;">
                 <h2 id="minutes">0</h2>
-                <p style="font-family: 'Josefin Sans', sans-serif;">Minutes</p>
+                <p style="font-family: 'Josefin Sans', sans-serif;">Menit</p>
             </div>
             <div class="count-items">
                 <h2 id="seconds" style="font-family: Andika, sans-serif;font-weight: normal;">0</h2>
-                <p style="font-family: 'Josefin Sans', sans-serif;">Seconds</p>
+                <p style="font-family: 'Josefin Sans', sans-serif;">Detik</p>
             </div>
         </div>
     </div>
     <div id="section-love" class="section" style="background: #f6ece2;">
         <div data-aos="zoom-in">
             <h2 class="text-center" style="margin-bottom: 19px;font-family: moonTime, sans-serif;font-size:80px;font-weight: normal;color: rgb(126,99,79);">We Found Love</h2>
-            <p class="text-center" style="letter-spacing: 4px;color: rgb(126,99,79);">“ And among the signs of His power is He created for you wives of your own kind, your stable tends and is at ease with it, and made Him between you taste and affection. In fact, in this there are really signs for people who think “<br></p>
+            <p class="text-center" style="letter-spacing: 0px;color: rgb(126,99,79);">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً إِنَّ فِي ذَلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ<br></p>
+            <p class="text-center" style="letter-spacing: 4px;color: rgb(126,99,79);">“ Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“<br></p>
             <!-- <p class="text-center"
                 style="color: rgb(126,99,79);">(Colossians 3:14-15)<br></p> -->
         </div>
@@ -64,9 +65,9 @@ WebWedding
                         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 align-self-lg-center align-self-xl-center text-left content-about" style="padding: 0px;margin: 0px;">
                             <h1>Riowira Aditya Perdana</h1>
                             <h3><strong>Rio &nbsp;</strong></h3>
-                            <p>Son of Mr.Subiyanto<br>and Mrs.Erny Setiowati<br></p>
+                            <p>Putra dari Bapak Subiyanto<br>dan Ibu Erny Setiowati<br></p>
                             <div class="instagram-text">
-                            <a class="text-decoration-none" href="https://www.instagram.com/anesitumeang/">
+                            <a class="text-decoration-none" href="https://www.instagram.com/anesitumeang/"></a>
     
 
                             </div>
@@ -80,7 +81,7 @@ WebWedding
                         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 align-self-center text-right content-about">
                             <h1>Anisah Saleshah</h1>
                             <h3 style="">Anisah</h3>
-                            <p>Daughter of Mr.Fajar Suryatin<br>and Mrs.SriWidyastuti</p>
+                            <p>Putri dari Bapak Fajar Suryatin<br>dan Ibu SriWidyastuti</p>
                             <div class="instagram-text">
                             <a class="text-decoration-none" href="#">
                             <i class="fa fa-instagram mr-2"></i>-
@@ -119,7 +120,7 @@ WebWedding
             </div>
             <p class="detail-venue" style=""></p>
             <p class="detail-venue">Jl. Wijaya Kusuma IX, RT.05/10, Kel.Medan Satria Kec.Medan Satria - Kota Bekasi </p>
-            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;1">We appologize in the implementation on holy matrimony will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
+            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;1">Mohon maaf dalam pelaksanaan akad nikah hanya akan dihadiri oleh keluarga <br>sesuai protokol kesehatan terkait situasi pandemi Covid-19 <br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
         <div data-aos="zoom-in-up"
             class="text-center">
             <div>
@@ -136,7 +137,7 @@ WebWedding
                 </div>
             </div>
             <p class="detail-venue">Jl. Wijaya Kusuma IX, RT.05/10, Kel.Medan Satria Kec.Medan Satria - Kota Bekasi </p>
-            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">We would apply strictly health protocol.  Please always wear a mask, Wash your hand, Keeping a save distance, <br>Use hand sanitizer frequently</p>
+            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">Kami akan menerapkan protokol kesehatan yang ketat. Selalu pakai masker, Cuci tangan, Jaga jarak, <br>Dan sering pakai hand sanitizer </p>
         </div>
     </div>
     <div id="section-guest" class="section">
@@ -180,7 +181,7 @@ WebWedding
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <div class="form-group text-center"><label class="text-center" style="font-weight: bold;">Will You Be Coming ?</label>
+                                <div class="form-group text-center"><label class="text-center" style="font-weight: bold;">Apakah kamu ingin datang ?</label>
                                     <div>
                                         <div class="form-group form-status text-center">
                                             <div class="form-check ml-2">
@@ -213,10 +214,11 @@ WebWedding
     </div>
 
     <div id="section-maps" class="section text-center">
-    <h1 class="title-section">Location </h1>
+    <h1 class="title-section">Lokasi </h1>
     <!-- <img class="img-location" src="{{url('aness/assets/img/location-removebg-preview.png')}}"> -->
         <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.575814825532!2d106.97129931476903!3d-6.187476995520567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnMTQuOSJTIDEwNsKwNTgnMjQuNiJF!5e0!3m2!1sid!2sid!4v1624785788039!5m2!1sid!2sid&amp;zoom=15"
                 width="100%" height="400"></iframe></div>
+        <a href="https://www.google.com/maps?saddr=My+Location&daddr=-6.1871462716819465, 106.97344054171016" class="btn btn-block btn-secondary"></a>
     </div>
 
     <div id="section-ucapan" class="section">
