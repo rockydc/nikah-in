@@ -31,7 +31,14 @@
 
     gtag('config', 'G-7YLNT1MN0T');
     </script>
-
+    <style>
+    .img-thumbnail{
+        border:none;
+        width:200px !important;
+        height:200px !important;
+    }
+    
+    </style>
 
 
 </head>
@@ -68,7 +75,57 @@
         </div>
     </div>
 </div>
-  
+
+<div class="modal" role="dialog" tabindex="-1" id="modalProkes">
+    <div class="modal-dialog modal-dialog-centered modal-md"  role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+           
+                <div class="container-fluid py-5 border border-dark rounded">
+                    <p class="mb-0 text-center">Acara ini dilaksanakan dengan menerapkan</p>
+                    <h1 class="text-center">PROTOKOL KESEHATAN</h1>
+                    <p class="text-center">Sebagai Berikut:</p>
+                    <div class="gambar-prokes">
+                        <div class="row">
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/masker.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">masker</p>
+                            </div>
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/cuci-tangan.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Cuci Tangan</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/jagajarak.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">jagajarak</p>
+                            </div>
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/salaman.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Tidak Bersalaman</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/hand-sanitizer.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Handsanitizer</p>
+                            </div>
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/termo-gun.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Pengecekan Suhu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center"><a id="btn-prokes" class="btn btn-buka" href="#">Saya Mengerti</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <nav class="navbar navbar-light navbar-expand-md fixed-top " id="mainNav">
         <div class="container-fluid"><a style="font-family:Dancing Script;color:#af8876;font-weight:600;letter-spacing:5px;" class="navbar-brand" href="#page-top">Anis & Rio</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
@@ -108,7 +165,30 @@
     <script src="{{url('aness/assets/js/scrolling.js')}}"></script>
     <script src="{{url('aness/assets/js/scrollchangecolor.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="{{url('template/jasmine/assets/js/page.js')}}"></script>
+    <script>
+    
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+        $('#myModal').css("display","flex");
+        $('#myModal').css("justify-content","center");
+    });
+
+    var myaudio = document.getElementById("myaudio");
+   
+    $('#btn-open').click(function(){
+        $('#myModal').modal('hide');
+        $('#modalProkes').modal('show')
+       
+        
+    })
+
+    $('#btn-prokes').click(function(){
+        $('#modalProkes').modal('hide');
+        myaudio.play()
+    })
+
+    
+    </script>
     <script>
    
 
