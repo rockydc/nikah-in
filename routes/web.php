@@ -176,6 +176,27 @@ Route::prefix('riowira-anisa')
         
     });
 });
+
+
+Route::prefix('Adit-Ika')
+->namespace('ardy')
+->group(function(){
+    Route::get('/home/{name?}','ArdyController@index')->name('ardy');
+    Route::get('/success','ArdyController@success')->name('ardy-success');
+    Route::post('/store','ArdyController@store')->name('ardystore');
+
+    Route::prefix('admin')
+    ->middleware(['auth','ardy'])
+    ->group(function(){
+        Route::get('/','ArdyController@dashboard')->name('ardydashboard');
+        Route::get('/rsvp','ArdyController@rsvp')->name('ardyrsvp');
+        Route::get('/getrsvp','ArdyController@getrsvp');
+        Route::get('/cetakpdf','ArdyController@cetakpdf')->name('ardycetak');
+        
+    });
+});
+
+
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);

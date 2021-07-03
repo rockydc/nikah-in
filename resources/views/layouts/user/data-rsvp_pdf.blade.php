@@ -39,7 +39,7 @@
 		<thead>
 			<tr>
                         <th>Nama</th>
-                        <th>no_telepon</th>
+                      
                         <th>email</th>
                         <th>Status</th>
                         <th>Jmlh_orang</th>
@@ -52,7 +52,7 @@
 			<tr>
 			
 				<td>{{$item->nama}}</td>
-				<td>{{$item->no_telepon}}</td>
+				
 				<td>{{$item->email}}</td>
 				<td>{{$item->status}}</td>
 				<td>{{$item->jmlh_orang}}</td>

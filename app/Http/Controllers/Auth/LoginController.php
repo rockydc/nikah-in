@@ -69,6 +69,11 @@ public function logout(Request $request)
         $this->doLogout($request);
         return redirect()->route('riowira');
     }
+    elseif(Auth::user() && Auth::user()->roles == 'ARDY'){
+        $this->doLogout($request);
+        return redirect()->route('ardy');
+    }
+    
     
     else{
         $this->doLogout($request);
