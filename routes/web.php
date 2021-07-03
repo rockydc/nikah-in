@@ -178,7 +178,7 @@ Route::prefix('riowira-anisa')
 });
 
 
-Route::prefix('Adit-Ika')
+Route::prefix('adit-ika')
 ->namespace('ardy')
 ->group(function(){
     Route::get('/home/{name?}','ArdyController@index')->name('ardy');
