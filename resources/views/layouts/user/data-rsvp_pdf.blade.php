@@ -23,7 +23,17 @@
                 text-align: center;
                 line-height: 35px;
             }
+            th{
+                text-align:left;
 
+            }
+            th:last-child{
+                text-align:center;
+            }
+            
+            td{
+                margin-top:10px;
+            }
             footer {
                 position: fixed; 
                 bottom: 0cm; 
@@ -36,7 +46,7 @@
  <h1 class="mt-5">Daftar tamu RSVP </h1>   
 <div class="table-responsive mt-5">  
     <table class="table table-bordered" width="100%" cellspacing="0">
-		<thead>
+		<thead class="text-center">
 			<tr>
                         <th>Nama</th>
                       

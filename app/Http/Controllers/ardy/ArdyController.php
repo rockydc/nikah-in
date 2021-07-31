@@ -64,7 +64,8 @@ class ArdyController extends Controller
     public function cetakpdf(){
 
         $items = Ardy::all();
-        $pdf = PDF::loadview('layouts.user.data-rsvp_pdf',['items'=>$items]);
+    
+        $pdf = PDF::loadview('layouts.user.data-rsvp_pdf',['items'=>$items])->setOptions(['defaultPaperSize'=>'a3']);
         return $pdf->download('laporan-data-rsvp.pdf');
     }
     
