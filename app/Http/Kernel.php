@@ -70,7 +70,7 @@ class Kernel extends HttpKernel
         'ferry'=>\App\Http\Middleware\IsFerry::class,
         'riowira'=>\App\Http\Middleware\IsRio::class,
         'ardy'=>\App\Http\Middleware\IsArdy::class,
-        
+        'adhigita'=>\App\Http\Middleware\adhigita::class,
     ];
 
     /**

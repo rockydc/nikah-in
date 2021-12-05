@@ -96,7 +96,7 @@ Route::prefix('Hesti_Isby')
 
 Route::prefix('Peter_Melita')
 ->namespace('peter')
-->middleware('auth','peter')
+
 ->group(function(){
     Route::get('/','PeterController@index')->name('Peter');
     Route::get('/succes','PeterController@success')->name('peter-success');
@@ -192,6 +192,25 @@ Route::prefix('adit-ika')
         Route::get('/rsvp','ArdyController@rsvp')->name('ardyrsvp');
         Route::get('/getrsvp','ArdyController@getrsvp');
         Route::get('/cetakpdf','ArdyController@cetakpdf')->name('ardycetak');
+        
+    });
+});
+
+
+Route::prefix('adhi-gita')
+->namespace('adhigita')
+->group(function(){
+    Route::get('/home/{name?}','AdhigitaController@index')->name('adhigita');
+    Route::get('/success','AdhigitaController@success')->name('adhigita-success');
+    Route::post('/store','AdhigitaController@store')->name('adhigitastore');
+
+    Route::prefix('admin')
+    ->middleware(['auth','adhigita'])
+    ->group(function(){
+        Route::get('/','AdhigitaController@dashboard')->name('adhigitadashboard');
+        Route::get('/rsvp','AdhigitaController@rsvp')->name('adhigitarsvp');
+        Route::get('/getrsvp','AdhigitaController@getrsvp');
+        Route::get('/cetakpdf','AdhigitaController@cetakpdf')->name('adhigitacetak');
         
     });
 });
