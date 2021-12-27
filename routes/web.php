@@ -216,6 +216,23 @@ Route::prefix('adhi-gita')
 });
 
 
+Route::prefix('jauja-agus')
+->namespace('jauja')
+->group(function(){
+    Route::get('/home/{name?}','jaujaController@index')->name('jauja');
+    Route::get('/success','jaujaController@success')->name('jauja-success');
+    Route::post('/store','jaujaController@store')->name('jaujastore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','jaujaController@dashboard')->name('jaujadashboard');
+        Route::get('/rsvp','jaujaController@rsvp')->name('jaujarsvp');
+        Route::get('/getrsvp','jaujaController@getrsvp');
+        Route::get('/cetakpdf','jaujaController@cetakpdf')->name('jaujacetak');
+    });
+});
+
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);
@@ -238,6 +255,8 @@ Route::prefix('terminal')->group(function(){
         $this->info("get output");
     });
 });
+
+
 Auth::routes();
 
 
