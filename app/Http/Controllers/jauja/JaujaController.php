@@ -17,12 +17,12 @@ class JaujaController extends Controller
         $datapengantin = [
             "cowo"=>"Agus",
             "cewe"=>"Jauja",
-            "tgl"=>"19",
-            "bln"=>"12",
-            "thn"=>"21",
-            "lagu"=>"Canon in D (Pachelbel's Canon) - Cello & Piano",
+            "tgl"=>"06",
+            "bln"=>"02",
+            "thn"=>"22",
+            "lagu"=>"Love Story - Taylor Swift (Cover by Eltasya Natasha ft. Indah Aqila)",
             "lokasi"=>"Perumahan taman kintamani blok D8 no 29 RT 19 RW 08 Jejalen Jaya, Tambun Utara - Bekasi",
-            "tanggal"=>"May 22, 2020",
+            "tanggal"=>"February 06, 2022",
             "jam akad"=>"08.00 - 10.00",
             "jam resepsi"=>"11.00 - 17.00"
         ];

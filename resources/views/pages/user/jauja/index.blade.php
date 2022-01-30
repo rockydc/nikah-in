@@ -233,7 +233,21 @@ WebWedding
         <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.297442251872!2d107.06128021476906!3d-6.22445629549418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa1c09a39439cc188!2zNsKwMTMnMjguMCJTIDEwN8KwMDMnNDguNSJF!5e0!3m2!1sid!2sid!4v1640587987600!5m2!1sid!2sid"&amp;zoom=15"
                 width="100%" height="400"></iframe></div>
     </div>
+    <div id="share-the-love" class="section text-center">
+        <h1 class="title-section" style="font-size:50px;">Share The Love</h1>
+        <div class="wrapper-love d-flex justify-content-center align-items-center flex-column">
+            <p style="letter-spacing: 4px;color: rgb(126,99,79);"> We Also Provide Cash Less
+                <br>Wedding Gift Using Ovo and Bank Account</p>
+                <img class="mt-4 img-barcode" src="{{url('user/jauja/assets/img/qr.png')}}">
+                <p class="mt-1" >BCA</p>
+                <div class="bank-account">
+                <p><strong>CIMB</strong> : 706127039900  <br>jauza Hasanah isdiana</p>
+                </div>
+                
 
+        </div>
+
+    </div>
     <div id="section-ucapan" class="section">
     <div class="container wrapper-content" style="background-color:#F3DBB2;">
             <h1>Pray &amp; <strong>Love</strong></h1>

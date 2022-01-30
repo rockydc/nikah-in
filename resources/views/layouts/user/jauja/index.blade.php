@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <title>{{$datapengantin['cowo']}} &amp; {{ $datapengantin['cewe']}}</title>
-    <meta name="description" content="Muhammad Ficry &amp; Fitriya "
+    <meta name="description"  content="{{ $profilecowo['nama'] }} &amp; {{ $profilecewe['nama']}} ">
     @include('includes.user.style')
     <link rel="icon" type="image/png" sizes="500x500" href="{{url('user/ficry/assets/img/mosque 2.png')}}">
     <link rel="stylesheet" href="{{url('aness/assets/bootstrap/css/bootstrap.min.css')}}">
@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Meddon">
     <link rel="stylesheet" href="{{url('aness/assets/fonts/font-awesome.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
-    <link rel="stylesheet" href="{{url('aness/assets/css/styles.css')}}">
-    <link rel="stylesheet" href="{{url('aness/assets/css/styles.compiled.css')}}">
+
     <link rel="stylesheet" href="{{url('aness/assets/scss/styles.css')}}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YLNT1MN0T"></script>
@@ -39,7 +38,7 @@
 </head>
 
 <audio loop id="myaudio" type="audio/mp3">
-    <source src="{{url('user/ficry/assets/ten thousand hours.mp3')}}">
+    <source src="{{url('user/jauja/Love Story - Taylor Swift (Cover by Eltasya Natasha ft. Indah Aqila).mp3')}}">
 </audio>
 
 <body id="page-top"style="background: rgb(246,236,226);">
