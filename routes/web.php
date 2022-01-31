@@ -233,6 +233,24 @@ Route::prefix('jauja-agus')
     });
 });
 
+
+Route::prefix('suhartono-dewi')
+->namespace('suhartono')
+->group(function(){
+    Route::get('/home/{name?}','SuhartonoController@index')->name('suhartono');
+    Route::get('/success','SuhartonoController@success')->name('suhartono-success');
+    Route::post('/store','SuhartonoController@store')->name('suhartonostore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','SuhartonoController@dashboard')->name('suhartonodashboard');
+        Route::get('/rsvp','SuhartonoController@rsvp')->name('suhartonorsvp');
+        Route::get('/getrsvp','SuhartonoController@getrsvp');
+        Route::get('/cetakpdf','SuhartonoController@cetakpdf')->name('suhartonocetak');
+    });
+});
+
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);
