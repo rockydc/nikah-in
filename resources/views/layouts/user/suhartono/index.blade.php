@@ -47,7 +47,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="section-modal"><img class="img-header" src="{{url('user/suhartono/assets/img/_MG_0252.jpg')}}" />
+                <div class="section-modal"><img class="img-header" src="{{url('user/suhartono/assets/img/_MG_0252.webp')}}" />
                     <div class="mt-4">
                         <p class="text-center">Wedding of<br /></p>
                         <h1>{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br /></h1>
@@ -87,7 +87,7 @@
 </div>
   
 <nav class="navbar navbar-light navbar-expand-md fixed-top " id="mainNav">
-        <div class="container-fluid"><a style="font-family:Dancing Script;color:#af8876;font-weight:600;letter-spacing:5px;" class="navbar-brand" href="#page-top">{{$datapengantin['cowo']}} & {{$datapengantin['cewe']}}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a style="font-family:Dancing Script;color:#af8876;font-weight:600;letter-spacing:5px; text-shadow: 1px 1px 13px rgb(255 255 255 / 70%);" class="navbar-brand" href="#page-top">{{$datapengantin['cowo']}} & {{$datapengantin['cewe']}}</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">

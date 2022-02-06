@@ -8,9 +8,9 @@ WebWedding
 @section('content')
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active"><img class="w-100 d-block" src="{{url('user/jauja/assets/img/RENJANAs-6.jpg')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
-            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/jauja/assets/img/RENJANAs-8.jpg')}}" alt="Slide Image"></div>
-            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/jauja/assets/img/RENJANAs-12.jpg')}}" alt="Slide Image"></div>
+            <div class="carousel-item active"><img class="w-100 d-block" src="{{url('user/suhartono/assets/img/7b.webp')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/suhartono/assets/img/_MG_0250.webp')}}" alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/suhartono/assets/img/_MG_0268.webp')}}" alt="Slide Image"></div>
         </div>
         <!-- <div>
             <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -59,15 +59,15 @@ WebWedding
             <div class="container">
                 <div>
                     <div class="row">
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="{{url('user/jauja/assets/img/profile-cowo.png')}}"></div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="{{url('user/suhartono/assets/img/profile-image-cowok.png')}}"></div>
                         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 align-self-lg-center align-self-xl-center text-left content-about" style="padding: 0px;margin: 0px;">
                             <h1>{{$profilecowo['nick']}}</h1>
                             <h3><strong>{{$profilecowo['nama']}}&nbsp;</strong></h3>
                             <p>Son of {{$profilecowo['ayah']}}<br>and {{$profilecowo['ibu']}}<br></p>
                             <div class="instagram-text">
-                            <a class="text-decoration-none" href="https://www.instagram.com/anesitumeang/">
+                            <!-- <a class="text-decoration-none" href="https://www.instagram.com/anesitumeang/">
                             <i class="fa fa-instagram mr-2"></i>{{$profilecowo['ig']}}
-                            </a>
+                            </a> -->
 
                             </div>
 
@@ -82,15 +82,15 @@ WebWedding
                             <h3 style="">{{$profilecewe['nama']}}</h3>
                             <p>Daughter of {{$profilecewe['ayah']}}<br>and {{$profilecewe['ibu']}}</p>
                             <div class="instagram-text">
-                            <a class="text-decoration-none" href="#">
+                            <!-- <a class="text-decoration-none" href="#">
                             <i class="fa fa-instagram mr-2"></i>{{$profilecewe['ig']}}
-                            </a>
+                            </a> -->
 
                             </div>
 
                            
                         </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="{{url('user/jauja/assets/img/profile-cewe.png')}}"></div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="{{url('user/suhartono/assets/img/profile-image-cewek.png')}}"></div>
                     </div>
                 </div>
             </div>
@@ -221,30 +221,33 @@ WebWedding
         <h2 class="title-section">Gallery</h2>
         <!-- <img class="img-gallery" src="{{url('aness/assets/img/gallery-removebg-preview.png')}}"> -->
         <div data-aos="zoom-in-up" class="gallery-wrapper container">
-        <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0250.jpg')}}"></div>
-            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0252.jpg')}}"></div>
-            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0268.jpg')}}"></div>
-            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0304.jpg')}}"></div>
-            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/7a.jpg')}}"></div>
-            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/7b.jpg')}}"></div>
+        <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0250.webp')}}"></div>
+            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0252.webp')}}"></div>
+            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0268.webp')}}"></div>
+            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0304.webp')}}"></div>
+            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/7a.webp')}}"></div>
+            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/7b.webp')}}"></div>
 
         </div>
     </div>
     <div id="section-maps" class="section text-center">
     <h1 class="title-section">Location </h1>
     <!-- <img class="img-location" src="{{url('aness/assets/img/location-removebg-preview.png')}}"> -->
-        <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.297442251872!2d107.06128021476906!3d-6.22445629549418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa1c09a39439cc188!2zNsKwMTMnMjguMCJTIDEwN8KwMDMnNDguNSJF!5e0!3m2!1sid!2sid!4v1640587987600!5m2!1sid!2sid"&amp;zoom=15"
+        <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5375328720843!2d111.69417671477366!3d-7.06349609489845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6eb6590e54dbb4b0!2zN8KwMDMnNDguNiJTIDExMcKwNDEnNDYuOSJF!5e0!3m2!1sid!2sid!4v1643703323264!5m2!1sid!2sid"&amp;zoom=15"
                 width="100%" height="400"></iframe></div>
     </div>
     <div id="share-the-love" class="section text-center">
         <h1 class="title-section" style="font-size:50px;">Share The Love</h1>
         <div class="wrapper-love d-flex justify-content-center align-items-center flex-column">
             <p style="letter-spacing: 4px;color: rgb(126,99,79);"> We Also Provide Cash Less
-                <br>Wedding Gift Using Ovo and Bank Account</p>
-                <img class="mt-4 img-barcode" src="{{url('user/jauja/assets/img/qr.png')}}">
-                <p class="mt-1" >BCA</p>
+                <br>Wedding Gift Using qrcode</p>
+                <!-- <img class="mt-4 img-barcode" src="{{url('user/jauja/assets/img/qr.png')}}"> -->
+                <!-- <p class="mt-1" >qrcode BCA/emoney lainya</p> -->
                 <div class="bank-account">
-                <p><strong>CIMB</strong> : 706127039900  <br>jauza Hasanah isdiana</p>
+                <p><strong>BRI</strong> : 50701020823505  <br>Tono</p>
+                </div>
+                <div class="bank-account mt-2" >
+                <p><strong>Mandiri</strong> : 1030006665950  <br>Tono</p>
                 </div>
                 
 

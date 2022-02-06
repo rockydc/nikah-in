@@ -216,20 +216,20 @@ Route::prefix('adhi-gita')
 });
 
 
-Route::prefix('jauja-agus')
+Route::prefix('jauza-agus')
 ->namespace('jauja')
 ->group(function(){
-    Route::get('/home/{name?}','jaujaController@index')->name('jauja');
-    Route::get('/success','jaujaController@success')->name('jauja-success');
-    Route::post('/store','jaujaController@store')->name('jaujastore');
+    Route::get('/home/{name?}','JaujaController@index')->name('jauja');
+    Route::get('/success','JaujaController@success')->name('jauja-success');
+    Route::post('/store','JaujaController@store')->name('jaujastore');
 
     Route::prefix('admin')
    
     ->group(function(){
-        Route::get('/','jaujaController@dashboard')->name('jaujadashboard');
-        Route::get('/rsvp','jaujaController@rsvp')->name('jaujarsvp');
-        Route::get('/getrsvp','jaujaController@getrsvp');
-        Route::get('/cetakpdf','jaujaController@cetakpdf')->name('jaujacetak');
+        Route::get('/','JaujaController@dashboard')->name('jaujadashboard');
+        Route::get('/rsvp','JaujaController@rsvp')->name('jaujarsvp');
+        Route::get('/getrsvp','JaujaController@getrsvp');
+        Route::get('/cetakpdf','JaujaController@cetakpdf')->name('jaujacetak');
     });
 });
 
