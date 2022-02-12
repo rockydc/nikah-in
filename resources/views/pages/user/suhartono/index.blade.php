@@ -221,11 +221,11 @@ WebWedding
         <h2 class="title-section">Gallery</h2>
         <!-- <img class="img-gallery" src="{{url('aness/assets/img/gallery-removebg-preview.png')}}"> -->
         <div data-aos="zoom-in-up" class="gallery-wrapper container">
-        <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0250.webp')}}"></div>
+        <div class="img-wrapper"><img style="object-fit:fill;" class="img-items" src="{{url('user/suhartono/assets/img/_MG_0250New.jpg')}}"></div>
             <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0252.webp')}}"></div>
             <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0268.webp')}}"></div>
-            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0304.webp')}}"></div>
-            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/7a.webp')}}"></div>
+            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/_MG_0304.jpg')}}"></div>
+            <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/7aNew.jpg')}}"></div>
             <div class="img-wrapper"><img class="img-items" src="{{url('user/suhartono/assets/img/7b.webp')}}"></div>
 
         </div>
@@ -244,10 +244,14 @@ WebWedding
                 <!-- <img class="mt-4 img-barcode" src="{{url('user/jauja/assets/img/qr.png')}}"> -->
                 <!-- <p class="mt-1" >qrcode BCA/emoney lainya</p> -->
                 <div class="bank-account">
-                <p><strong>BRI</strong> : 50701020823505  <br>Tono</p>
+                <p ><strong>BRI</strong> : 50701020823505  <br>Tono</p>
+                <input type="hidden" id="rek1" value="50701020823505">
+                <button onclick="copyToClipboard('rek1')"style="background-color:#f2b577;border:none;" class="btn btn-primary btn-sm">Copy</button>
                 </div>
                 <div class="bank-account mt-2" >
                 <p><strong>Mandiri</strong> : 1030006665950  <br>Tono</p>
+                <input type="hidden" id="rek2" value="1030006665950  ">
+                <button onclick="copyToClipboard('rek2')"style="background-color:#f2b577;border:none;" class="btn btn-primary btn-sm">Copy</button>
                 </div>
                 
 
