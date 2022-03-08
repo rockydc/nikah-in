@@ -24,7 +24,10 @@ class JaujaController extends Controller
             "lokasi"=>"Perumahan taman kintamani blok D8 no 29 RT 19 RW 08 Jejalen Jaya, Tambun Utara - Bekasi",
             "tanggal"=>"February 06, 2022",
             "jam akad"=>"08.00 - 10.00",
-            "jam resepsi"=>"11.00 - 17.00"
+            "jam resepsi"=>"08.00 - Selesai ",
+            "lokasi resepsi" => "Muruh kidul Rt013 rw007 muruh gantiwarno klaten",
+            "Map link"=> "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7120.794691059975!2d110.53131750600662!3d-7.767956725344487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x302d4537fb224c68!2zN8KwNDUnNTguNiJTIDExMMKwMzEnNTYuOCJF!5e0!3m2!1sid!2sid!4v1645159590964!5m2!1sid!2sid",
+            "tanggal resepsi"=> "Februari 20,2022"
         ];
          $profileCowo =[
             "nama"=> "Agus Riyadi",

@@ -126,16 +126,16 @@ WebWedding
                 <div>
                     <div class="wrapper-content-church">
                         <div></div>
-                        <div><h2 class="text-venue" style="">Wedding Reception</h2>
+                        <div><h2 class="text-venue" style="">Unduh Mantu</h2>
                         <img src="{{url('user/ficry/assets/img/mosque 2.png')}}">
                        
-                        <p class="date-venue" style="">{{$datapengantin['tanggal']}} <br> {{$datapengantin['jam resepsi']}}</p>
+                        <p class="date-venue" style="">{{$datapengantin['tanggal resepsi']}} <br> {{$datapengantin['jam resepsi']}}</p>
                         </div>
                         <div class="d-md-flex justify-content-md-start align-items-md-center barcode"><img src="{{url('user/ficry/assets/img/qrcode.png')}}"></div>
                     </div>
                 </div>
             </div>
-            <p class="detail-venue">{{$datapengantin['lokasi']}}</p>
+            <p class="detail-venue">{{$datapengantin['lokasi resepsi']}}</p/>
             <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">We would apply strictly health protocol.  Please always wear a mask, Wash your hand, Keeping a save distance, <br>Use hand sanitizer frequently</p>
         </div>
     </div>
@@ -230,7 +230,7 @@ WebWedding
     <div id="section-maps" class="section text-center">
     <h1 class="title-section">Location </h1>
     <!-- <img class="img-location" src="{{url('aness/assets/img/location-removebg-preview.png')}}"> -->
-        <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.297442251872!2d107.06128021476906!3d-6.22445629549418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa1c09a39439cc188!2zNsKwMTMnMjguMCJTIDEwN8KwMDMnNDguNSJF!5e0!3m2!1sid!2sid!4v1640587987600!5m2!1sid!2sid"&amp;zoom=15"
+        <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="{{$datapengantin['Map link']}}"&amp;zoom=15"
                 width="100%" height="400"></iframe></div>
     </div>
     <div id="share-the-love" class="section text-center">
