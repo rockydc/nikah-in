@@ -233,6 +233,23 @@ Route::prefix('jauza-agus')
     });
 });
 
+    Route::prefix('Andreas-Deve')
+->namespace('andreasdeve')
+->group(function(){
+    Route::get('/home/{name?}','AndreasdeveController@index')->name('andreasdeve');
+    Route::get('/success','AndreasdeveController@success')->name('andreasdeve-success');
+    Route::post('/store','AndreasdeveController@store')->name('andreasdevestore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','AndreasdeveController@dashboard')->name('andreasdevedashboard');
+        Route::get('/rsvp','AndreasdeveController@rsvp')->name('andreasdevesvp');
+        Route::get('/getrsvp','AndreasdeveController@getrsvp');
+        Route::get('/cetakpdf','AndreasdeveController@cetakpdf')->name('andreasdevecetak');
+    });
+});
+
 
 Route::prefix('suhartono-dewi')
 ->namespace('suhartono')
