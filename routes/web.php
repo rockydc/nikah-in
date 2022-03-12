@@ -244,7 +244,7 @@ Route::prefix('jauza-agus')
    
     ->group(function(){
         Route::get('/','AndreasdeveController@dashboard')->name('andreasdevedashboard');
-        Route::get('/rsvp','AndreasdeveController@rsvp')->name('andreasdevesvp');
+        Route::get('/rsvp','AndreasdeveController@rsvp')->name('andreasdeversvp');
         Route::get('/getrsvp','AndreasdeveController@getrsvp');
         Route::get('/cetakpdf','AndreasdeveController@cetakpdf')->name('andreasdevecetak');
     });
@@ -265,6 +265,23 @@ Route::prefix('suhartono-dewi')
         Route::get('/rsvp','SuhartonoController@rsvp')->name('suhartonorsvp');
         Route::get('/getrsvp','SuhartonoController@getrsvp');
         Route::get('/cetakpdf','SuhartonoController@cetakpdf')->name('suhartonocetak');
+    });
+});
+
+Route::prefix('kevinresita')
+->namespace('kevinresita')
+->group(function(){
+    Route::get('/home/{name?}','kevinresitaController@index')->name('kevinresita');
+    Route::get('/success','kevinresitaController@success')->name('kevinresita-success');
+    Route::post('/store','kevinresitaController@store')->name('kevinresitastore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','kevinresitaController@dashboard')->name('kevinresitadashboard');
+        Route::get('/rsvp','kevinresitaController@rsvp')->name('kevinresitarsvp');
+        Route::get('/getrsvp','kevinresitaController@getrsvp');
+        Route::get('/cetakpdf','kevinresitaController@cetakpdf')->name('kevinresitacetak');
     });
 });
 

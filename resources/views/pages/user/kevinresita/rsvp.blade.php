@@ -1,13 +1,13 @@
-@extends('layouts.user.andreasdeve.dashboard')
+@extends('layouts.user.suhartono.dashboard')
 
 @section('content')
                 <!-- Begin Page Content -->
-                <div class="container-fluid mt-5">
+                <div class="container-fluid" style="margin-top:20px;">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Daftar Tamu RSVP</h1>
-                        <a href="{{route('andreasdevecetak')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                        <a href="{{route('jaujacetak')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                         <i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
@@ -28,7 +28,7 @@
                                             <th>Jmlh_orang</th>
                                             <th>pesan</th>
                                           
-                                 
+                                            
                                         </tr>
                                     </thead>
                                     

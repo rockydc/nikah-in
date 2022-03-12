@@ -116,7 +116,10 @@ header .header-wrap .date-wrap {
 
 @media (min-width: 0) and (max-width: 600px) {
   header {
-    background: url("../img/header-mobile.png") center/cover no-repeat;
+    background: url("../img/header-mobile-2.png") center/cover no-repeat;
+  }
+  header .header-wrap {
+    padding-top: 10em;
   }
 }
 .section-quotes {

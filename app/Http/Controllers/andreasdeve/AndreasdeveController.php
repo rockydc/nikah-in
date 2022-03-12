@@ -61,6 +61,8 @@ class AndreasdeveController extends Controller
             "ig"=>"@deveqt",
             "igurl"=>"https://www.instagram.com/deveqt/"
         ];
+
+        $name = str_replace(["+"], [" "],$name);
         return view('pages.user.andreasdeve.index',[
 
             'items'=>$items,

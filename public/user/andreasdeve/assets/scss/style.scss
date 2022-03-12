@@ -141,7 +141,10 @@ header {
 }
 @include mobile {
     header {
-        background: url("../img/header-mobile.png") center/ cover no-repeat;
+        background: url("../img/header-mobile-2.png") center/ cover no-repeat;
+        .header-wrap {
+            padding-top: 10em;
+        }
     }
 }
 //end of header

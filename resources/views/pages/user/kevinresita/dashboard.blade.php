@@ -1,4 +1,4 @@
-@extends('layouts.user.andreasdeve.dashboard')
+@extends('layouts.user.ficry.dashboard')
 
 @section('content')
                 <!-- Begin Page Content -->
@@ -42,7 +42,7 @@
                             @endforeach
            
 
-                            <div class="col d-flex align-items-center justify-content-center mb-4"><a style="color:black;" href="{{route('ferryrsvp')}}">Lihat Semua</a></div>
+                            <div class="col d-flex align-items-center justify-content-center mb-4"><a style="color:black;" href="{{route('anesrsvp')}}">Lihat Semua</a></div>
 
                         </div>
                         </div>

@@ -41,7 +41,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="section-modal"><img class="img-header" src="{{url('user/andreasdeve/assets/img/1.jpg')}}" />
+                <div class="section-modal"><img class="img-header" src="{{url('user/andreasdeve/assets/img/5.jpg')}}" />
                     <div class="mt-4">
                         <p class="text-center">Wedding of<br /></p>
                         <h1>{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br /></h1>

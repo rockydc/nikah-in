@@ -21,7 +21,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                         <div><img data-aos="fade-up" src="{{url('user/andreasdeve/assets/img/profile-cowo.png')}}">
                             <h1 data-aos="fade-up" class="mt-5 text-name">{{$profilecowo['nama']}}</h1>
-                            <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putra dari {{$profilecowo['ayah']}} dan ibu {{$profilecowo['ibu']}}<br></p>
+                            <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putra dari Bpk.{{$profilecowo['ayah']}} dan Ibu {{$profilecowo['ibu']}}<br></p>
                             <div>
                                 <a href={{$profilecowo['igurl']}}>
                                 <p data-aos="fade-up" class="instagram-profile"><img src="{{url('user/isby/assets/img/ig_icon.svg')}}" class="mr-3" style="width:24px;height:24px;">{{$profilecowo['ig']}}</p>
@@ -39,7 +39,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                         <div><img data-aos="fade-up" src="{{url('user/andreasdeve/assets/img/profile-cewe.png')}}">
                             <h1 data-aos="fade-up" class="mt-5 text-name">{{$profilecewe['nama']}}</h1>
-                            <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putri dari  Bpk. {{$profilecewe['ayah']}} dan ibu {{$profilecewe['ibu']}}<br></p>
+                            <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putri dari  Bpk.{{$profilecewe['ayah']}} dan Ibu {{$profilecewe['ibu']}}<br></p>
                           
                            
                             <div>
@@ -133,7 +133,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             </div>
       
                 <div data-aos="fade-up">
-                    <p data-aos="fade-up">Pemberkatan</p>
+                    <p data-aos="fade-up">Pemberkatan <strong>(Hanya untuk Keluarga)</strong></p>
                     <p data-aos="fade-up">{{$datapengantin['lokasi']}}</p>
                 </div>
                 <div data-aos="fade-up"></div>
@@ -177,10 +177,10 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <label class="mt-5" for="pesan">Ucapan atau Doa</label>
-            <textarea class="form-control " rows="8" placeholder="Ucapan" name="pesan"></textarea>
+            <textarea  required class="form-control " rows="8" placeholder="Ucapan" name="pesan"></textarea>
                 <div class="form-group d-flex justify-content-center mt-5">
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="rd_1" name="status" class="custom-control-input" value="Hadir">
+                    <input type="radio" id="rd_1" name="status" checked class="custom-control-input" value="Hadir">
                     <label class="custom-control-label green" for="rd_1">Akan Hadir</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
@@ -191,11 +191,9 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                 <div class="form-group d-flex justify-content-center">
                     <div class="d-flex align-items-center mr-4"><label>Hadir Bersama</label></div><select class="form-control" name="jmlh_orang"style="width: 150px;">
                         <optgroup label="Jumlah orang">
-                            <option value="1" selected="">1</option>
+                            <option value="1" selected>1</option>
                             <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+     
                         </optgroup>
                     </select>
                 </div>
@@ -206,7 +204,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
     <section class="section-gift">
         <div class="container wrapper">
             <h1 style="font-family: Montserrat, sans-serif;">Share gift</h1>
-            <p>Bagikan kebahagian bersama {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br></p>
+            <p>Bagikan kebahagiaan bersama {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br></p>
            
         <div class="wrapper-love d-flex justify-content-center align-items-center flex-column">
        
