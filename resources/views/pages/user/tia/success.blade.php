@@ -1,4 +1,4 @@
-@extends('layouts.user.kevinresita.success')
+@extends('layouts.user.tia.success')
 @section('content-success')
 
 <div class="container">
@@ -7,14 +7,14 @@
         </nav>    
 <div class="d-flex justify-content-center"> 
 <lottie-player class="align-self-center rounded" style="width:245px; height:245px;" src="{{url('
-rsvp.json')}}"  loop  autoplay></lottie-player>
+success-rsvp.json')}}"  loop  autoplay></lottie-player>
 </div>
 
         <div class="d-flex justify-content-center align-items-center flex-column">
             <p style="font-size:25px;font-weight:700; font-familiy:montserrat,sans-serif;">Yeay ! Terimakasih telah mengisi Buku Tamu</p>
             <p>Tetap Patuhi Protokol Kesehatan !</p> 
 
-            <a class="btn btn-buka" style="" href="{{route('kevinresita')}}">Home</a>     
+            <a class="btn btn-buka" style="" href="{{route('tia')}}">Home</a>     
         </div>
     </div>
     

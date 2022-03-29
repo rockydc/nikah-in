@@ -311,6 +311,10 @@
   flex-direction: row;
 }
 @media (min-width: 0) and (max-width: 600px) {
+  #section-guest .form-wrapper {
+    width: 100%;
+    padding: 30px 10px;
+  }
   #section-guest .form-status {
     align-items: center;
     justify-content: center;
@@ -339,7 +343,7 @@
 #section-gallery .gallery-wrapper {
   margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1rem;
 }
 #section-gallery .img-wrapper {
@@ -399,6 +403,7 @@
 @media (min-width: 0) and (max-width: 600px) {
   #section-ucapan .wrapper-content {
     width: 100%;
+    padding: 50px;
   }
 }
 
@@ -464,7 +469,7 @@
   }
 
   .fixed-top {
-    background-color: #FDF4E3 !important;
+    background-color: #fdf4e3 !important;
   }
 
   .date-venue {
@@ -508,7 +513,7 @@
 
 .btn-buka {
   margin-top: 30px;
-  background-color: #D4AF37;
+  background-color: #d4af37;
   text-decoration: none;
   color: white;
   padding: 15px 43px;

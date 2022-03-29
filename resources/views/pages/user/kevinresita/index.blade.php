@@ -8,9 +8,12 @@ WebWedding
 @section('content')
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active"><img class="w-100 d-block" src="{{url('user/suhartono/assets/img/7b.webp')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
-            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/suhartono/assets/img/_MG_0250.webp')}}" alt="Slide Image"></div>
-            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/suhartono/assets/img/_MG_0268.webp')}}" alt="Slide Image"></div>
+            <div class="carousel-item active "><img class="w-100 d-block" src="{{url('user/kevinresita/assets/img/5.jpg')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
+            <!-- @foreach($imggaleri as $index => $value)
+        <div class="img-wrapper"><img  class="img-items" src="/user/kevinresita/assets/img/{{$value}}"></div>
+        @endforeach -->
+            <div class="carousel-item " ><img class="w-100 d-block" src="{{url('user/kevinresita/assets/img/2.jpg')}}" alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/kevinresita/assets/img/9.jpg')}}"  style="object-position:center" alt="Slide Image"></div>
         </div>
         <!-- <div>
             <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -158,7 +161,7 @@ WebWedding
         <h1 class="title-section">RSVP</h1>
         <!-- <img class="img-guest" src="{{url('aness/assets/img/guest_attendance-removebg-preview.png')}}"> -->
             <div class="form-wrapper p-lg-4 p-md-4 p-sm-1">
-                <form action="{{route('suhartonostore')}}" method="post">
+                <form action="{{route('kevinresitastore')}}" method="post">
                 @csrf 
 
                     <div>
@@ -230,7 +233,7 @@ WebWedding
         <!-- <img class="img-gallery" src="{{url('aness/assets/img/gallery-removebg-preview.png')}}"> -->
         <div data-aos="zoom-in-up" class="gallery-wrapper container">
         @foreach($imggaleri as $index => $value)
-        <div class="img-wrapper"><img style="object-fit:fill;" class="img-items" src="/user/kevinresita/assets/img/{{$value}}"></div>
+        <div class="img-wrapper"><img  class="img-items" src="/user/kevinresita/assets/img/{{$value}}"></div>
         @endforeach
         
         </div>
@@ -238,7 +241,7 @@ WebWedding
     <div id="section-maps" class="section text-center">
     <h1 class="title-section">Location </h1>
     <!-- <img class="img-location" src="{{url('aness/assets/img/location-removebg-preview.png')}}"> -->
-        <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5375328720843!2d111.69417671477366!3d-7.06349609489845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6eb6590e54dbb4b0!2zN8KwMDMnNDguNiJTIDExMcKwNDEnNDYuOSJF!5e0!3m2!1sid!2sid!4v1643703323264!5m2!1sid!2sid"&amp;zoom=15"
+        <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src={{$datapengantin['map_link']}}&amp;zoom=15"
                 width="100%" height="400"></iframe></div>
     </div>
     <div id="share-the-love" class="section text-center">

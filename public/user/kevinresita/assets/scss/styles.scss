@@ -9,16 +9,15 @@
 }
 
 @font-face {
-    font-family: 'moonTime';
-    src: url('../fonts/MoonTime-Regular-www.Dfonts.org/MoonTime-Regular.otf');
-    src: url('../fonts/MoonTime-Regular-www.Dfonts.org/MoonTime-Regular.ttf');
-
+    font-family: "moonTime";
+    src: url("../fonts/MoonTime-Regular-www.Dfonts.org/MoonTime-Regular.otf");
+    src: url("../fonts/MoonTime-Regular-www.Dfonts.org/MoonTime-Regular.ttf");
 }
 
-$bp-sm:600px;
-$bp-md:768px;
-$bp-L:992px;
-$bp-XL:1200px;
+$bp-sm: 600px;
+$bp-md: 768px;
+$bp-L: 992px;
+$bp-XL: 1200px;
 
 @mixin mobile {
     @media (min-width:0) and (max-width:#{$bp-sm}) {
@@ -32,9 +31,7 @@ $bp-XL:1200px;
     }
 }
 
-
 #carousel-1 {
-
     @-webit-keyframes zoom {
         from {
             -webkit-transform: scale(1, 1);
@@ -55,20 +52,18 @@ $bp-XL:1200px;
         }
     }
 
-    .carousel-inner .carousel-item>img {
+    .carousel-inner .carousel-item > img {
         -webkit-animation: zoom 20s;
         animation: zoom 20s;
     }
 
-    z-index:-5 !important;
+    z-index: -5 !important;
 
     .carousel-item {
-
         img {
             height: 900px;
             object-fit: cover;
             filter: brightness(70%);
-
         }
 
         @include mobile {
@@ -82,12 +77,8 @@ $bp-XL:1200px;
                 height: 700px;
             }
         }
-
     }
-
 }
-
-
 
 #countdown {
     margin-top: -280px;
@@ -97,11 +88,9 @@ $bp-XL:1200px;
         margin-top: -200px;
 
         h4 {
-
             font-size: 15px;
             font-familiy: Andika, sans-serif;
             letter-spacing: 4px;
-
         }
     }
 
@@ -113,12 +102,9 @@ $bp-XL:1200px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
-
     }
 
     .count-items {
-
         color: white;
         width: 200px;
         padding: 20px 20px;
@@ -128,7 +114,11 @@ $bp-XL:1200px;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background: linear-gradient(25deg, rgba(0, 0, 0, 0) 0%, rgb(108, 108, 108) 99%);
+        background: linear-gradient(
+            25deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgb(108, 108, 108) 99%
+        );
 
         @include mobile {
             width: 50px;
@@ -138,7 +128,6 @@ $bp-XL:1200px;
                 font-size: 15px;
                 font-weight: bold;
             }
-
         }
 
         @include tablet {
@@ -150,9 +139,6 @@ $bp-XL:1200px;
                 font-weight: bold;
             }
         }
-
-
-
     }
 }
 
@@ -170,7 +156,6 @@ $bp-XL:1200px;
 }
 
 #section-about {
-
     .content-about {
         a {
             font-size: 15px;
@@ -190,7 +175,7 @@ $bp-XL:1200px;
 
         h3 {
             color: rgb(96, 82, 68);
-            font-family: 'Dancing Script', cursive;
+            font-family: "Dancing Script", cursive;
             font-weight: bold;
             letter-spacing: 7px;
             line-height: 55px;
@@ -201,7 +186,7 @@ $bp-XL:1200px;
         }
     }
 
-    position:relative;
+    position: relative;
 
     .wrapper-about {
         width: 90%;
@@ -209,29 +194,23 @@ $bp-XL:1200px;
         border-radius: 20px;
         padding: 50px 0px;
         margin: auto;
-
-
     }
 
     .bunga {
         width: 300px;
-        z-index: 10
+        z-index: 10;
     }
 
     #bunga-1 {
         position: absolute;
         top: -90px;
         right: 30px;
-
     }
 
     #bunga-2 {
-
         position: absolute;
         bottom: -130px;
         left: 30px;
-
-
     }
 
     .img-profile {
@@ -253,7 +232,6 @@ $bp-XL:1200px;
                 letter-spacing: 0;
                 text-align: center;
                 font-weight: 300;
-
             }
 
             p {
@@ -268,25 +246,21 @@ $bp-XL:1200px;
 
         .img-about {
             width: 100%;
-
         }
 
         #bunga-1 {
             display: none;
-
         }
 
         #bunga-2 {
             width: 170px;
             left: 0px;
             bottom: -60px;
-
         }
 
         .img-profile {
             width: 100%;
         }
-
     }
 
     @include tablet {
@@ -300,7 +274,6 @@ $bp-XL:1200px;
                 letter-spacing: 0;
                 text-align: center;
                 font-weight: 300;
-
             }
 
             p {
@@ -314,7 +287,6 @@ $bp-XL:1200px;
 
             .img-about {
                 width: 450px;
-
             }
 
             .img-profile {
@@ -334,12 +306,8 @@ $bp-XL:1200px;
         #bunga-2 {
             left: 0px;
             bottom: -50px;
-
         }
-
-
     }
-
 }
 
 #section-join {
@@ -363,7 +331,6 @@ $bp-XL:1200px;
             img {
                 width: 100px;
             }
-
         }
     }
 
@@ -390,7 +357,6 @@ $bp-XL:1200px;
                     display: none;
                 }
             }
-
         }
     }
 
@@ -429,6 +395,10 @@ $bp-XL:1200px;
     }
 
     @include mobile {
+        .form-wrapper {
+            width: 100%;
+            padding: 30px 10px;
+        }
         .form-status {
             align-items: center;
             justify-content: center;
@@ -462,13 +432,10 @@ $bp-XL:1200px;
     }
 
     .gallery-wrapper {
-
         margin: 50px auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-gap: 1rem;
-
-
     }
 
     .img-wrapper {
@@ -476,19 +443,15 @@ $bp-XL:1200px;
         overflow: hidden;
 
         .img-unik {
-
             object-position: 35% center;
         }
-
     }
 
     .img-items {
-
         display: block;
         width: 100%;
         height: 350px;
         object-fit: cover;
-
 
         &:hover {
             -webkit-filter: sepia(0);
@@ -496,17 +459,13 @@ $bp-XL:1200px;
             -webkit-transform: scale(1.2);
             transform: scale(1.2);
         }
-
-
     }
 
     @include mobile {
         .img-gallery {
             width: 70%;
         }
-
     }
-
 }
 
 .img-location {
@@ -517,13 +476,11 @@ $bp-XL:1200px;
     }
 }
 
-
 #section-ucapan {
     h1 {
         font-size: 25px;
         font-weight: normal;
         font-family: Josefin, sans-serif;
-
     }
 
     .wrapper-content {
@@ -549,20 +506,21 @@ $bp-XL:1200px;
     @include mobile {
         .wrapper-content {
             width: 100%;
+            padding: 50px;
         }
     }
 }
 
 //additional css
 .text-venue {
-    font-family: 'Dancing Script', cursive;
+    font-family: "Dancing Script", cursive;
     font-weight: bold;
     color: rgb(150, 94, 86);
     letter-spacing: 8px;
 }
 
 .date-venue {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .detail-venue {
@@ -594,7 +552,6 @@ $bp-XL:1200px;
     border-radius: 10px;
 }
 
-
 .act-btn {
     z-index: 100;
     background: #ff299c;
@@ -610,8 +567,6 @@ $bp-XL:1200px;
     bottom: 30px;
     border: none;
     outline: none;
-
-
 }
 
 @include mobile {
@@ -620,7 +575,7 @@ $bp-XL:1200px;
     }
 
     .fixed-top {
-        background-color: #FDF4E3 !important;
+        background-color: #fdf4e3 !important;
     }
 
     .date-venue {
@@ -632,9 +587,7 @@ $bp-XL:1200px;
     }
 }
 
-
 .section-modal {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -646,7 +599,6 @@ $bp-XL:1200px;
         width: 90%;
         height: 270px;
         border-radius: 5px;
-
     }
 
     h1 {
@@ -659,11 +611,9 @@ $bp-XL:1200px;
     }
 
     .date-wrapper {
-
         width: 105px;
         display: flex;
         justify-content: space-between;
-
     }
 
     span {
@@ -673,7 +623,7 @@ $bp-XL:1200px;
 
 .btn-buka {
     margin-top: 30px;
-    background-color: #D4AF37;
+    background-color: #d4af37;
 
     text-decoration: none;
     color: white;
@@ -684,21 +634,16 @@ $bp-XL:1200px;
         background-color: rgb(193, 148, 3);
         color: white;
     }
-
 }
 
 @include mobile {
     #myModal {
-
         .modal-dialog {
-
             width: 70%;
             min-height: calc(100vh - 70px);
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-
         }
 
         .section-modal {
@@ -714,8 +659,6 @@ $bp-XL:1200px;
             span {
                 font-size: 10px;
             }
-
-
         }
 
         .btn-buka {
@@ -725,7 +668,5 @@ $bp-XL:1200px;
             font-size: 12px;
             padding: 7px 15px;
         }
-
-
     }
 }

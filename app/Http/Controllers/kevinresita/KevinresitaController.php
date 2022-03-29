@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\kevinresita;
-
+use App\Http\Requests\IsbyRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User\suhartono as suhartono;
+use App\Models\User\kevinresita as kevinresita;
 
 
 class KevinresitaController extends Controller
@@ -12,7 +12,8 @@ class KevinresitaController extends Controller
     //
      //
      public function index($name='rocky'){
-        $items = suhartono::all();
+        $items = kevinresita::all();
+
         $datapengantin = [
             "cowo"=>"Kevin",
             "cewe"=>"Resita",
@@ -21,9 +22,9 @@ class KevinresitaController extends Controller
             "thn"=>"22",
             "lagu"=>"Love Story - Taylor Swift (Cover by Eltasya Natasha ft. Indah Aqila)",
             "lokasi"=>"Keraton Ballroom,Hotel Swiss-Belinn Saripetojo, Solo",
-            "tanggal"=>"March 28, 2022",
+            "tanggal"=>"March 27, 2022",
             "jam akad"=>"07.00 WIB - selesai",
-           
+            "map_link"=> "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1124008144848!2d110.79239151472443!3d-7.562722494546022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1431d75eba83%3A0xcf3e4a64ecd841db!2sSwiss-Belinn%20Saripetojo%20Solo!5e0!3m2!1sid!2sid!4v1647080576878!5m2!1sid!2sid",
             "jam resepsi"=>[
                  [
                 "judul" => "Sesi 1",
@@ -82,10 +83,14 @@ class KevinresitaController extends Controller
             "6.jpg",
             "7.jpg",
             "8.jpg"
-            
-
-
         ];
+
+        $carouselimg =[
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+        ];
+        $modalimg = "2.jpg";
 
         $name = str_replace(["+"], [" "],$name);
         return view('pages.user.kevinresita.index',[
@@ -96,7 +101,9 @@ class KevinresitaController extends Controller
             'profilecowo'=>$profileCowo,
             'profilecewe'=>$profileCewe,
             'accountbank'=>$accountbank,
-            'imggaleri'=>$imgGalery
+            'imggaleri'=>$imgGalery,
+            'carouselimg'=>$carouselimg,
+            'modalimg'=>$modalimg
            
         ]);
     }
@@ -104,34 +111,34 @@ class KevinresitaController extends Controller
     public function store(IsbyRequest $request){
         //
         $data = $request->all();
-        suhartono::create($data);
-        return redirect()->route('suhartono-success');
+        kevinresita::create($data);
+        return redirect()->route('kevinresita-success');
 
 
 
     }
     public function success(){
-        return view('pages.user.suhartono.success');
+        return view('pages.user.kevinresita.success');
     }
     public function dashboard(){
 
-        $items = suhartono::all();
+        $items = kevinresita::all();
 
-        return view('pages.user.suhartono.dashboard',[
+        return view('pages.user.kevinresita.dashboard',[
             'items'=>$items
         ]);
     }
 
 
     public function getrsvp(){
-        $items = suhartono::get();
+        $items = kevinresita::get();
         return json_encode(array('data'=>$items));
     }
 
 
     public function rsvp(Request $request){
              
-        $items = suhartono::all();
+        $items = kevinresita::all();
 
             if($request->ajax()){
                 
@@ -139,12 +146,12 @@ class KevinresitaController extends Controller
 
 
             }
-        return view('pages.user.suhartono.rsvp',compact('items'));
+        return view('pages.user.kevinresita.rsvp',compact('items'));
     }
 
     public function cetakpdf(){
 
-        $items = suhartono::all();
+        $items = kevinresita::all();
     
         $pdf = PDF::loadview('layouts.user.data-rsvp_pdf',['items'=>$items])->setOptions(['defaultPaperSize'=>'a3']);
         return $pdf->download('laporan-data-rsvp.pdf');

@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{url('aness/assets/fonts/font-awesome.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
 
-    <link rel="stylesheet" href="{{url('user/suhartono/assets/scss/styles.css')}}">
+    <link rel="stylesheet" href="{{url('user/kevinresita/assets/scss/styles.css')}}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YLNT1MN0T"></script>
     <script>
@@ -38,7 +38,7 @@
 </head>
 
 <audio loop id="myaudio" type="audio/mp3">
-    <source src="{{url('user/jauja/Love Story - Taylor Swift (Cover by Eltasya Natasha ft. Indah Aqila).mp3')}}">
+    <source src="{{url('user/kevinresita/First Love - Nikka Costa (Cover by Tereza).mp3')}}">
 </audio>
 
 <body id="page-top"style="background: rgb(246,236,226);">
@@ -47,7 +47,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="section-modal"><img class="img-header" src="{{url('user/suhartono/assets/img/_MG_0252.webp')}}" />
+                <div class="section-modal"><img class="img-header" src="/user/kevinresita/assets/img/{{$modalimg}}" />
                     <div class="mt-4">
                         <p class="text-center">Wedding of<br /></p>
                         <h1>{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br /></h1>

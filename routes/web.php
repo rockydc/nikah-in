@@ -250,6 +250,23 @@ Route::prefix('jauza-agus')
     });
 });
 
+Route::prefix('anda-cyntia')
+->namespace('tia')
+->group(function(){
+    Route::get('/home/{name?}','TiaController@index')->name('tia');
+    Route::get('/success','TiaController@success')->name('tia-success');
+    Route::post('/store','TiaController@store')->name('tiastore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','TiaController@dashboard')->name('tiadashbaord');
+        Route::get('/rsvp','TiaController@rsvp')->name('tiarsvp');
+        Route::get('/getrsvp','TiaController@getrsvp');
+        Route::get('/cetakpdf','TiaController@cetakpdf')->name('tiacetak');
+    });
+});
+
 
 Route::prefix('suhartono-dewi')
 ->namespace('suhartono')
@@ -271,17 +288,17 @@ Route::prefix('suhartono-dewi')
 Route::prefix('kevinresita')
 ->namespace('kevinresita')
 ->group(function(){
-    Route::get('/home/{name?}','kevinresitaController@index')->name('kevinresita');
-    Route::get('/success','kevinresitaController@success')->name('kevinresita-success');
-    Route::post('/store','kevinresitaController@store')->name('kevinresitastore');
+    Route::get('/home/{name?}','KevinresitaController@index')->name('kevinresita');
+    Route::get('/success','KevinresitaController@success')->name('kevinresita-success');
+    Route::post('/store','KevinresitaController@store')->name('kevinresitastore');
 
     Route::prefix('admin')
    
     ->group(function(){
-        Route::get('/','kevinresitaController@dashboard')->name('kevinresitadashboard');
-        Route::get('/rsvp','kevinresitaController@rsvp')->name('kevinresitarsvp');
-        Route::get('/getrsvp','kevinresitaController@getrsvp');
-        Route::get('/cetakpdf','kevinresitaController@cetakpdf')->name('kevinresitacetak');
+        Route::get('/','KevinresitaController@dashboard')->name('kevinresitadashboard');
+        Route::get('/rsvp','KevinresitaController@rsvp')->name('kevinresitarsvp');
+        Route::get('/getrsvp','KevinresitaController@getrsvp');
+        Route::get('/cetakpdf','KevinresitaController@cetakpdf')->name('kevinresitacetak');
     });
 });
 
