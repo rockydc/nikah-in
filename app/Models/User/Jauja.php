@@ -4,7 +4,7 @@ namespace App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
-class jauja extends Model
+class Jauja extends Model
 {
     protected $table = 'jauja_rsvp';
      protected $fillable = [
