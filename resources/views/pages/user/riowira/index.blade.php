@@ -6,6 +6,9 @@
 WebWedding
 @endsection
 @section('content')
+<script>
+
+</script>
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active"><img class="w-100 d-block" src="{{url('user/riowira/assets/img/img1.jpg')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
