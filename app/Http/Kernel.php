@@ -71,6 +71,7 @@ class Kernel extends HttpKernel
         'riowira'=>\App\Http\Middleware\IsRio::class,
         'ardy'=>\App\Http\Middleware\IsArdy::class,
         'adhigita'=>\App\Http\Middleware\adhigita::class,
+        'auth.jwt' => Tymon\JWTAuth\Mddleware\GetUserFromToken::class
     ];
 
     /**

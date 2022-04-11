@@ -4,7 +4,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\daniel\DanielController;
 
 use App\Http\Controllers\{
-    Admin_2022\MenuController
+    Admin_2022\MenuController,
+    api\v1\authController,
+    api\v1\UserController,
+    api\v1\TemplateController
+
 };
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +30,24 @@ Route::Group(['prefix' => 'admin'], function(){
     Route::group(['prefix' => 'menu'], function(){
         Route::post('save', [MenuController::class, 'saveForm'])->name('menu.save');
     });
+});
+Route::group(['prefix' => 'v1'], function(){
+    Route::post('register', [authController::class, 'register'])->name('api.register');
+    Route::post('/login', [authController::class, 'authenticate'])->name('api.login');
+    Route::post('/logout', [authController::class, 'logout'])->name('api.logout');
+    Route::group(['prefix' => '', 'middleware' => 'auth:api'], function(){
+        Route::post('profile', [authController::class, 'userProfile']);
+        Route::group(['prefix' => 'user'], function(){
+            Route::post('/create', [UserController::class, 'create']);
+            Route::post('/delete', [UserController::class, 'delete']);
+    
+        });
+        Route::group(['prefix' => 'template'], function(){
+            Route::post('/create', [TemplateController::class, 'create']);
+            Route::post('/delete', [TemplateController::class, 'delete']);
+    
+        });
+    });
+
 });
 
