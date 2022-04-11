@@ -8,7 +8,7 @@ use App\Http\Requests\UserRequest;
 use App\Http\Requests\UserDetailRequest;
 
 use App\User;
-use App\Models\NikahinUserDetail;
+use App\Models\{NikahinUserDetail, TsUserRole};
 use Carbon\Carbon as carbon;
 class UserController extends Controller
 {
@@ -24,7 +24,10 @@ class UserController extends Controller
             unset($data['id']);
             $data['password'] = bcrypt($data['password']);
             $model = User::create($data);
-            
+            $role = new TsUserRole;
+            $role->user_id = $model->id;
+            $role->role_id = '1';
+            $role->save();
         }else{
             $id = $data['id'];
             unset($data['id']);
@@ -48,7 +51,7 @@ class UserController extends Controller
             $check = NikahinUserDetail::where('user_id',$model->id)->get();
             $saveResult = false;
             $msg = 'Data User Berhasil Ditambahkan';
-            if(!empty($check)){
+            if(!empty($check->toArray())){
                 $detailModel = NikahinUserDetail::where('user_id', $model->id)->first();
                 $saveResult = $detailModel->update($detailData);
                 $msg = 'Data User Berhasil Diupdate';
@@ -74,5 +77,12 @@ class UserController extends Controller
             return response()->json(['error' => 'Data User Tidak Ditemukan']);
         }
         return response()->json(['success' => true, 'message' => 'Berhasil Menghapus Data User'], 201);
+    }
+    public function get(User $data){
+        $data = array_merge(
+            $data->toArray(),
+            ['detail' => $data->detail, 'role' => $data->roleUser]
+        );
+        return response()->json(['success' => true, 'data' => $data,'errors' => []]);
     }
 }

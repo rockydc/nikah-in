@@ -43,6 +43,9 @@ class TemplateController extends Controller
         }
         return response()->json($x,$code);
     }
+    public function get(TmTemplate $data){
+        return response()->json(['data' => $data, 'success' => true, 'errors' => []], 201);
+    }
     public function delete(Request $request){
         $x = [
             'success' => false,

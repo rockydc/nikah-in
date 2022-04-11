@@ -7,6 +7,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use App\Models\TsUserRole;
+use App\Models\NikahinUserDetail;
+
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
@@ -54,5 +56,9 @@ class User extends Authenticatable implements JWTSubject
     }
     public function getJWTCustomClaims() {
         return [];
-    }    
+    }   
+    public function detail(){
+        return $this->hasOne(NikahinUserDetail::class, 'user_id', 'id');
+
+    } 
    }

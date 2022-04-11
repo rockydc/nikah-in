@@ -38,11 +38,13 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => '', 'middleware' => 'auth:api'], function(){
         Route::post('profile', [authController::class, 'userProfile']);
         Route::group(['prefix' => 'user'], function(){
+            Route::post('get/{data?}', [UserController::class, 'get']);
             Route::post('/create', [UserController::class, 'create']);
             Route::post('/delete', [UserController::class, 'delete']);
     
         });
         Route::group(['prefix' => 'template'], function(){
+            Route::post('get/{data?}', [TemplateController::class, 'get']);
             Route::post('/create', [TemplateController::class, 'create']);
             Route::post('/delete', [TemplateController::class, 'delete']);
     
