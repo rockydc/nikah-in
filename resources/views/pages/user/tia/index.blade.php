@@ -130,19 +130,20 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             </div>
       
                 <div data-aos="fade-up">
-                    <p data-aos="fade-up">Pemberkatan</p>
+                    <p data-aos="fade-up"><strong>Pemberkatan</strong></p>
                     <p data-aos="fade-up">{{$datapengantin['lokasi']}}</p>
+                    <a data-bs-hover-animate="pulse" class="mb-3 btn btn-direction" target="_blank"  href={{$datapengantin['Map link pemberkatan']}}>Buka Peta</a>
                 </div>
                 <div data-aos="fade-up"></div>
                 <div data-aos="fade-up">
-                    <p data-aos="fade-up">Resepsi</p>
+                    <p data-aos="fade-up"><strong>Resepsi</strong></p>
                     <p data-aos="fade-up">{{$datapengantin['lokasi resepsi']}}</p>
-              
+                    <a data-bs-hover-animate="pulse" class="mb-3 btn btn-direction" target="_blank"  href={{$datapengantin['Map link resepsi']}}>Buka Peta</a>
             </div>
-            <div class="btn-location">
+            <!-- <div class="btn-location">
             <a data-bs-hover-animate="pulse" class="btn btn-direction" target="_blank"  href={{$datapengantin['Map link pemberkatan']}}>Pemberkatan</a>
             <a data-bs-hover-animate="pulse" class="btn btn-direction" target="_blank"  href={{$datapengantin['Map link resepsi']}}>Resepsi</a>
-            </div>
+            </div> -->
 
         </div>
     </section>
@@ -209,11 +210,11 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
        
                 <div class="bank-account">
                 @foreach($accountbank as $index => $value)
-                    <div class="box-account ">
+                    <div class="box-account mb-3 text-center ">
                     <input type="hidden" id={{$value['id']}} value={{$value['account']}}>
                     <p><strong>{{$value['bank']}}</strong> : {{$value['account']}}  <br>{{$value['acc_name']}}
              </p>
-              <div class="container d-flex justify-content-center mt-3 align-items-center">
+              <div class="container d-flex justify-content-center align-items-center">
                          <button onclick="copyToClipboard('{{$value['id']}}')"style="background-color:#f2b577;border:none;" class="btn btn-primary btn-sm">Copy</button>
               </div>
       

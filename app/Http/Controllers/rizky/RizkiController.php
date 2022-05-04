@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\kevinresita;
-use App\Http\Requests\IsbyRequest;
+namespace App\Http\Controllers\rizky;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User\kevinresita as kevinresita;
 
-
-class KevinresitaController extends Controller
+class RizkiController extends Controller
 {
     //
      //
@@ -86,25 +84,25 @@ class KevinresitaController extends Controller
             "ibu"=>"Almh.Siti Aisyah",
             "ig"=>"",
             "ig_link"=>"cc",
-            "foto"=>"profile-image-cewek.png"
+            "foto"=>".png"
         ];
         $imgGalery = [
-            "5.jpg",
-            "6.jpg",
-            "3.jpg",
-            "4.jpg",
             "1.jpg",
             "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.jpg",
+            "6.jpg",
             "7.jpg",
-            "8.png"
+            "8.jpg"
         ];
 
         $carouselimg =[
             "8.jpg",
             "7.jpg",
-            "1.jpg",
+            "2.jpg",
         ];
-        $modalimg = "7.jpg";
+        $modalimg = "6.jpg";
 
         $name = str_replace(["+"], [" "],$name);
         return view('pages.user.kevinresita.index',[
@@ -128,7 +126,7 @@ class KevinresitaController extends Controller
         //
         $data = $request->all();
         kevinresita::create($data);
-        return redirect()->route('rizky-success');
+        return redirect()->route('kevinresita-success');
 
 
 

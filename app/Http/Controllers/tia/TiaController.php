@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\tia;
-
+use PDF;
 use App\Http\Requests\IsbyRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -34,13 +34,20 @@ class TiaController extends Controller
                 "id"=>"rek1",
                 "bank"=>"BCA",
                 "account"=> "1940222130",
-                "acc_name"=> ""
-            ]
+                "acc_name"=> "Hotlas Cyntia Maharani"
+            ],
+            "bank2" => [
+                "id"=>"rek2",
+                "bank"=>"BCA",
+                "account"=> "5210790723",
+                "acc_name"=> "Chandra Eliap Thirty"
+            ],
+
             ];
          $profileCowo =[
             "nama"=> "Eliap Thirty Chandra Pasaribu",
             "nick"=> "Anda",
-            "ayah"=>"R.R.M Pasaribu",
+            "ayah"=>"(Alm) R.R.M Pasaribu",
             "ibu"=>" Rini Gloria Sihombing",
             "ig"=>"@anda.pasaribu",
             "igurl"=>"https://www.instagram.com/anda.pasaribu/",

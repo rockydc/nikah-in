@@ -15,30 +15,30 @@ class SuhartonoController extends Controller
         public function index($name='rocky'){
             $items = suhartono::all();
             $datapengantin = [
-                "cowo"=>"Suhartono",
-                "cewe"=>"Dewi Kurniasih",
-                "tgl"=>"28",
-                "bln"=>"02",
+                "cowo"=>"Rizki",
+                "cewe"=>"Whiwent Aulia",
+                "tgl"=>"15",
+                "bln"=>"05",
                 "thn"=>"22",
                 "lagu"=>"Love Story - Taylor Swift (Cover by Eltasya Natasha ft. Indah Aqila)",
-                "lokasi"=>"Desa Wonosari kecamatan SenoriKabupaten Tuban RT.009/ RW.003",
-                "tanggal"=>"February 28, 2022",
+                "lokasi"=>"Jalan Veteran No. 11 RT.23 Rw.04 (belakang Pegadaian) Kota Marabahan Kec.Marabahan Kab.Barito Kuala Kal-Sel 70511",
+                "tanggal"=>"May 15, 2022",
                 "jam akad"=>"09.00 - selesai",
                 "jam resepsi"=>"11.00 - selesai"
             ];
              $profileCowo =[
-                "nama"=> "Suhartono",
-                "nick"=> "Tono",
-                "ayah"=>"Saryono",
-                "ibu"=>"Saenah",
-                "ig"=>"@boskangkung10"
+                "nama"=> "Rizki",
+                "nick"=> "Rizki",
+                "ayah"=>"Kurnianto ",
+                "ibu"=>"Hariani",
+                "ig"=>""
             ];
              $profileCewe =[
-                "nama"=> "Dewi Kurniasih",
-                "nick"=> "Dewi",
-                "ayah"=>"Mukrimun",
-                "ibu"=>"Gimiati",
-                "ig"=>"@jsyam_"
+                "nama"=> "Whiwent Aulia",
+                "nick"=> "Went",
+                "ayah"=>"Alm.Darjat",
+                "ibu"=>"Almh.Siti Aisyah",
+                "ig"=>""
             ];
     
      

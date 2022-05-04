@@ -8,12 +8,12 @@ WebWedding
 @section('content')
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active "><img class="w-100 d-block" src="{{url('user/kevinresita/assets/img/5.jpg')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
+            <div class="carousel-item active "><img class="w-100 d-block" src="{{url('user/rizky/assets/img/7.jpg')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
             <!-- @foreach($imggaleri as $index => $value)
-        <div class="img-wrapper"><img  class="img-items" src="/user/kevinresita/assets/img/{{$value}}"></div>
+        <div class="img-wrapper"><img  class="img-items" src="/user/rizky/assets/img/{{$value}}"></div>
         @endforeach -->
-            <div class="carousel-item " ><img class="w-100 d-block" src="{{url('user/kevinresita/assets/img/2.jpg')}}" alt="Slide Image"></div>
-            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/kevinresita/assets/img/9.jpg')}}"  style="object-position:center" alt="Slide Image"></div>
+            <div class="carousel-item " ><img class="w-100 d-block" src="{{url('user/rizky/assets/img/8.jpg')}}" alt="Slide Image"></div>
+            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/rizky/assets/img/2.jpg')}}"  style="object-position:center" alt="Slide Image"></div>
         </div>
         <!-- <div>
             <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -64,7 +64,7 @@ WebWedding
                     <div class="row">
               
                         </p>
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="/user/kevinresita/assets/img/{{$profilecowo['foto']}}"></div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="/user/rizky/assets/img/{{$profilecowo['foto']}}"></div>
                         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 align-self-lg-center align-self-xl-center text-left content-about" style="padding: 0px;margin: 0px;">
                             <h1>{{$profilecowo['nick']}}</h1>
                             <h3><strong>{{$profilecowo['nama']}}&nbsp;</strong></h3>
@@ -95,7 +95,7 @@ WebWedding
 
                            
                         </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="/user/kevinresita/assets/img/{{$profilecewe['foto']}}"></div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="/user/rizky/assets/img/{{$profilecewe['foto']}}"></div>
                     </div>
                 </div>
             </div>
@@ -118,16 +118,27 @@ WebWedding
                     
                     </div>
                         <div class="mt-3">
-                        <h2 class="text-venue" style="">Akad</h2>
+                        <h2 class="text-venue" style="">{{$sesi['sesi1']['judul']}}</h2>
                         <img src="{{url('user/ficry/assets/img/mosque 2.png')}}">
                            
-                            <p class="date-venue" style="">{{$datapengantin['tanggal']}} <br> {{$datapengantin['jam akad']}}</p>
+                            <p class="date-venue" style="">{{$sesi['sesi1']['tanggal']}} 
+
+                            @foreach($sesi['sesi1']['jam'] as $index => $value)  
+                        @if($value['subjudul'] != null)
+
+                        <br>{{$value['subjudul']}} : {{$value['jam']}}
+                       @else
+                       <br>{{$value['subjudul']}}  {{$value['jam']}}
+                       @endif
+                        @endforeach
+
+                            </p>
                         </div>
                         <div></div>
                     </div>
                 </div>
             </div>
-            <p class="detail-venue" style="">{{$datapengantin['lokasi']}}</p>
+            <p class="detail-venue" style="">{{$sesi['sesi1']['lokasi']}}</p>
             <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;1">We appologize in the implementation on akad will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
         <div data-aos="zoom-in-up"
             class="text-center">
@@ -135,13 +146,17 @@ WebWedding
                 <div>
                     <div class="wrapper-content-church">
                         <div></div>
-                        <div><h2 class="text-venue" style="">Wedding Reception</h2>
+                        <div><h2 class="text-venue" style="">{{$sesi['sesi2']['judul']}}</h2>
                         <img src="{{url('user/ficry/assets/img/mosque 2.png')}}">
                        
-                        <p class="date-venue" style="">{{$datapengantin['tanggal']}} 
-                        @foreach($datapengantin['jam resepsi'] as $index => $value)   
-                        <br>{{$value['judul']}} : {{$value['jam']}}
-                       
+                        <p class="date-venue" style="">{{$sesi['sesi2']['tanggal']}} 
+                        @foreach($sesi['sesi2']['jam'] as $index => $value)  
+                        @if($value['subjudul'] != null)
+
+                        <br>{{$value['subjudul']}} : {{$value['jam']}}
+                       @else
+                       <br>{{$value['subjudul']}}  {{$value['jam']}}
+                       @endif
                         @endforeach
 
                     </p>
@@ -152,7 +167,7 @@ WebWedding
                     </div>
                 </div>
             </div>
-            <p class="detail-venue">{{$datapengantin['lokasi']}}</p>
+            <p class="detail-venue">{{$sesi['sesi2']['lokasi']}}</p>
             <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">We would apply strictly health protocol.  Please always wear a mask, Wash your hand, Keeping a save distance, <br>Use hand sanitizer frequently</p>
         </div>
     </div>
@@ -161,7 +176,7 @@ WebWedding
         <h1 class="title-section">RSVP</h1>
         <!-- <img class="img-guest" src="{{url('aness/assets/img/guest_attendance-removebg-preview.png')}}"> -->
             <div class="form-wrapper p-lg-4 p-md-4 p-sm-1">
-                <form action="{{route('kevinresitastore')}}" method="post">
+                <form action="{{route('rizkystore')}}" method="post">
                 @csrf 
 
                     <div>
@@ -233,7 +248,7 @@ WebWedding
         <!-- <img class="img-gallery" src="{{url('aness/assets/img/gallery-removebg-preview.png')}}"> -->
         <div data-aos="zoom-in-up" class="gallery-wrapper container">
         @foreach($imggaleri as $index => $value)
-        <div class="img-wrapper"><img  class="img-items" src="/user/kevinresita/assets/img/{{$value}}"></div>
+        <div class="img-wrapper"><img  class="img-items" src="/user/rizky/assets/img/{{$value}}"></div>
         @endforeach
         
         </div>
@@ -249,8 +264,8 @@ WebWedding
         <div class="wrapper-love d-flex justify-content-center align-items-center flex-column">
             <p style="letter-spacing: 4px;color: rgb(126,99,79);"> We Also Provide Cash Less
                 <br>Wedding Gift Using qrcode</p>
-                <!-- <img class="mt-4 img-barcode" src="{{url('user/jauja/assets/img/qr.png')}}"> -->
-                <!-- <p class="mt-1" >qrcode BCA/emoney lainya</p> -->
+                <img class="mt-4 img-barcode" src="/user/rizky/assets/img/{{$emoney['img']}}">
+                <p class="mt-1" >{{$emoney['name']}}</p>
                 @foreach($accountbank as $index => $value)
                 <div class="bank-account mb-2">
                 

@@ -28,7 +28,7 @@ class AndreasdeveController extends Controller
             "Map link resepsi"=> "https://goo.gl/maps/PPceB2UXpSZpwmWH9",
             "tanggal resepsi"=> "Maret 26,2022",
             "ayat"=> "Yohanes 15 : 12",
-            "ayatsuci" => "  “ Inilah perintah-Ku: Kamu harus saling mengasihi, sama seperti Aku telah mengasihi kamu. “"
+            "ayatsuci" => ""
         ];
         $accountbank = [
             "bank1" => [

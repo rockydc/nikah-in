@@ -260,7 +260,7 @@ Route::prefix('anda-cyntia')
     Route::prefix('admin')
    
     ->group(function(){
-        Route::get('/','TiaController@dashboard')->name('tiadashbaord');
+        Route::get('/','TiaController@dashboard')->name('tiadashboard');
         Route::get('/rsvp','TiaController@rsvp')->name('tiarsvp');
         Route::get('/getrsvp','TiaController@getrsvp');
         Route::get('/cetakpdf','TiaController@cetakpdf')->name('tiacetak');
@@ -285,12 +285,12 @@ Route::prefix('suhartono-dewi')
     });
 });
 
-Route::prefix('kevinresita')
+Route::prefix('rizkywent')
 ->namespace('kevinresita')
 ->group(function(){
-    Route::get('/home/{name?}','KevinresitaController@index')->name('kevinresita');
-    Route::get('/success','KevinresitaController@success')->name('kevinresita-success');
-    Route::post('/store','KevinresitaController@store')->name('kevinresitastore');
+    Route::get('/home/{name?}','KevinresitaController@index')->name('rizky');
+    Route::get('/success','KevinresitaController@success')->name('rizky-success');
+    Route::post('/store','KevinresitaController@store')->name('rizkystore');
 
     Route::prefix('admin')
    

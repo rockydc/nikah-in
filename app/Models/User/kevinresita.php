@@ -9,7 +9,7 @@ class kevinresita extends Model
 {
     //
       //
-      protected $table = 'tbl_kevinresita';
+      protected $table = 'tbl_rizki';
       protected $fillable = [
          'nama','ikatan','email','pesan','status','jmlh_orang'
       ];

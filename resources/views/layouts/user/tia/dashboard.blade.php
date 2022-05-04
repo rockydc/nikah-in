@@ -17,7 +17,7 @@
 </head>
 
 <body id="page-top">
-
+ 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -128,7 +128,7 @@
                     paging :true,
 
                     ajax : {
-                        url: "{{ route('andreasdeversvp')}}",
+                        url: "{{ route('tiarsvp')}}",
                         type:'GET'
                     },
                     columns:[

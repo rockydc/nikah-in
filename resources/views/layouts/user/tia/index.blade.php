@@ -79,6 +79,58 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal" role="dialog" tabindex="-1" id="modalProkes">
+    <div class="modal-dialog modal-dialog-centered modal-md"  role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+           
+                <div class="container-fluid py-5 border border-dark rounded">
+                    <p class="mb-0 text-center">Acara ini dilaksanakan dengan menerapkan</p>
+                    <h1 class="text-center">PROTOKOL KESEHATAN</h1>
+                    <p class="text-center">Sebagai Berikut:</p>
+                    <div class="gambar-prokes">
+                        <div class="row">
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/masker.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">masker</p>
+                            </div>
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/cuci-tangan.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Cuci Tangan</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/jagajarak.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">jagajarak</p>
+                            </div>
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/salaman.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Tidak Bersalaman</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/hand-sanitizer.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Handsanitizer</p>
+                            </div>
+                            <div class="col-6">
+                            <img src="{{url('user/riowira/assets/img/termo-gun.png')}}" alt="" class="img-thumbnail">
+                            <p class="text-center">Pengecekan Suhu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center"><a id="btn-prokes" class="btn btn-buka" href="#">Saya Mengerti</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <nav class="navbar navbar-light navbar-expand-md sticky-top">
         <div class="container-fluid"><a class="navbar-brand" href="https://nikah-in.com"><img class="mr-2" src="{{url('template/jasmine/assets/img/Nikahin-removebg-preview.png')}}" style="width: 32px;height: 32px;">Nikah-in</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -125,25 +177,54 @@
    
 
         var myaudio = document.getElementById("myaudio");
-        var iconplay = document.getElementById("icon-play");
+      
 
         
+        $(window).on('load', function() {
+        $('#myModal').modal('show');
+        $('#myModal').css("display","flex");
+        $('#myModal').css("justify-content","center");
+    });
 
+    var myaudio = document.getElementById("myaudio");
+   
+    $('#btn-open').click(function(){
+        $('#myModal').modal('hide');
+        $('#modalProkes').modal('show')
+       
+        
+    })
 
-        playbutton.addEventListener("click",()=>{
-            if(myaudio.paused){
-                myaudio.play();
-                $('#icon-play').removeClass('fa-play');
-                $('#icon-play').addClass('fa-pause')
-            }else{
-                myaudio.pause();
-                $('#icon-play').removeClass('fa-pause');
-                $('#icon-play').addClass('fa-play');
+    $('#btn-prokes').click(function(){
+        $('#modalProkes').modal('hide');
+        myaudio.play()
+    })
 
-            }
-        })
        
        </script>
+        <script>
+   
+
+   var myaudio = document.getElementById("myaudio");
+   var iconplay = document.getElementById("icon-pause");
+
+   
+
+
+   playbutton.addEventListener("click",()=>{
+       if(myaudio.paused){
+           myaudio.play();
+           $('#icon-play').removeClass('fa-play');
+           $('#icon-play').addClass('fa-pause')
+       }else{
+           myaudio.pause();
+           $('#icon-play').removeClass('fa-pause');
+           $('#icon-play').addClass('fa-play');
+
+       }
+   })
+  
+  </script>
 </body>
 
 </html>

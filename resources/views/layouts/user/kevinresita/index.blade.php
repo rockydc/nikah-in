@@ -47,7 +47,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="section-modal"><img class="img-header" src="/user/kevinresita/assets/img/{{$modalimg}}" />
+                <div class="section-modal"><img class="img-header" src="/user/rizky/assets/img/{{$modalimg}}" />
                     <div class="mt-4">
                         <p class="text-center">Wedding of<br /></p>
                         <h1>{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br /></h1>
@@ -152,7 +152,7 @@
     <script>
             $(document).ready(function(){
 
-            const weddingdate = "March 27, 2022 07:00:00"
+            const weddingdate = "May 15, 2022 09:00:00"
             const Timer = {
                 init:(weddingdate)=>{
                     countdownDate(weddingdate)

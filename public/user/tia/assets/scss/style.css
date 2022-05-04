@@ -439,7 +439,7 @@ header .header-wrap .date-wrap {
 
 @media (min-width: 0) and (max-width: 600px) {
   .section-gift {
-    height: 500px;
+    height: 70vh;
   }
   .section-gift p {
     font-size: 12px;
