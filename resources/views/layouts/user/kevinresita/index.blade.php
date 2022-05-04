@@ -38,7 +38,7 @@
 </head>
 
 <audio loop id="myaudio" type="audio/mp3">
-    <source src="{{url('user/kevinresita/First Love - Nikka Costa (Cover by Tereza).mp3')}}">
+    <source src="{{url('user/jauja/Love Story - Taylor Swift (Cover by Eltasya Natasha ft. Indah Aqila).mp3')}}">
 </audio>
 
 <body id="page-top"style="background: rgb(246,236,226);">
