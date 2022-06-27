@@ -494,7 +494,7 @@ a {
 .about-wrap .btn-about:hover {
   padding-left: 40px;
   padding-right: 0px;
-  background-color: #e7b25b;
+  background-color: rgb(231, 178, 91);
   color: white;
 }
 .about-wrap .about-text {
@@ -593,7 +593,7 @@ a {
   margin-top: 26px;
 }
 .footer-msg .footer-msg-form form .btn-pesan {
-  background-color: #d4af37;
+  background-color: rgb(212, 175, 55);
   margin-top: 54px;
   width: 230px;
   height: 52px;
@@ -763,7 +763,7 @@ footer .copyright {
     border-radius: 5px;
   }
   .content-detail .button-wrapper a:hover {
-    background-color: #a38627;
+    background-color: rgb(163, 134, 39);
   }
   .content-detail .button-wrapper a:nth-last-child(1) {
     width: 110px;

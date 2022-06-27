@@ -128,7 +128,7 @@
                     paging :true,
 
                     ajax : {
-                        url: "{{ route('tiarsvp')}}",
+                        url: "{{ route('retnorsvp')}}",
                         type:'GET'
                     },
                     columns:[

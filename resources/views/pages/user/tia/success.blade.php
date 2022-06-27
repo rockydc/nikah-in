@@ -14,7 +14,7 @@ success-rsvp.json')}}"  loop  autoplay></lottie-player>
             <p style="font-size:25px;font-weight:700; font-familiy:montserrat,sans-serif;">Yeay ! Terimakasih telah mengisi Buku Tamu</p>
             <p>Tetap Patuhi Protokol Kesehatan !</p> 
 
-            <a class="btn btn-buka" style="" href="{{route('tia')}}">Home</a>     
+            <a class="btn btn-buka" style="" href="{{route('retno')}}">Home</a>     
         </div>
     </div>
     

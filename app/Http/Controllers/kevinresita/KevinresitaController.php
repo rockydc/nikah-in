@@ -4,7 +4,7 @@ namespace App\Http\Controllers\kevinresita;
 use App\Http\Requests\IsbyRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User\kevinresita as kevinresita;
+use App\Models\User\rizki as kevinresita;
 
 
 class KevinresitaController extends Controller

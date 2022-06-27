@@ -19,14 +19,17 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             <div class="photo-wrap">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <div><img data-aos="fade-up" src="/user/tia/assets/img/{{$profilecowo['foto']}}">
+                        <div><img data-aos="fade-up" src="/user/{{$owner}}/assets/img/{{$profilecowo['foto']}}">
                             <h1 data-aos="fade-up" class="mt-5 text-name">{{$profilecowo['nama']}}</h1>
                             <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putra dari Bpk.{{$profilecowo['ayah']}} dan Ibu {{$profilecowo['ibu']}}<br></p>
+
+                            @if($profilecowo['ig'] != null)
                             <div>
                                 <a href={{$profilecowo['igurl']}}>
                                 <p data-aos="fade-up" class="instagram-profile"><img src="{{url('user/isby/assets/img/ig_icon.svg')}}" class="mr-3" style="width:24px;height:24px;">{{$profilecowo['ig']}}</p>
                                  </a>
                                 </div>
+                                @endif
                         </div>
                         
                     </div>
@@ -37,17 +40,17 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                         <div></div>
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <div><img data-aos="fade-up" src="/user/tia/assets/img/{{$profilecewe['foto']}}">
+                        <div><img data-aos="fade-up" src="/user/{{$owner}}/assets/img/{{$profilecewe['foto']}}">
                             <h1 data-aos="fade-up" class="mt-5 text-name">{{$profilecewe['nama']}}</h1>
                             <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putri dari  Bpk.{{$profilecewe['ayah']}} dan Ibu {{$profilecewe['ibu']}}<br></p>
                           
-                           
+                           @if($profilecewe['ig'] != null)
                             <div>
                                 <a href={{$profilecewe['igurl']}}>
                                 <p data-aos="fade-up" class="instagram-profile"><img src="{{url('user/isby/assets/img/ig_icon.svg')}}" class="mr-3" style="width:24px;height:24px;">{{$profilecewe['ig']}}</p>
                             </a>
                                 </div>
-
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -69,21 +72,21 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             </div>
         </div>
     </section>
-
+@if($imggaleri != null)
     <section id="galeri" class="section-galeri">
         <h1 data-aos="fade-up" class="text-center">Galeri Pre Wedding</h1>
         <div class="gallery-wrap container">
             <div class="row">
             @foreach($imggaleri as $index => $value)
                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-4 mt-3">
-                    <img data-aos="fade-up" data-aos-delay="200" src="/user/tia/assets/img/galery/{{$value}}" loading="lazy">
+                    <img data-aos="fade-up" data-aos-delay="200" src="/user/{{$owner}}/assets/img/galery/{{$value}}" loading="lazy">
                 </div>
                 @endforeach
             </div>
       
         </div>
     </section>
-
+@endif
     <section class="section-information d-flex justify-content-center align-items-center" style="width: 100%;">
         <div class="wrap-info">
             <p style="font-family:Montserrat,sans-serif;font-size:15px;font-weight:500;letter-spacing:5px;">Save the Date</p>
@@ -112,7 +115,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
         <div class="information-detail container text-center d-flex align-items-center justify-content-center flex-column">
         <div class="location">
                 <div data-aos="fade-up">
-                    <p data-aos="fade-up">Pemberkatan</p>
+                    <p data-aos="fade-up">{{$datapengantin['acara1']}}</p>
                     <p data-aos="fade-up">{{$datapengantin['jam akad']}}</p>
                 </div>
                 <div data-aos="fade-up"></div>
@@ -130,7 +133,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             </div>
       
                 <div data-aos="fade-up">
-                    <p data-aos="fade-up"><strong>Pemberkatan</strong></p>
+                    <p data-aos="fade-up"><strong>{{$datapengantin['acara1']}}</strong></p>
                     <p data-aos="fade-up">{{$datapengantin['lokasi']}}</p>
                     <a data-bs-hover-animate="pulse" class="mb-3 btn btn-direction" target="_blank"  href={{$datapengantin['Map link pemberkatan']}}>Buka Peta</a>
                 </div>
@@ -147,12 +150,18 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
 
         </div>
     </section>
+    <section id="section-maps" class="section text-center my-5">
+    <h1 class="title-section">Location </h1>
+    <!-- <img class="img-location" src="{{url('aness/assets/img/location-removebg-preview.png')}}"> -->
+        <div style="padding-top: 20px;"><iframe allowfullscreen="" frameborder="0" src={{$datapengantin['map_link']}}&amp;zoom=15"
+                width="100%" height="400"></iframe></div>
+    </section>
     <section id="rsvp" class="section-rsvp">
         <div class="form-wrapper">
             <h1 class="text-center">Daftar Kehadiran</h1>
 
 
-            <form action="{{route('tiastore')}}" method="post" >
+            <form action="{{route('retnostore')}}" method="post" >
 
             
 
@@ -214,6 +223,8 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                     <input type="hidden" id={{$value['id']}} value={{$value['account']}}>
                     <p><strong>{{$value['bank']}}</strong> : {{$value['account']}}  <br>{{$value['acc_name']}}
              </p>
+      
+
               <div class="container d-flex justify-content-center align-items-center">
                          <button onclick="copyToClipboard('{{$value['id']}}')"style="background-color:#f2b577;border:none;" class="btn btn-primary btn-sm">Copy</button>
               </div>
@@ -221,11 +232,13 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                     </div>
             
                @endforeach
+               <h3 class="text-center">GoPay</h3>
                 </div>
 
 
         </div>
-        <div class="content-wrapper mt-5"><img class="amplop-ats items" src="{{url('template/jasmine/assets/img/amplop-ats.png')}}"><img class="kertas items" src="/user/tia/assets/img/{{$qrcode}}"><img class="amplop-bwh items" src="{{url('template/jasmine/assets/img/amplop-bwh.png')}}"></div>
+
+        <div class="content-wrapper mt-5"><img class="amplop-ats items" src="{{url('template/jasmine/assets/img/amplop-ats.png')}}"><img class="kertas items" src="/user/{{$owner}}/assets/img/{{$qrcode}}"><img class="amplop-bwh items" src="{{url('template/jasmine/assets/img/amplop-bwh.png')}}"></div>
         </div>
     </section>
     <section class="section-ucapan">

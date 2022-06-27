@@ -95,7 +95,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(25deg, rgba(0, 0, 0, 0) 0%, #6c6c6c 99%);
+  background: linear-gradient(25deg, rgba(0, 0, 0, 0) 0%, rgb(108, 108, 108) 99%);
 }
 @media (min-width: 0) and (max-width: 600px) {
   #countdown .count-items {
@@ -134,7 +134,7 @@
 }
 #section-about .content-about a {
   font-size: 15px;
-  color: #605244;
+  color: rgb(96, 82, 68);
   letter-spacing: 1px;
 }
 #section-about .content-about a i {
@@ -143,10 +143,10 @@
 #section-about .content-about h1 {
   font-family: Meddon, cursive;
   font-weight: 700;
-  color: #6d5f52;
+  color: rgb(109, 95, 82);
 }
 #section-about .content-about h3 {
-  color: #605244;
+  color: rgb(96, 82, 68);
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   letter-spacing: 7px;
@@ -297,12 +297,12 @@
   padding: 50px 20px;
 }
 #section-guest .btn-send {
-  background-color: #7e634f;
+  background-color: rgb(126, 99, 79);
   color: white;
   width: 30%;
 }
 #section-guest .btn-send:hover {
-  background-color: #804012;
+  background-color: rgb(128, 64, 18);
 }
 #section-guest .form-status {
   display: flex;
@@ -384,17 +384,17 @@
 #section-ucapan .wrapper-content {
   width: 60%;
   color: black;
-  background: #f2b577;
+  background: rgb(242, 181, 119);
   padding: 50px;
   border-radius: 20px;
   box-shadow: 10px 10px 31px -19px rgba(0, 0, 0, 0.75);
 }
 #section-ucapan .wrapper-content .btn-send {
-  background-color: #7e634f;
+  background-color: rgb(126, 99, 79);
   color: white;
 }
 #section-ucapan .wrapper-content .btn-send:hover {
-  background-color: #804012;
+  background-color: rgb(128, 64, 18);
 }
 @media (min-width: 0) and (max-width: 600px) {
   #section-ucapan .wrapper-content {
@@ -405,7 +405,7 @@
 .text-venue {
   font-family: "Dancing Script", cursive;
   font-weight: bold;
-  color: #965e56;
+  color: rgb(150, 94, 86);
   letter-spacing: 8px;
 }
 
@@ -416,7 +416,7 @@
 .detail-venue {
   font-family: Andika, sans-serif;
   letter-spacing: 1px;
-  color: #7f878f;
+  color: rgb(127, 135, 143);
 }
 
 .title-section {
@@ -515,7 +515,7 @@
   transition: 0.5s;
 }
 .btn-buka:hover {
-  background-color: #c19403;
+  background-color: rgb(193, 148, 3);
   color: white;
 }
 

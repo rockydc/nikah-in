@@ -238,7 +238,7 @@ header .header-wrap .date-wrap {
 }
 
 .section-venue {
-  background-color: #fbf4ed;
+  background-color: rgb(251, 244, 237);
   padding-top: 66px;
   padding-bottom: 35px;
 }
@@ -259,7 +259,7 @@ header .header-wrap .date-wrap {
 }
 .section-venue .btn-direction {
   margin-top: 50px;
-  background-color: #d4af37;
+  background-color: rgb(212, 175, 55);
   color: white;
   width: 236px;
   padding: 10px 50px;
@@ -284,7 +284,7 @@ header .header-wrap .date-wrap {
   width: 60%;
 }
 .section-rsvp .form-wrapper button {
-  background-color: #d4af37;
+  background-color: rgb(212, 175, 55);
   border: none;
   width: 200px;
 }
@@ -476,7 +476,7 @@ header .header-wrap .date-wrap {
   transition: 0.5s;
 }
 .btn-buka:hover {
-  background-color: #c19403;
+  background-color: rgb(193, 148, 3);
   color: white;
 }
 

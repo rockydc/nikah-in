@@ -8,12 +8,10 @@ WebWedding
 @section('content')
 <div class="carousel slide carousel-fade" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active "><img class="w-100 d-block" src="{{url('user/rizky/assets/img/7.jpg')}}" alt="Slide Image" style="object-position: 50% 50%;"></div>
-            <!-- @foreach($imggaleri as $index => $value)
-        <div class="img-wrapper"><img  class="img-items" src="/user/rizky/assets/img/{{$value}}"></div>
-        @endforeach -->
-            <div class="carousel-item " ><img class="w-100 d-block" src="{{url('user/rizky/assets/img/8.jpg')}}" alt="Slide Image"></div>
-            <div class="carousel-item"><img class="w-100 d-block" src="{{url('user/rizky/assets/img/2.jpg')}}"  style="object-position:center" alt="Slide Image"></div>
+            <div class="carousel-item active "><img class="w-100 d-block" src="{{url('user/rizky/assets/img/bg_riadi.png')}}" alt="Slide Image" style="object-position: 40% 15%;"></div>
+            <div class="carousel-item active "><img class="w-100 d-block" src="{{url('user/rizky/assets/img/bg_riadi.png')}}" alt="Slide Image" style="object-position: 40% 15%;"></div>
+  
+          
         </div>
         <!-- <div>
             <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
@@ -25,7 +23,7 @@ WebWedding
         <ol class="carousel-indicators">
             <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-1" data-slide-to="1"></li>
-            <li data-target="#carousel-1" data-slide-to="2"></li>
+      
             </ol>
 </div>
     <div id="countdown" class="container">
@@ -176,7 +174,7 @@ WebWedding
         <h1 class="title-section">RSVP</h1>
         <!-- <img class="img-guest" src="{{url('aness/assets/img/guest_attendance-removebg-preview.png')}}"> -->
             <div class="form-wrapper p-lg-4 p-md-4 p-sm-1">
-                <form action="{{route('rizkystore')}}" method="post">
+                <form action="{{route('riadistore')}}" method="post">
                 @csrf 
 
                     <div>
@@ -236,13 +234,14 @@ WebWedding
                         </div>
                     </div>
                     <div class="d-flex align-item-center justify-content-center"><button class="btn btn-send btn-block text-center" type="submit">Submit</button></div>
-                    
-
                 </form>
 
             </div>
         </div>
     </div>
+
+
+    @if($imggaleri != null)
     <div id="section-gallery" class="section text-center">
         <h2 class="title-section">Gallery</h2>
         <!-- <img class="img-gallery" src="{{url('aness/assets/img/gallery-removebg-preview.png')}}"> -->
@@ -253,6 +252,7 @@ WebWedding
         
         </div>
     </div>
+    @endif
     <div id="section-maps" class="section text-center">
     <h1 class="title-section">Location </h1>
     <!-- <img class="img-location" src="{{url('aness/assets/img/location-removebg-preview.png')}}"> -->

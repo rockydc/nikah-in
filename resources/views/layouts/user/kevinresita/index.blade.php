@@ -38,7 +38,7 @@
 </head>
 
 <audio loop id="myaudio" type="audio/mp3">
-    <source src="{{url('user/jauja/Love Story - Taylor Swift (Cover by Eltasya Natasha ft. Indah Aqila).mp3')}}">
+    <source src="{{url('user/rizky/bg-sound.mp3')}}">
 </audio>
 
 <body id="page-top"style="background: rgb(246,236,226);">
@@ -150,16 +150,16 @@
        
        </script>
     <script>
-            $(document).ready(function(){
-
-            const weddingdate = "May 15, 2022 09:00:00"
-            const Timer = {
-                init:(weddingdate)=>{
-                    countdownDate(weddingdate)
-                }
-            }
-            Timer.init(weddingdate);
-            })
+               $(document).ready(function(){
+             
+             const weddingdate = "{{$datapengantin['countdown']}}"
+             const Timer = {
+                 init:(weddingdate)=>{
+                     countdownDate(weddingdate)
+                 }
+             }
+             Timer.init(weddingdate);
+             })
     </script>
 
     

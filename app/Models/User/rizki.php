@@ -1,13 +1,12 @@
 <?php
-
-namespace App\User;
+namespace App\Models\User;
 
 use Illuminate\Database\Eloquent\Model;
 
 class rizki extends Model
 {
     //
-    protected $table = 'tbl_kevinresita';
+    protected $table = 'tbl_rizki';
     protected $fillable = [
        'nama','ikatan','email','pesan','status','jmlh_orang'
     ];
@@ -30,4 +29,4 @@ class rizki extends Model
         return $additional;
     }
 }
-}
+

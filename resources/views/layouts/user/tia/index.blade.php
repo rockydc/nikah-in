@@ -7,7 +7,7 @@
     <title>@yield('title')</title>
     @include('includes.user.style')
     <!-- <link rel="stylesheet" href="{{url('template/jasmine/assets/css/styles.min.css')}}"> -->
-    <link rel="stylesheet" href="{{url('user/tia/assets/scss/style.css')}}">
+    <link rel="stylesheet" href="/user/{{$owner}}/assets/scss/style.css">
     <style>
     
 .act-btn{
@@ -41,7 +41,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="section-modal"><img class="img-header" src="/user/tia/assets/img/galery/{{$modalimg}}" />
+                <div class="section-modal"><img class="img-header" src="/user/{{$owner}}/assets/img/galery/{{$modalimg}}" />
                     <div class="mt-4">
                         <p class="text-center">Wedding of<br /></p>
                         <h1>{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br /></h1>
@@ -160,11 +160,11 @@
     <script src="{{url('template/jasmine/assets/js/script.min.js')}}"></script>
     <script src="{{url('template/jasmine/assets/js/page.js')}}"></script>
     <script src="{{url('user/kevinresita/assets/js/countdown.js')}}"></script>
-
+    <!-- April 09, 2022 09:00:00 -->
     <script>
             $(document).ready(function(){
-
-            const weddingdate = "April 09, 2022 09:00:00"
+             
+            const weddingdate = "{{$datapengantin['countdown']}}"
             const Timer = {
                 init:(weddingdate)=>{
                     countdownDate(weddingdate)

@@ -302,6 +302,57 @@ Route::prefix('rizkywent')
     });
 });
 
+Route::prefix('ridho-tasya')
+->namespace('ridho')
+->group(function(){
+    Route::get('/home/{name?}','RidhoController@index')->name('ridho');
+    Route::get('/success','RidhoController@success')->name('ridho-success');
+    Route::post('/store','RidhoController@store')->name('ridhostore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','RidhoController@dashboard')->name('ridhodashboard');
+        Route::get('/rsvp','RidhoController@rsvp')->name('ridhorsvp');
+        Route::get('/getrsvp','RidhoController@getrsvp');
+        Route::get('/cetakpdf','RidhoController@cetakpdf')->name('ridhocetak');
+    });
+});
+Route::prefix('neno-mirfak')
+->namespace('retno')
+->group(function(){
+    Route::get('/home/{name?}','RetnoController@index')->name('retno');
+    Route::get('/success','RetnoController@success')->name('retno-success');
+    Route::post('/store','RetnoController@store')->name('retnostore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','RetnoController@dashboard')->name('retnodashboard');
+        Route::get('/rsvp','RetnoController@rsvp')->name('retnorsvp');
+        Route::get('/getrsvp','RetnoController@getrsvp');
+        Route::get('/cetakpdf','RetnoController@cetakpdf')->name('retnocetak');
+    });
+});
+
+Route::prefix('riadi-anisa')
+->namespace('riadi')
+->group(function(){
+    Route::get('/home/{name?}','RiadiController@index')->name('riadi');
+    Route::get('/success','RiadiController@success')->name('riadi-success');
+    Route::post('/store','RiadiController@store')->name('riadistore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','RiadiController@dashboard')->name('riadidashboard');
+        Route::get('/rsvp','RiadiController@rsvp')->name('riadirsvp');
+        Route::get('/getrsvp','RiadiController@getrsvp');
+        Route::get('/cetakpdf','RiadiController@cetakpdf')->name('riadicetak');
+    });
+});
+
+
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);
