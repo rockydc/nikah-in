@@ -327,7 +327,6 @@ header .header-wrap .date-wrap {
   .section-venue {
     height: auto;
   }
-
   .btn-direction {
     margin-top: 50px;
     background-color: white;
@@ -336,7 +335,6 @@ header .header-wrap .date-wrap {
     box-sizing: border-box;
     padding: 5px 10px;
   }
-
   .btn-location {
     display: flex;
     flex-direction: column;

@@ -282,11 +282,9 @@ header .header-wrap .date-wrap {
   header {
     background: url("../../assets/img/header_bg_mobile.png") center/cover;
   }
-
   .text-title {
     font-size: 24px;
   }
-
   .section-countdown {
     padding-bottom: 60px;
     padding-top: 55px;

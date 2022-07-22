@@ -305,7 +305,6 @@ header .date-wrapper {
   header .text-date {
     font-size: 15px;
   }
-
   .section-the-date {
     height: 347px;
     padding-top: 69px;
@@ -325,7 +324,6 @@ header .date-wrapper {
   .section-the-date .countdown-wrapper .text-caption {
     font-size: 15px;
   }
-
   .section-venue {
     padding-top: 93px;
     padding-bottom: 93px;
@@ -342,14 +340,12 @@ header .date-wrapper {
   header .text-date {
     font-size: 20px;
   }
-
   .section-profile .profile-wrapper {
     width: 90%;
   }
   .section-profile .text-dan {
     font-size: 100px;
   }
-
   .section-the-date {
     height: 447px;
     padding-top: 69px;
@@ -365,7 +361,6 @@ header .date-wrapper {
   .section-the-date .countdown-wrapper .text-date {
     font-size: 30px;
   }
-
   .section-venue .text-lokasi {
     font-size: 14px;
   }

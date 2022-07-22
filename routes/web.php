@@ -352,6 +352,40 @@ Route::prefix('riadi-anisa')
     });
 });
 
+Route::prefix('septian-eri')
+->namespace('eri')
+->group(function(){
+    Route::get('/home/{name?}','EriController@index')->name('eri');
+    Route::get('/success','EriController@success')->name('eri-success');
+    Route::post('/store','EriController@store')->name('eristore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','EriController@dashboard')->name('eridashboard');
+        Route::get('/rsvp','EriController@rsvp')->name('erirsvp');
+        Route::get('/getrsvp','EriController@getrsvp');
+        Route::get('/cetakpdf','EriController@cetakpdf')->name('ericetak');
+    });
+});
+
+
+Route::prefix('abdul-laras')
+->namespace('abdul')
+->group(function(){
+    Route::get('/home/{name?}','AbdulController@index')->name('abdul');
+    Route::get('/success','AbdulController@success')->name('abdul-success');
+    Route::post('/store','AbdulController@store')->name('abdulstore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','AbdulController@dashboard')->name('abduldashboard');
+        Route::get('/rsvp','AbdulController@rsvp')->name('abdulrsvp');
+        Route::get('/getrsvp','AbdulController@getrsvp');
+        Route::get('/cetakpdf','AbdulController@cetakpdf')->name('abdulcetak');
+    });
+});
 
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
