@@ -368,7 +368,22 @@ Route::prefix('septian-eri')
         Route::get('/cetakpdf','EriController@cetakpdf')->name('ericetak');
     });
 });
+Route::prefix('ari-ajeng')
+->namespace('ari')
+->group(function(){
+    Route::get('/home/{name?}','AriController@index')->name('ari');
+    Route::get('/success','AriController@success')->name('ari-success');
+    Route::post('/store','AriController@store')->name('aristore');
 
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','AriController@dashboard')->name('aridashboard');
+        Route::get('/rsvp','AriController@rsvp')->name('arirsvp');
+        Route::get('/getrsvp','AriController@getrsvp');
+        Route::get('/cetakpdf','AriController@cetakpdf')->name('aricetak');
+    });
+});
 
 Route::prefix('abdul-laras')
 ->namespace('abdul')
@@ -387,6 +402,58 @@ Route::prefix('abdul-laras')
     });
 });
 
+
+Route::prefix('hilman-elsa')
+->namespace('hilman')
+->group(function(){
+    Route::get('/home/{name?}','HilmanController@index')->name('hilman');
+    Route::get('/success','HilmanController@success')->name('hilman-success');
+    Route::post('/store','HilmanController@store')->name('hilmanstore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','HilmanController@dashboard')->name('hilmandashboard');
+        Route::get('/rsvp','HilmanController@rsvp')->name('hilmanrsvp');
+        Route::get('/getrsvp','HilmanController@getrsvp');
+        Route::get('/cetakpdf','HilmanController@cetakpdf')->name('hilmancetak');
+    });
+});
+
+
+Route::prefix('febri-rakmah')
+->namespace('febrirakmah')
+->group(function(){
+    Route::get('/home/{name?}','FebriController@index')->name('febri');
+    Route::get('/success','FebriController@success')->name('febri-success');
+    Route::post('/store','FebriController@store')->name('febristore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','FebriController@dashboard')->name('febridashboard');
+        Route::get('/rsvp','FebriController@rsvp')->name('febrirsvp');
+        Route::get('/getrsvp','FebriController@getrsvp');
+        Route::get('/cetakpdf','FebriController@cetakpdf')->name('febricetak');
+    });
+});
+
+Route::prefix('ageng-miftah')
+->namespace('ageng')
+->group(function(){
+    Route::get('/home/{name?}','AgengController@index')->name('ageng');
+    Route::get('/success','AgengController@success')->name('ageng-success');
+    Route::post('/store','AgengController@store')->name('agengstore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','AgengController@dashboard')->name('agengdashboard');
+        Route::get('/rsvp','AgengController@rsvp')->name('agengrsvp');
+        Route::get('/getrsvp','AgengController@getrsvp');
+        Route::get('/cetakpdf','AgengController@cetakpdf')->name('agengcetak');
+    });
+});
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);

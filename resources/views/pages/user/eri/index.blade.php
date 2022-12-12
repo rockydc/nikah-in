@@ -72,10 +72,9 @@ WebWedding
                             <h3><strong>{{$profilecowo['nama']}}&nbsp;</strong></h3>
                             <p>Son of {{$profilecowo['ayah']}}<br>and {{$profilecowo['ibu']}}<br></p>
                             <div class="instagram-text">
-                            <!-- <a class="text-decoration-none" href="https://www.instagram.com/anesitumeang/">
+                   <a class="text-decoration-none" href="https://www.instagram.com/anesitumeang/">
                             <i class="fa fa-instagram mr-2"></i>{{$profilecowo['ig']}}
-                            </a> -->
-
+                            </a>                    
                             </div>
 
                         </div>
@@ -89,9 +88,9 @@ WebWedding
                             <h3 style="">{{$profilecewe['nama']}}</h3>
                             <p>Daughter of {{$profilecewe['ayah']}}<br>and {{$profilecewe['ibu']}}</p>
                             <div class="instagram-text">
-                            <!-- <a class="text-decoration-none" href="#">
+           <a class="text-decoration-none" href="#">
                             <i class="fa fa-instagram mr-2"></i>{{$profilecewe['ig']}}
-                            </a> -->
+                            </a>
 
                             </div>
 
@@ -141,7 +140,13 @@ WebWedding
                 </div>
             </div>
             <p class="detail-venue" style="">{{$sesi['sesi1']['lokasi']}}</p>
-            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;1">We appologize in the implementation on akad will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p><img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
+            <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;1">We appologize in the implementation on akad will only be attended by famillies accordance<br>to health protocols related to the pandemic Covid-19 situation<br></p>
+            <div>
+
+            </div>
+            <img class="flowers" src="{{url('aness/assets/img/bunga.png')}}"></div>
+
+            @if($sesi['sesi2']['isActive'] != false)
         <div data-aos="zoom-in-up"
             class="text-center">
             <div>
@@ -172,6 +177,7 @@ WebWedding
             <p class="detail-venue">{{$sesi['sesi2']['lokasi']}}</p>
             <p class="msg-venue" style="font-family: 'Josefin Sans', sans-serif;">We would apply strictly health protocol.  Please always wear a mask, Wash your hand, Keeping a save distance, <br>Use hand sanitizer frequently</p>
         </div>
+        @endif
     </div>
     <div id="section-guest" class="section">
         <div data-aos="fade" class="d-flex align-items-center flex-column">
