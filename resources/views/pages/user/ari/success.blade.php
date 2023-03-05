@@ -12,7 +12,7 @@ rsvp.json')}}"  loop  autoplay></lottie-player>
 
         <div class="d-flex justify-content-center align-items-center flex-column">
             <p style="font-size:25px;font-weight:700; font-familiy:montserrat,sans-serif;">Yeay ! Terimakasih telah mengisi Buku Tamu</p>
-            <p>Tetap Patuhi Protokol Kesehatan !</p> 
+            <p>Tetap Patuhi Protokol Kesehatan !lara</p> 
 
             <a class="btn btn-buka" style="" href="{{route($routeName)}}">Home</a>     
         </div>

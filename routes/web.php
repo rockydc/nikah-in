@@ -454,6 +454,41 @@ Route::prefix('ageng-miftah')
         Route::get('/cetakpdf','AgengController@cetakpdf')->name('agengcetak');
     });
 });
+
+
+Route::prefix('aje-nur')
+->namespace('nur')
+->group(function(){
+    Route::get('/home/{name?}','NurController@index')->name('ageng');
+    Route::get('/success','NurController@success')->name('ageng-success');
+    Route::post('/store','NurController@store')->name('agengstore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','NurController@dashboard')->name('agengdashboard');
+        Route::get('/rsvp','NurController@rsvp')->name('agengrsvp');
+        Route::get('/getrsvp','NurController@getrsvp');
+        Route::get('/cetakpdf','NurController@cetakpdf')->name('agengcetak');
+    });
+});
+
+Route::prefix('abdul-asti')
+->namespace('abdulasti')
+->group(function(){
+    Route::get('/home/{name?}','AbdulAstiController@index')->name('abdulasti');
+    Route::get('/success','AbdulAstiController@success')->name('abdulasti-success');
+    Route::post('/store','AbdulAstiController@store')->name('abdulastistore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','AbdulAstiController@dashboard')->name('abdulastidashboard');
+        Route::get('/rsvp','AbdulAstiController@rsvp')->name('abdulastirsvp');
+        Route::get('/getrsvp','AbdulAstiController@getrsvp');
+        Route::get('/cetakpdf','AbdulAstiController@cetakpdf')->name('abdulasticetak');
+    });
+});
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);

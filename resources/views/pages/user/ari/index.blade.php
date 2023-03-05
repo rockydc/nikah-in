@@ -69,17 +69,21 @@ WebWedding
               
                         </p>
                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="{{$pathFileImg}}{{$profilecowo['foto']}}"></div>
+                     
                         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 align-self-lg-center align-self-xl-center text-left content-about" style="padding: 0px;margin: 0px;">
                             <h1>{{$profilecowo['nick']}}</h1>
                             <h3><strong>{{$profilecowo['nama']}}&nbsp;</strong></h3>
                             <p>Son of {{$profilecowo['ayah']}}<br>and {{$profilecowo['ibu']}}<br></p>
+
+                            @if($profilecowo['ig_link']!= null)
                             <div class="instagram-text">
                             <a class="text-decoration-none" href="{{$profilecowo['ig_link']}}">
                             <i class="fa fa-instagram mr-2"></i>{{$profilecowo['ig']}}
                             </a>
                             </div>
-
+                            @endif
                         </div>
+                     
                     </div>
                     <div class="row">
                         <div class="col"><img class="flower" src="{{url('aness/assets/img/bunga-removebg-preview.png')}}"></div>
@@ -89,13 +93,13 @@ WebWedding
                         <h1>{{$profilecewe['nick']}}</h1>
                             <h3 style="">{{$profilecewe['nama']}}</h3>
                             <p>Daughter of {{$profilecewe['ayah']}}<br>and {{$profilecewe['ibu']}}</p>
+                            @if($profilecowo['ig_link']!= null)
                             <div class="instagram-text">
-                         
                             <a class="text-decoration-none" href="{{$profilecewe['ig_link']}}">
                             <i class="fa fa-instagram mr-2"></i>{{$profilecewe['ig']}}
                             </a>
                             </div>
-
+                            @endif
                            
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4"><img class="img-profile" src="{{$pathFileImg}}{{$profilecewe['foto']}}"></div>
@@ -189,6 +193,9 @@ WebWedding
     <div id="section-guest" class="section">
         <div data-aos="fade" class="d-flex align-items-center flex-column">
         <h1 class="title-section">RSVP</h1>
+        @if($specialNote != null)
+        <p>{{$specialNote}}</p>
+        @endif
         <!-- <img class="img-guest" src="{{url('aness/assets/img/guest_attendance-removebg-preview.png')}}"> -->
             <div class="form-wrapper p-lg-4 p-md-4 p-sm-1">
                 <form action="{{route($storeRsvp)}}" method="post">
