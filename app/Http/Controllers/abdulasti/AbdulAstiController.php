@@ -73,7 +73,7 @@ class AbdulAstiController extends Controller
             ];
          $emoney =[
             "emoney1"=>[
-                "name"=>"DANA",
+                "name"=>"Offline Gift",
                 "img"=>"qrcode2.jpeg",
                 "isActive"=>false
             ]

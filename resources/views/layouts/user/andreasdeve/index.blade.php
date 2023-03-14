@@ -41,7 +41,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="section-modal"><img class="img-header" src="{{url('user/andreasdeve/assets/img/5.jpg')}}" />
+                <div class="section-modal"><img class="img-header" src="{{$pathFileImg}}{{$modalimg}}" />
                     <div class="mt-4">
                         <p class="text-center">Wedding of<br /></p>
                         <h1>{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br /></h1>
@@ -107,7 +107,7 @@
     @include('includes.user.script')
     <script src="{{url('template/jasmine/assets/js/script.min.js')}}"></script>
     <script src="{{url('template/jasmine/assets/js/page.js')}}"></script>
-    <script src="{{url('user/andreasdeve/assets/js/countdown.js')}}"></script>
+    <script src="{{url('user/kevinresita/assets/js/countdown.js')}}"></script>
     <script>
    
 
@@ -130,6 +130,17 @@
             }
         })
        
+       </script>
+       <script>
+        $(document).ready(function(){
+            const weddingdate = "{{$datapengantin['countdown']}}"
+            const Timer = {
+                init:(weddingdate)=>{
+                    countdownDate(weddingdate)
+                }
+            }
+            Timer.init(weddingdate)
+        })
        </script>
 </body>
 

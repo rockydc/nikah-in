@@ -489,6 +489,23 @@ Route::prefix('abdul-asti')
         Route::get('/cetakpdf','AbdulAstiController@cetakpdf')->name('abdulasticetak');
     });
 });
+
+Route::prefix('anwar-siti')
+->namespace('anwar')
+->group(function(){
+    Route::get('/home/{name?}','AnwarController@index')->name('anwar');
+    Route::get('/success','AnwarController@success')->name('anwar-success');
+    Route::post('/store','AnwarController@store')->name('anwarstore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','AnwarController@dashboard')->name('anwardashboard');
+        Route::get('/rsvp','AnwarController@rsvp')->name('anwarrsvp');
+        Route::get('/getrsvp','AnwarController@getrsvp');
+        Route::get('/cetakpdf','AnwarController@cetakpdf')->name('anwarcetak');
+    });
+});
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);

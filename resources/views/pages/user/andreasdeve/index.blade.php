@@ -19,7 +19,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             <div class="photo-wrap">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <div><img data-aos="fade-up" src="{{url('user/andreasdeve/assets/img/profile-cowo.png')}}">
+                        <div><img data-aos="fade-up" src="{{$pathFileImg}}{{$profilecowo['foto']}}">
                             <h1 data-aos="fade-up" class="mt-5 text-name">{{$profilecowo['nama']}}</h1>
                             <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putra dari Bpk.{{$profilecowo['ayah']}} dan Ibu {{$profilecowo['ibu']}}<br></p>
                             <div>
@@ -37,7 +37,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
                         <div></div>
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <div><img data-aos="fade-up" src="{{url('user/andreasdeve/assets/img/profile-cewe.png')}}">
+                        <div><img data-aos="fade-up" src="{{$pathFileImg}}{{$profilecewe['foto']}}">
                             <h1 data-aos="fade-up" class="mt-5 text-name">{{$profilecewe['nama']}}</h1>
                             <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putri dari  Bpk.{{$profilecewe['ayah']}} dan Ibu {{$profilecewe['ibu']}}<br></p>
                           
@@ -74,14 +74,9 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
         <h1 data-aos="fade-up" class="text-center">Galeri Pre Wedding</h1>
         <div class="gallery-wrap container">
             <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="200" src="{{url('user/andreasdeve/assets/img/galery/1.jpg')}}" loading="lazy"></div>
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="250" src="{{url('user/andreasdeve/assets/img/2.jpg')}}" loading="lazy"></div>
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="300" src="{{url('user/andreasdeve/assets/img/galery/2.jpg')}}" loading="lazy"></div>
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="350" src="{{url('user/andreasdeve/assets/img/4.jpg')}}" loading="lazy"></div>
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="400" src="{{url('user/andreasdeve/assets/img/galery/3.jpg')}}" loading="lazy"></div>
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="300" src="{{url('user/andreasdeve/assets/img/galery/4.jpg')}}" loading="lazy"></div>
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="250" src="{{url('user/andreasdeve/assets/img/galery/5.jpg')}}" loading="lazy"></div>
-                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="200" src="{{url('user/andreasdeve/assets/img/galery/6.jpg')}}"></div>
+                @foreach($imggaleri as $index => $value)
+                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mt-3"><img data-aos="fade-up" data-aos-delay="200" src="{{$pathFileImg}}{{$value}}" loading="lazy"></div>
+                @endforeach
             </div>
       
         </div>
@@ -115,7 +110,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
         <div class="information-detail container text-center d-flex align-items-center justify-content-center flex-column">
         <div class="location">
                 <div data-aos="fade-up">
-                    <p data-aos="fade-up">Pemberkatan</p>
+                    <p data-aos="fade-up">Akad</p>
                     <p data-aos="fade-up">{{$datapengantin['jam akad']}}</p>
                 </div>
                 <div data-aos="fade-up"></div>
@@ -133,7 +128,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             </div>
       
                 <div data-aos="fade-up">
-                    <p data-aos="fade-up">Pemberkatan <strong>(Hanya untuk Keluarga)</strong></p>
+                    <p data-aos="fade-up">Akad</p>
                     <p data-aos="fade-up">{{$datapengantin['lokasi']}}</p>
                 </div>
                 <div data-aos="fade-up"></div>
@@ -143,7 +138,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
               
             </div>
             <div class="btn-location">
-            <a data-bs-hover-animate="pulse" class="btn btn-direction" target="_blank"  href={{$datapengantin['Map link pemberkatan']}}>Pemberkatan</a>
+            <a data-bs-hover-animate="pulse" class="btn btn-direction" target="_blank"  href={{$datapengantin['Map link pemberkatan']}}>Akad</a>
             <a data-bs-hover-animate="pulse" class="btn btn-direction" target="_blank"  href={{$datapengantin['Map link resepsi']}}>Resepsi</a>
             </div>
 
@@ -154,7 +149,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             <h1 class="text-center">Daftar Kehadiran</h1>
 
 
-            <form action="{{route('andreasdevestore')}}" method="post" >
+            <form action="{{route($storeRsvp)}}" method="post" >
 
             
 
