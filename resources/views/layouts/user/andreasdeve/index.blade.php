@@ -35,7 +35,7 @@
 
 <body>
 <audio loop id="myaudio" type="audio/mp3">
-<source src="{{url('user/andreasdeve/Two Words - Lea Salonga.mp3')}}">
+<source src="{{$musicName}}">
 </audio>
 <div class="modal" role="dialog" tabindex="-1" id="myModal" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-dialog-centered" role="document">

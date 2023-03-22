@@ -7,7 +7,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
 
 @section('content')
 
-<header class="text-center" style="margin-top: -70px;">
+<header class="text-center" style="margin-top: -70px; background-image:url({{$pathFileImg.$headerImg}})">
         <div class="header-wrap">
             <p style="font-family: 'Playfair Display', serif;">Wedding of</p>
             <h1 style="font-family: 'Playfair Display', serif;">{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}</h1>
@@ -57,7 +57,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
     <section id="story" class="section-story container-fluid">
         <div>
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 photo-story" id="photo-story1"></div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 photo-story" id="photo-story1" style="background-image: url('{{$pathFileImg.$imgStorylove}}') "></div>
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 text-story" style="background: url({{url('template/jasmine/assets/img/bg-story1.png')}}) right / cover no-repeat;">
                     <div class="text-wrapper-story"><img class="icon-leaf"src="{{url('template/jasmine/assets/img/ic-leaf.svg')}}">
                         <p>{{$datapengantin['ayat']}}</p>
@@ -69,7 +69,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             </div>
         </div>
     </section>
-
+    @if($layouts['isSectionGaleryActive'] != false)
     <section id="galeri" class="section-galeri">
         <h1 data-aos="fade-up" class="text-center">Galeri Pre Wedding</h1>
         <div class="gallery-wrap container">
@@ -81,8 +81,8 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
       
         </div>
     </section>
-
-    <section class="section-information d-flex justify-content-center align-items-center" style="width: 100%;">
+    @endif
+    <section class="section-information d-flex justify-content-center align-items-center" style="width: 100%;background: url('{{$pathFileImg.$imgCountdown}}')center/cover;">
         <div class="wrap-info">
             <p style="font-family:Montserrat,sans-serif;font-size:15px;font-weight:500;letter-spacing:5px;">Save the Date</p>
             <h1 class="text-wedding-date">{{$datapengantin['tanggal']}}</h1>
@@ -144,6 +144,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
 
         </div>
     </section>
+    @if($layouts['isRsvpActive'] != false)
     <section id="rsvp" class="section-rsvp">
         <div class="form-wrapper">
             <h1 class="text-center">Daftar Kehadiran</h1>
@@ -196,6 +197,8 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
             </form>
         </div>
     </section>
+    @endif
+    @if($layouts['isGiftSectionActive'] != false)
     <section class="section-gift">
         <div class="container wrapper">
             <h1 style="font-family: Montserrat, sans-serif;">Share gift</h1>
@@ -218,6 +221,7 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
         <div class="content-wrapper mt-5"><img class="amplop-ats items" src="{{url('template/jasmine/assets/img/amplop-ats.png')}}"><img class="kertas items" src="{{url('user/andreasdeve/assets/img/kertas.png')}}"><img class="amplop-bwh items" src="{{url('template/jasmine/assets/img/amplop-bwh.png')}}"></div>
         </div>
     </section>
+    @endif
     <section class="section-ucapan">
         <h1 class="text-center">Kartu ucapan<br></h1>
         <div data-aos="zoom-in-up" class="ucapan-wrapper container">

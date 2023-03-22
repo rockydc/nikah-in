@@ -85,11 +85,15 @@ a {
 header {
   height: 734px;
   margin-bottom: 127px;
-  background: url("../img/header.png") center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
 }
 header .header-wrap {
   display: flex;
@@ -115,9 +119,6 @@ header .header-wrap .date-wrap {
 }
 
 @media (min-width: 0) and (max-width: 600px) {
-  header {
-    background: url("../img/header-mobile-2.png") center/cover no-repeat;
-  }
   header .header-wrap {
     padding-top: 10em;
   }
@@ -170,7 +171,8 @@ header .header-wrap .date-wrap {
      object-fit: cover;
 }
 .section-story #photo-story1 {
-  background: url("../img/story.png") top/cover;
+  background-position: top;
+  background-size: cover;
 }
 .section-story .text-story {
   padding: 0px !important;
@@ -192,7 +194,8 @@ header .header-wrap .date-wrap {
 }
 @media (min-width: 0) and (max-width: 600px) {
   .section-story #photo-story1 {
-    background: url("../img/story-mobile.png") center/cover;
+    background-position: center;
+    background-size: cover;
   }
   .section-story .photo-story img {
     width: 100%;
@@ -225,15 +228,14 @@ header .header-wrap .date-wrap {
     height: 420px;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 20% 30%;
-       object-position: 20% 30%;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 
 .section-information {
   margin-top: 150px;
   height: 700px;
-  background: url("../img/countdown-bg.png") center/cover no-repeat;
   background-attachment: fixed;
 }
 .section-information .wrap-info {
@@ -273,11 +275,6 @@ header .header-wrap .date-wrap {
   }
 }
 
-@media (min-width: 0) and (max-width: 600px) {
-  .section-information {
-    background: url("../img/countdown-bg-mobile.png") bottom/cover no-repeat;
-  }
-}
 .section-venue {
   background: #421b1a;
   color: white;

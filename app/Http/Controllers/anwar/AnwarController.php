@@ -4,14 +4,15 @@ namespace App\Http\Controllers\anwar;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User\andreasdeve as andreasdeve;
+use App\Models\User\anwar as anwar;
 use App\Http\Requests\IsbyRequest;
 use PDF;
+use Jenssegers\Agent\Agent;
 class AnwarController extends Controller
 {
 
     public function index($name='rocky'){
-     $items = andreasdeve::all();
+     $items = anwar::all();
      $datapengantin = [
          "cowo"=>"Anwar",
          "cewe"=>"Siti",
@@ -19,12 +20,12 @@ class AnwarController extends Controller
          "bln"=>"05",
          "thn"=>"23",
          "lagu"=>"Janji kita",
-         "lokasi"=>"No., Jl. HH No.14, RT.8/RW.1, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530",
+         "lokasi"=>"Gor Kebon jeruk",
          "Map link pemberkatan"=> "https://goo.gl/maps/pX8wPTK8Lgrt22Hu7",
          "tanggal"=>"14 Mei 2023",
          "jam akad"=>"08.00 - Selesai",
          "jam resepsi"=>"10.00 - Selesai ",
-         "lokasi resepsi" => "No., Jl. HH No.14, RT.8/RW.1, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530",
+         "lokasi resepsi" => "Gor Kebon jeruk",
          "Map link resepsi"=> "https://goo.gl/maps/pX8wPTK8Lgrt22Hu7",
          "tanggal resepsi"=> "Maret 26,2022",
          "ayat"=> "QS Ar Rum Ayat 21",
@@ -56,11 +57,17 @@ class AnwarController extends Controller
             ]
             ];
     $folderName = 'anwar';
-    $musicName = "/user/".$folderName."/test.mp3";
+    $musicName = "/user/".$folderName."/Nuca & Mahalini - Janji Kita.mp3";
     $pathFileImg ="/user/".$folderName."/assets/img/";
+    $headerImg = '1.jpg';
     $imgGalery = [
         "1.jpg",
         "2.jpg",
+        "3.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg"
     ];
     $modalimg = '1.jpg';
      $accountbank = [
@@ -82,7 +89,7 @@ class AnwarController extends Controller
          "igurl"=>"https://www.instagram.com/anwar_hidayaat/",
          "foto"=>"profile-cowo.png"
      ];
-     $storeRsvp = 'anwar-store';
+     $storeRsvp = 'anwarstore';
       $profileCewe =[
          "nama"=> "Siti nurhaliza",
          "nick"=> "Chacha",
@@ -92,6 +99,25 @@ class AnwarController extends Controller
          "igurl"=>"https://www.instagram.com/chacha292929/",
          "foto"=>"profile-cewe.png"
      ];
+     $layouts = [
+        "isGiftSectionActive" => false,
+        "isSectionGaleryActive" => true,
+        "isRsvpActive"=> true
+     ];
+  
+     $imgMobileSectionLove = '';
+     $agent = new Agent();
+     $imgCountdown = '';
+     $imgStorylove = '';
+     if($agent->isMobile()){
+        $imgCountdown = 'countdown-bg-mobile.png';
+        $imgStorylove = 'story-mobile.png';
+        $headerImg = '1.jpg';
+     }else {
+        $imgStorylove = 'story.png';
+        $headerImg = '1.jpg';
+        $imgCountdown = 'countdown-bg.png';
+     }
 
      $name = str_replace(["+"], [" "],$name);
      return view('pages.user.andreasdeve.index',[
@@ -108,7 +134,12 @@ class AnwarController extends Controller
          'quote'=>$quote,
          'pathFileImg'=>$pathFileImg,
          'musicName'=>$musicName,
-         'storeRsvp'=>$storeRsvp
+         'storeRsvp'=>$storeRsvp,
+         'layouts'=>$layouts,
+         'imgMobileSectionLove'=>$imgMobileSectionLove,
+         'imgStorylove'=>$imgStorylove,
+         'imgCountdown'=>$imgCountdown,
+         'headerImg'=>$headerImg
      ]);
  }
 
@@ -117,34 +148,37 @@ class AnwarController extends Controller
  public function store(IsbyRequest $request){
      //
      $data = $request->all();
-     andreasdeve::create($data);
-     return redirect()->route('andreasdeve-success');
+     anwar::create($data);
+     return redirect()->route('anwar-success');
 
 
 
  }
  public function success(){
-     return view('pages.user.andreasdeve.success');
+    $routeName = 'anwar';
+     return view('pages.user.andreasdeve.success',[
+        "routeName"=>$routeName
+    ]);
  }
  public function dashboard(){
 
-     $items = andreasdeve::all();
+     $items = anwar::all();
 
-     return view('pages.user.andreasdeve.dashboard',[
+     return view('pages.user.anwar.dashboard',[
          'items'=>$items
      ]);
  }
 
 
  public function getrsvp(){
-     $items = andreasdeve::get();
+     $items = anwar::get();
      return json_encode(array('data'=>$items));
  }
 
 
  public function rsvp(Request $request){
           
-     $items = andreasdeve::all();
+     $items = anwar::all();
 
          if($request->ajax()){
              
@@ -156,7 +190,7 @@ class AnwarController extends Controller
  }
  public function cetakpdf(){
 
-     $items = andreasdeve::all();
+     $items = anwar::all();
  
      $pdf = PDF::loadview('layouts.user.data-rsvp_pdf',['items'=>$items])->setOptions(['defaultPaperSize'=>'a3']);
      return $pdf->download('laporan-data-rsvp.pdf');
