@@ -40,7 +40,7 @@
 
 <!-- Nav Item - rsvp -->
 <li class="nav-item active">
-    <a class="nav-link" href="{{route('jaujarsvp')}}">
+    <a class="nav-link" href="{{route($routeRsvp)}}">
         <i class="fa fa-inbox"></i>
         <span>RSVP Online</span></a>
 </li>
@@ -128,7 +128,7 @@
                     paging :true,
 
                     ajax : {
-                        url: "{{ route('andreasdeversvp')}}",
+                        url: "{{ route($routeRsvp)}}",
                         type:'GET'
                     },
                     columns:[

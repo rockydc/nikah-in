@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User\anwar as anwar;
 use App\Http\Requests\IsbyRequest;
 use PDF;
-use Jenssegers\Agent\Agent;
+
 class AnwarController extends Controller
 {
 
@@ -15,7 +15,7 @@ class AnwarController extends Controller
      $items = anwar::all();
      $datapengantin = [
          "cowo"=>"Anwar",
-         "cewe"=>"Siti",
+         "cewe"=>"Chacha",
          "tgl"=>"14",
          "bln"=>"05",
          "thn"=>"23",
@@ -59,6 +59,7 @@ class AnwarController extends Controller
     $folderName = 'anwar';
     $musicName = "/user/".$folderName."/Nuca & Mahalini - Janji Kita.mp3";
     $pathFileImg ="/user/".$folderName."/assets/img/";
+    $scssFile = "/user/".$folderName."/assets/scss/style.css";
     $headerImg = '1.jpg';
     $imgGalery = [
         "1.jpg",
@@ -81,7 +82,7 @@ class AnwarController extends Controller
 
          ];
       $profileCowo =[
-         "nama"=> "Anwar Hidayat",
+         "nama"=> "Anwar Hidayat, S.E",
          "nick"=> "Anwar",
          "ayah"=>"Sobirin",
          "ibu"=>"Nunung",
@@ -100,16 +101,18 @@ class AnwarController extends Controller
          "foto"=>"profile-cewe.png"
      ];
      $layouts = [
-        "isGiftSectionActive" => false,
+        "isGiftSectionActive" => true,
         "isSectionGaleryActive" => true,
-        "isRsvpActive"=> true
+        "isRsvpActive"=> true,
+        "isAmplopSectionActive" => false
      ];
-  
+     $user_agent = $_SERVER['HTTP_USER_AGENT'];
+     $isMobile = preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i', $user_agent);
+     $isTablet =  preg_match('/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i', $user_agent);
      $imgMobileSectionLove = '';
-     $agent = new Agent();
      $imgCountdown = '';
      $imgStorylove = '';
-     if($agent->isMobile()){
+     if($isMobile || $isTablet == true ){
         $imgCountdown = 'countdown-bg-mobile.png';
         $imgStorylove = 'story-mobile.png';
         $headerImg = '1.jpg';
@@ -139,7 +142,8 @@ class AnwarController extends Controller
          'imgMobileSectionLove'=>$imgMobileSectionLove,
          'imgStorylove'=>$imgStorylove,
          'imgCountdown'=>$imgCountdown,
-         'headerImg'=>$headerImg
+         'headerImg'=>$headerImg,
+         'scssFile'=>$scssFile
      ]);
  }
 
@@ -179,14 +183,18 @@ class AnwarController extends Controller
  public function rsvp(Request $request){
           
      $items = anwar::all();
-
+     $routeCetak = 'anwarcetak';
+     $routeRsvp = 'anwarrsvp';
          if($request->ajax()){
              
              return datatables()->of($items)->make(true);
 
 
          }
-     return view('pages.user.andreasdeve.rsvp',compact('items'));
+     return view('pages.user.andreasdeve.rsvp',compact('items'),[
+        "routeCetak"=>$routeCetak,
+        "routeRsvp"=>$routeRsvp
+     ]);
  }
  public function cetakpdf(){
 

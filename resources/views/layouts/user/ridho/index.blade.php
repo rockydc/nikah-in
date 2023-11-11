@@ -5,18 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     @include('includes.user.style')
-    <title>{{$datapengantin['cowo']}} &amp; {{ $datapengantin['cewe']}}</title>
+    <title>@yield('title')</title>
     <meta name="description"  content="{{ $profilecowo['nama'] }} &amp; {{ $profilecewe['nama']}} ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="{{url('user/ridho/assets/scss/style.css')}}">
+    <link rel="stylesheet" href="{{url($scssFile)}}">
     <link rel="stylesheet" href="{{url('template/puzzlewood/assets/css/Video-Responsive-YouTube.css')}}">
+    
+    @if($layouts['isAmplopSectionActive'] != false)
+    .section-gift {
+        padding-bottom:0;
+    }
+    @endif
+
 </head>
 <audio loop id="myaudio" type="audio/mp3">
-    <source src="{{url('user/ridho/Raef -You Are The One.mp3')}}">
+<source src="{{$musicName}}">
 </audio>
 <body id="page-top">
 
@@ -24,7 +31,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="section-modal"><img class="img-header" src="/user/ridho/assets/img/galery/{{$modalimg}}" />
+                <div class="section-modal"><img class="img-header" src="{{$pathFileImg}}{{$modalimg}}" />
                     <div class="mt-4">
                         <p class="text-center">Wedding of<br /></p>
                         <h1>{{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br /></h1>
@@ -145,7 +152,7 @@
     <script src="{{url('template/puzzlewood/assets/js/bs-init.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    script>
+
     <script src="{{url('user/ridho/assets/js/countdown.js')}}"></script>
     <script src="{{url('aness/assets/js/scrolling.js')}}"></script>
     <script src="{{url('aness/assets/js/scrollchangecolor.js')}}"></script>
@@ -173,18 +180,17 @@
    })
   
   </script>
-    <script>
-            $(document).ready(function(){
-
-            const weddingdate = "May 21, 2022 16:00:00"
+       <script>
+        $(document).ready(function(){
+            const weddingdate = "{{$datapengantin['countdown']}}"
             const Timer = {
                 init:(weddingdate)=>{
                     countdownDate(weddingdate)
                 }
             }
-            Timer.init(weddingdate);
-            })
-    </script>
+            Timer.init(weddingdate)
+        })
+       </script>
 
 </body>
 

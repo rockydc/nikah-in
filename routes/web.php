@@ -506,6 +506,42 @@ Route::prefix('anwar-siti')
         Route::get('/cetakpdf','AnwarController@cetakpdf')->name('anwarcetak');
     });
 });
+
+Route::prefix('tri-sekar')
+->namespace('trisekar')
+->group(function(){
+    Route::get('/home/{name?}','TrisekarController@index')->name('trisekar');
+    Route::get('/success','TrisekarController@success')->name('trisekar-success');
+    Route::post('/store','TrisekarController@store')->name('trisekarstore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','TrisekarController@dashboard')->name('trisekardashboard');
+        Route::get('/rsvp','TrisekarController@rsvp')->name('trisekarrsvp');
+        Route::get('/getrsvp','TrisekarController@getrsvp');
+        Route::get('/cetakpdf','TrisekarController@cetakpdf')->name('trisekarcetak');
+    });
+});
+
+Route::prefix('andre-cilla')
+->namespace('andrecilla')
+->group(function(){
+    Route::get('/home/{name?}','AndreCillaController@index')->name('andrecilla');
+    Route::get('/success','AndreCillaController@success')->name('andrecilla-success');
+    Route::post('/store','AndreCillaController@store')->name('andrecillastore');
+
+    Route::prefix('admin')
+   
+    ->group(function(){
+        Route::get('/','AndreCillaController@dashboard')->name('andrecilladashboard');
+        Route::get('/rsvp','AndreCillaController@rsvp')->name('andrecillarsvp');
+        Route::get('/getrsvp','AndreCillaController@getrsvp');
+        Route::get('/cetakpdf','AndreCillaController@cetakpdf')->name('andrecillacetak');
+    });
+});
+
+
 Route::prefix('terminal')->group(function(){
     Route::get('migrate', function(){
         \Artisan::call('migrate', ['force' => true]);

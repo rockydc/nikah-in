@@ -6,29 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>@yield('title')</title>
     @include('includes.user.style')
+    <meta name="theme-color" content="rgb(247,182,6)">
+    <meta property="keyword" content="pernikahan,nikah,perkawinan,website,undangan,undangan pernikahan">
+    <meta name="twitter:description" content="Website Penyedia jasa Pembuatan Undangan Pernikahan Berbasis Website">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Website Penyedia Jasa Pembuatan Undangan Pernikahan berbasis Website">
+    <meta property="og:image" content="{{url('home/assets/img/Nikahin.jpg')}}">
+    <meta name="twitter:image" content="{{url('home/assets/img/Nikahin.jpg')}}">
+    <meta name="twitter:title" content="Nikah-in">
+    <link rel="icon" type="image/jpeg" sizes="1080x1080" href="{{url('home/assets/img/Nikahin.jpg')}}">
+    <link rel="icon" type="image/jpeg" sizes="1080x1080" href="{{url('home/assets/img/Nikahin.jpg')}}">
+    <link rel="icon" type="image/jpeg" sizes="1080x1080" href="{{url('home/assets/img/Nikahin.jpg')}}">
+    <link rel="icon" type="image/jpeg" sizes="1080x1080" href="{{url('home/assets/img/Nikahin.jpg')}}">
+    <link rel="icon" type="image/jpeg" sizes="1080x1080" href="{{url('home/assets/img/Nikahin.jpg')}}">
     <!-- <link rel="stylesheet" href="{{url('template/jasmine/assets/css/styles.min.css')}}"> -->
-    <link rel="stylesheet" href="{{url('user/andreasdeve/assets/scss/style.css')}}">
+    <link rel="stylesheet" href="{{url($scssFile)}}">
     <style>
     
-.act-btn{
-    z-index:100;
-    background:#ff299c;
-    line-height: 20px;
-    color: white;
-    width:50px;
-    height:50px;
-    -webkit-border-radius:50%;
-    text-decoration: none;
-    transition: ease all 0.3s;
-    position: fixed;
-    right: 30px;
-    bottom:30px;
-    border:none;
-    outline:none!important;
+    .act-btn{
+        z-index:100;
+        background:#ff299c;
+        line-height: 20px;
+        color: white;
+        width:50px;
+        height:50px;
+        -webkit-border-radius:50%;
+        text-decoration: none;
+        transition: ease all 0.3s;
+        position: fixed;
+        right: 30px;
+        bottom:30px;
+        border:none;
+        outline:none!important;
 
+    }
 
-}
-
+    @if($layouts['isAmplopSectionActive'] != false)
+    .section-gift {
+        padding-bottom:0;
+    }
+    @endif
 
     </style>
 </head>

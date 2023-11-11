@@ -198,28 +198,32 @@ Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
         </div>
     </section>
     @endif
+
+
     @if($layouts['isGiftSectionActive'] != false)
     <section class="section-gift">
         <div class="container wrapper">
             <h1 style="font-family: Montserrat, sans-serif;">Share gift</h1>
             <p>Bagikan kebahagiaan bersama {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}<br></p>
            
-        <div class="wrapper-love d-flex justify-content-center align-items-center flex-column">
+             <div class="wrapper-love d-flex justify-content-center align-items-center flex-column">
        
-                <div class="bank-account">
-                @foreach($accountbank as $index => $value)
-                    <div class="box-account">
+                <div class="bank-account text-center">
+                        @foreach($accountbank as $index => $value)
+                            <div class="box-account">
 
-                    <p><strong>{{$value['bank']}}</strong> : {{$value['account']}}  <br>{{$value['acc_name']}}</p>
-                    </div>
-            
-               @endforeach
+                            <p><strong>{{$value['bank']}}</strong> : {{$value['account']}}  <br>{{$value['acc_name']}}</p>
+                            </div>
+                    
+                    @endforeach
                 </div>
 
 
+            </div>
+            @if($layouts['isAmplopSectionActive'] != false)
+            <div class="content-wrapper mt-5"><img class="amplop-ats items" src="{{url('template/jasmine/assets/img/amplop-ats.png')}}"><img class="kertas items" src="{{url('user/andreasdeve/assets/img/kertas.png')}}"><img class="amplop-bwh items" src="{{url('template/jasmine/assets/img/amplop-bwh.png')}}"></div>
         </div>
-        <div class="content-wrapper mt-5"><img class="amplop-ats items" src="{{url('template/jasmine/assets/img/amplop-ats.png')}}"><img class="kertas items" src="{{url('user/andreasdeve/assets/img/kertas.png')}}"><img class="amplop-bwh items" src="{{url('template/jasmine/assets/img/amplop-bwh.png')}}"></div>
-        </div>
+        @endif
     </section>
     @endif
     <section class="section-ucapan">

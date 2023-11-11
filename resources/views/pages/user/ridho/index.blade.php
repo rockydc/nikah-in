@@ -1,26 +1,25 @@
 
 @extends('layouts.user.ridho.index')
 
-
 @section('title')
-WebWedding
+
+Nikah-in | {{$datapengantin['cowo']}} &amp; {{$datapengantin['cewe']}}
 @endsection
 @section('content')
 
 <header>
         <div class="header-wrap"><img class="pol-1" src="{{url('template/puzzlewood/assets/img/Polygon%201.svg')}}"><img class="pol-2" src="{{url('template/puzzlewood/assets/img/Polygon%202.svg')}}">
-            <h1>R&amp;T<br></h1>
+            <h1>{{$initialName['cowo']}}&amp;{{$initialName['cewe']}}<br></h1>
         </div>
     </header>
     <section class="section-profile" id="profile">
         <div class="container">
-            <p class="text-center p-heading ">Assalamu'alaikum warahmatullahi wabarakatuh</p>
-
-            <p class="text-center mb-5" style="letter-spacing: 2px;color: rgb(126,99,79);">“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan diantaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir. “<br> - <strong class="mt-3">QS Ar Rum Ayat 21 </strong> <br></p>
+            <!-- <p class="text-center p-heading ">Assalamu'alaikum warahmatullahi wabarakatuh</p> -->
+            <p class="text-center mb-5" style="letter-spacing: 2px;color: rgb(126,99,79);">“{{$quote['Desc']}}“<br> - <strong class="mt-3">{{$quote['Title']}}</strong> <br></p>
             <div class="profile-wrapper">
                 <div class="row">
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <div class="profile-content text-center"><img src="/user/ridho/assets/img/{{$profilecowo['foto']}}">
+                        <div class="profile-content text-center"><img src="{{$pathFileImg}}{{$profilecowo['foto']}}">
                             <h3 class="mt-4">{{$profilecowo['nama']}}<br></h3>
                             <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putra dari Bpk. {{$profilecowo['ayah']}} dan Ibu {{$profilecowo['ibu']}}<br></p>
                         </div>
@@ -29,7 +28,7 @@ WebWedding
                         <h1 class="mt-4 mb-4" style="font-size: 144px;font-family: 'Playfair Display', serif;">&amp;</h1>
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <div class="profile-content text-center"><img src="/user/ridho/assets/img/{{$profilecewe['foto']}}">
+                        <div class="profile-content text-center"><img src="{{$pathFileImg}}{{$profilecewe['foto']}}">
                         <h3 data-aos="fade-up" class="mt-5 text-name">{{$profilecewe['nama']}}</h3>
                             <p data-aos="fade-up" style="font-family: Montserrat, sans-serif;">Putri dari  Bpk. {{$profilecewe['ayah']}} dan Ibu {{$profilecewe['ibu']}}<br></p>
                         </div>
@@ -77,6 +76,7 @@ WebWedding
                         @endforeach
                 <p class="mb-5">{{$sesi['sesi1']['lokasi']}}<br></p><a class="btn btn-direction"  href="{{$sesi['sesi1']['map_link']}}">Petunjuk Arah</a>
             </div><img src="{{url('template/puzzlewood/assets/img/ic_venue.svg')}}" style="margin-top: 48px;margin-bottom: 50px;">
+            @if($sesi['sesi2']['isActive'] != false)
             <div>
                 <p class="mt-5">{{$sesi['sesi2']['judul']}}<br></p>
                 <h1>{{$sesi['sesi2']['tanggal']}}<br></h1>
@@ -91,23 +91,29 @@ WebWedding
                         @endforeach
              
                 <p class="mb-5">{{$sesi['sesi2']['lokasi']}}<br></p><a class="btn btn-direction" href="{{$sesi['sesi2']['map_link']}}">Petunjuk Arah</a>
-            </div><img src="{{url('template/puzzlewood/assets/img/ic_venue.svg')}}" style="margin-top: 48px;margin-bottom: 50px;">
+            </div>
+         <img src="{{url('template/puzzlewood/assets/img/ic_venue.svg')}}" style="margin-top: 48px;margin-bottom: 50px;">   @endif
         </div>
 
         @if($video != null)
         <div class="d-flex justify-content-center flex-column align-items-center" style="margin-top: 153px;">
-            <p class="text-center mb-3" style="font-size: 25px;">Video pre wedding Jenny &amp; Ronald <br></p>
-            <div class="d-flex justify-content-center video-wrapper"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/Oh1eIFNbypQ" data-aos="zoom-out-down" data-aos-duration="1000" class="embed-responsive-item"></iframe></div>
+            <p class="text-center mb-3" style="font-size: 25px;">Video pre wedding {{$datapengantin['cowo']}} &amp; {{$datapengantin['cowo']}} <br></p>
+            <div class="d-flex justify-content-center video-wrapper">
+                <iframe allowfullscreen="" frameborder="0" src="{{$video}}" data-aos="zoom-out-down" data-aos-duration="1000" class="embed-responsive-item"></iframe>
+
+                </div>
         </div>
         @endif
  
     </section>
+
+    @if($layouts['isRsvpActive'] != false)
     <section id="rsvp" class="section-rsvp">
         <div class="form-wrapper">
             <h1 class="text-center">Daftar Kehadiran</h1>
 
 
-            <form action="{{route('ridhostore')}}" method="post" >
+            <form action="{{route($storeRsvp)}}" method="post" >
 
             
 
@@ -156,19 +162,23 @@ WebWedding
             </form>
         </div>
     </section>
+    @endif
+    @if($layouts['isSectionGaleryActive'] != false)
     <section id="galeri" class="section-galeri px-3">
         <h2 data-aos="fade-up" class="text-center">Galeri Pre Wedding</h2>
         <div class="gallery-wrap container">
             <div class="row">
             @foreach($imggaleri as $index => $value)
                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-4 mt-3">
-                    <img data-aos="fade-up" data-aos-delay="200" src="/user/ridho/assets/img/galery/{{$value}}" loading="lazy">
+                    <img  src="{{$pathFileImg}}galery/{{$value}}" loading="lazy">
                 </div>
                 @endforeach
             </div>
       
         </div>
     </section>
+    @endif
+    @if($layouts['isGiftSectionActive'] != false)
     <section class="section-gift">
         <div class="container wrapper">
         <h1 style="font-family: Montserrat, sans-serif;">Share gift</h1>
@@ -198,6 +208,7 @@ WebWedding
             @endif
         </div>
     </section>
+    @endif
     <section class="section-ucapan">
         <h1 class="text-center">Kartu ucapan<br></h1>
         <div data-aos="zoom-in-up" class="ucapan-wrapper container">
